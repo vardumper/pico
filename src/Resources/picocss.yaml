@@ -1,0 +1,40 @@
+# Dark Mode
+'*':
+   attributes:
+    data-theme:
+      description: 'Choose between light and dark mode. Overrides the OS default if set.'
+      type: enum|string
+      choices:
+        - light
+        - dark
+    data-tooltip:
+      description: 'Give extra context and information by adding tooltips.'
+      type: string
+    data-placement:
+      description: 'Choose the position of a tooltip. Depends on data-tooltip attribute.'
+      type: enum|string
+      choices:
+        - top
+        - left
+        - right
+        - bottom
+      defaultValue: top
+# Role Button
+'/^(a|button|div|span)$/':
+  attributes:
+    role:
+      description: 'The role attribute is used to define the purpose of an element.'
+      type: enum|string
+      choices:
+        - button
+    class:
+      description: 'The class attribute is used to define equal styles for multiple elements.'
+      required: true
+      defaultValue: ''
+      type: enum|string
+      choices:
+        - secondary
+        - contrast
+        - outline
+        - secondary outline
+        - contrast outline

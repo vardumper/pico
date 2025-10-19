@@ -1,0 +1,276 @@
+/** SASS for the <select> HTML element
+ *
+ * Found in scss/components/_accordion.scss#9: `#{$parent-selector} details {`
+ * Found in scss/components/_accordion.scss#105: `#{$parent-selector} details {`
+ * Found in scss/components/_card.scss#9: `#{$parent-selector} article {`
+ * Found in scss/components/_dropdown.scss#11: `#{$parent-selector} details.dropdown {`
+ * Found in scss/components/_dropdown.scss#27: `// for the marker to be aligned with the regular select`
+ * Found in scss/components/_dropdown.scss#41: `#{$parent-selector} nav details.dropdown {`
+ * Found in scss/components/_dropdown.scss#46: `// Button as a select`
+ * Found in scss/components/_dropdown.scss#49: `#{$parent-selector} details.dropdown > summary:not([role]) {`
+ * Found in scss/components/_dropdown.scss#68: `user-select: none;`
+ * Found in scss/components/_dropdown.scss#125: `#{$parent-selector} nav details.dropdown {`
+ * Found in scss/components/_dropdown.scss#159: `#{$parent-selector} details.dropdown > summary + ul {`
+ * Found in scss/components/_dropdown.scss#239: `#{$parent-selector} details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#246: `#{$parent-selector} details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#262: `#{$parent-selector} details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#277: `#{$parent-selector} label > details.dropdown {`
+ * Found in scss/components/_group.scss#9: `#{$parent-selector} [role="search"],`
+ * Found in scss/components/_group.scss#10: `#{$parent-selector} [role="group"] {`
+ * Found in scss/components/_group.scss#22: `select {`
+ * Found in scss/components/_group.scss#49: `select {`
+ * Found in scss/components/_group.scss#63: `@supports selector(:has(*)) {`
+ * Found in scss/components/_group.scss#71: `select {`
+ * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
+ * Found in scss/components/_group.scss#107: `#{$parent-selector} [role="search"] {`
+ * Found in scss/components/_loading.scss#10: `#{$parent-selector} [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/components/_loading.scss#36: `#{$parent-selector} button,`
+ * Found in scss/components/_loading.scss#37: `#{$parent-selector} [type="submit"],`
+ * Found in scss/components/_loading.scss#38: `#{$parent-selector} [type="button"],`
+ * Found in scss/components/_loading.scss#39: `#{$parent-selector} [type="reset"],`
+ * Found in scss/components/_loading.scss#40: `#{$parent-selector} [role="button"],`
+ * Found in scss/components/_loading.scss#41: `#{$parent-selector} a {`
+ * Found in scss/components/_modal.scss#14: `#{$parent-selector} dialog {`
+ * Found in scss/components/_modal.scss#36: `$close-selector: if(`
+ * Found in scss/components/_modal.scss#63: `#{$close-selector} {`
+ * Found in scss/components/_modal.scss#85: `#{$close-selector} {`
+ * Found in scss/components/_nav.scss#21: `#{$parent-selector} nav,`
+ * Found in scss/components/_nav.scss#22: `#{$parent-selector} nav ul {`
+ * Found in scss/components/_nav.scss#26: `#{$parent-selector} nav {`
+ * Found in scss/components/_nav.scss#69: `select {`
+ * Found in scss/components/_nav.scss#123: `#{$parent-selector} aside {`
+ * Found in scss/components/_nav.scss#148: `#{$parent-selector} nav {`
+ * Found in scss/components/_progress.scss#16: `#{$parent-selector} progress {`
+ * Found in scss/components/_progress.scss#24: `#{$parent-selector} progress {`
+ * Found in scss/components/_progress.scss#87: `#{$parent-selector} progress:indeterminate {`
+ * Found in scss/components/_tooltip.scss#9: `#{$parent-selector} [data-tooltip] {`
+ * Found in scss/content/_button.scss#17: `#{$parent-selector} button {`
+ * Found in scss/content/_button.scss#25: `#{$parent-selector} button,`
+ * Found in scss/content/_button.scss#26: `#{$parent-selector} [type="submit"],`
+ * Found in scss/content/_button.scss#27: `#{$parent-selector} [type="reset"],`
+ * Found in scss/content/_button.scss#28: `#{$parent-selector} [type="button"] {`
+ * Found in scss/content/_button.scss#35: `#{$parent-selector} button,`
+ * Found in scss/content/_button.scss#36: `#{$parent-selector} [type="submit"],`
+ * Found in scss/content/_button.scss#37: `#{$parent-selector} [type="reset"],`
+ * Found in scss/content/_button.scss#38: `#{$parent-selector} [type="button"],`
+ * Found in scss/content/_button.scss#39: `#{$parent-selector} [type="file"]::file-selector-button,`
+ * Found in scss/content/_button.scss#40: `#{$parent-selector} [role="button"] {`
+ * Found in scss/content/_button.scss#59: `user-select: none;`
+ * Found in scss/content/_button.scss#88: `#{$parent-selector} [type="submit"],`
+ * Found in scss/content/_button.scss#89: `#{$parent-selector} [type="reset"],`
+ * Found in scss/content/_button.scss#90: `#{$parent-selector} [type="button"] {`
+ * Found in scss/content/_button.scss#97: `#{$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).secondary,`
+ * Found in scss/content/_button.scss#98: `#{$parent-selector} [type="reset"],`
+ * Found in scss/content/_button.scss#99: `#{$parent-selector} [type="file"]::file-selector-button {`
+ * Found in scss/content/_button.scss#120: `#{$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
+ * Found in scss/content/_button.scss#140: `#{$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).outline,`
+ * Found in scss/content/_button.scss#154: `#{$parent-selector}`
+ * Found in scss/content/_button.scss#167: `#{$parent-selector}`
+ * Found in scss/content/_button.scss#179: `#{$parent-selector} [type="reset"],`
+ * Found in scss/content/_button.scss#180: `#{$parent-selector} [type="file"]::file-selector-button {`
+ * Found in scss/content/_button.scss#201: `#{$parent-selector}`
+ * Found in scss/content/_button.scss#203: `#{$parent-selector}`
+ * Found in scss/content/_code.scss#16: `#{$parent-selector} pre,`
+ * Found in scss/content/_code.scss#17: `#{$parent-selector} code,`
+ * Found in scss/content/_code.scss#18: `#{$parent-selector} kbd,`
+ * Found in scss/content/_code.scss#19: `#{$parent-selector} samp {`
+ * Found in scss/content/_code.scss#24: `#{$parent-selector} pre code,`
+ * Found in scss/content/_code.scss#25: `#{$parent-selector} pre samp {`
+ * Found in scss/content/_code.scss#31: `#{$parent-selector} pre {`
+ * Found in scss/content/_code.scss#39: `#{$parent-selector} pre,`
+ * Found in scss/content/_code.scss#40: `#{$parent-selector} code,`
+ * Found in scss/content/_code.scss#41: `#{$parent-selector} kbd,`
+ * Found in scss/content/_code.scss#42: `#{$parent-selector} samp {`
+ * Found in scss/content/_code.scss#50: `#{$parent-selector} code,`
+ * Found in scss/content/_code.scss#51: `#{$parent-selector} kbd,`
+ * Found in scss/content/_code.scss#52: `#{$parent-selector} samp {`
+ * Found in scss/content/_code.scss#57: `#{$parent-selector} pre {`
+ * Found in scss/content/_code.scss#72: `#{$parent-selector} kbd {`
+ * Found in scss/content/_embedded.scss#15: `#{$parent-selector} :where(audio, canvas, iframe, img, svg, video) {`
+ * Found in scss/content/_embedded.scss#20: `#{$parent-selector} audio,`
+ * Found in scss/content/_embedded.scss#21: `#{$parent-selector} video {`
+ * Found in scss/content/_embedded.scss#26: `#{$parent-selector} audio:not([controls]) {`
+ * Found in scss/content/_embedded.scss#32: `#{$parent-selector} :where(iframe) {`
+ * Found in scss/content/_embedded.scss#38: `#{$parent-selector} img {`
+ * Found in scss/content/_embedded.scss#45: `#{$parent-selector} :where(svg:not([fill])) {`
+ * Found in scss/content/_embedded.scss#50: `#{$parent-selector} svg:not(:root),`
+ * Found in scss/content/_embedded.scss#51: `#{$parent-selector} svg:not(:host) {`
+ * Found in scss/content/_figure.scss#9: `#{$parent-selector} figure {`
+ * Found in scss/content/_link.scss#9: `#{$parent-selector} :where(a:not([role="button"])),`
+ * Found in scss/content/_link.scss#10: `#{$parent-selector} [role="link"] {`
+ * Found in scss/content/_link.scss#64: `#{$parent-selector} a {`
+ * Found in scss/content/_misc.scss#16: `#{$parent-selector} hr {`
+ * Found in scss/content/_misc.scss#25: `#{$parent-selector} [hidden],`
+ * Found in scss/content/_misc.scss#26: `#{$parent-selector} template {`
+ * Found in scss/content/_misc.scss#35: `#{$parent-selector} canvas {`
+ * Found in scss/content/_table.scss#16: `#{$parent-selector} :where(table) {`
+ * Found in scss/content/_table.scss#27: `#{$parent-selector} th,`
+ * Found in scss/content/_table.scss#28: `#{$parent-selector} td {`
+ * Found in scss/content/_table.scss#41: `#{$parent-selector} tfoot {`
+ * Found in scss/content/_table.scss#53: `#{$parent-selector} table {`
+ * Found in scss/content/_typography.scss#15: `#{$parent-selector} b,`
+ * Found in scss/content/_typography.scss#16: `#{$parent-selector} strong {`
+ * Found in scss/content/_typography.scss#21: `#{$parent-selector} sub,`
+ * Found in scss/content/_typography.scss#22: `#{$parent-selector} sup {`
+ * Found in scss/content/_typography.scss#28: `#{$parent-selector} sub {`
+ * Found in scss/content/_typography.scss#31: `#{$parent-selector} sup {`
+ * Found in scss/content/_typography.scss#38: `#{$parent-selector} address,`
+ * Found in scss/content/_typography.scss#39: `#{$parent-selector} blockquote,`
+ * Found in scss/content/_typography.scss#40: `#{$parent-selector} dl,`
+ * Found in scss/content/_typography.scss#41: `#{$parent-selector} ol,`
+ * Found in scss/content/_typography.scss#42: `#{$parent-selector} p,`
+ * Found in scss/content/_typography.scss#43: `#{$parent-selector} pre,`
+ * Found in scss/content/_typography.scss#44: `#{$parent-selector} table,`
+ * Found in scss/content/_typography.scss#45: `#{$parent-selector} ul {`
+ * Found in scss/content/_typography.scss#54: `#{$parent-selector} h1,`
+ * Found in scss/content/_typography.scss#55: `#{$parent-selector} h2,`
+ * Found in scss/content/_typography.scss#56: `#{$parent-selector} h3,`
+ * Found in scss/content/_typography.scss#57: `#{$parent-selector} h4,`
+ * Found in scss/content/_typography.scss#58: `#{$parent-selector} h5,`
+ * Found in scss/content/_typography.scss#59: `#{$parent-selector} h6 {`
+ * Found in scss/content/_typography.scss#69: `#{$parent-selector} h1 {`
+ * Found in scss/content/_typography.scss#72: `#{$parent-selector} h2 {`
+ * Found in scss/content/_typography.scss#75: `#{$parent-selector} h3 {`
+ * Found in scss/content/_typography.scss#78: `#{$parent-selector} h4 {`
+ * Found in scss/content/_typography.scss#81: `#{$parent-selector} h5 {`
+ * Found in scss/content/_typography.scss#84: `#{$parent-selector} h6 {`
+ * Found in scss/content/_typography.scss#89: `#{$parent-selector}`
+ * Found in scss/content/_typography.scss#97: `#{$parent-selector} p {`
+ * Found in scss/content/_typography.scss#102: `#{$parent-selector} hgroup {`
+ * Found in scss/content/_typography.scss#118: `#{$parent-selector} :where(ol, ul) {`
+ * Found in scss/content/_typography.scss#126: `#{$parent-selector} :where(dl, ol, ul) :where(dl, ol, ul) {`
+ * Found in scss/content/_typography.scss#131: `#{$parent-selector} ul li {`
+ * Found in scss/content/_typography.scss#136: `#{$parent-selector} mark {`
+ * Found in scss/content/_typography.scss#144: `#{$parent-selector} blockquote {`
+ * Found in scss/content/_typography.scss#161: `#{$parent-selector} abbr[title] {`
+ * Found in scss/content/_typography.scss#168: `#{$parent-selector} ins {`
+ * Found in scss/content/_typography.scss#174: `#{$parent-selector} del {`
+ * Found in scss/content/_typography.scss#178: `// selection`
+ * Found in scss/content/_typography.scss#179: `#{$parent-selector} ::selection {`
+ * Found in scss/content/_typography.scss#180: `background-color: var(#{$css-var-prefix}text-selection-color);`
+ * Found in scss/forms/_basics.scss#6: `$helper-previous-tags: "input, select, textarea, fieldset";`
+ * Found in scss/forms/_basics.scss#18: `#{$parent-selector} input,`
+ * Found in scss/forms/_basics.scss#19: `#{$parent-selector} optgroup,`
+ * Found in scss/forms/_basics.scss#20: `#{$parent-selector} select,`
+ * Found in scss/forms/_basics.scss#21: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#30: `#{$parent-selector} input {`
+ * Found in scss/forms/_basics.scss#35: `#{$parent-selector} select {`
+ * Found in scss/forms/_basics.scss#43: `#{$parent-selector} legend {`
+ * Found in scss/forms/_basics.scss#51: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#56: `#{$parent-selector} [type="checkbox"],`
+ * Found in scss/forms/_basics.scss#57: `#{$parent-selector} [type="radio"] {`
+ * Found in scss/forms/_basics.scss#62: `#{$parent-selector} ::-webkit-inner-spin-button,`
+ * Found in scss/forms/_basics.scss#63: `#{$parent-selector} ::-webkit-outer-spin-button {`
+ * Found in scss/forms/_basics.scss#69: `#{$parent-selector} [type="search"] {`
+ * Found in scss/forms/_basics.scss#75: `#{$parent-selector} [type="search"]::-webkit-search-decoration {`
+ * Found in scss/forms/_basics.scss#81: `#{$parent-selector} ::-webkit-file-upload-button {`
+ * Found in scss/forms/_basics.scss#87: `#{$parent-selector} ::-moz-focus-inner {`
+ * Found in scss/forms/_basics.scss#93: `#{$parent-selector} :-moz-focusring {`
+ * Found in scss/forms/_basics.scss#98: `#{$parent-selector} :-moz-ui-invalid {`
+ * Found in scss/forms/_basics.scss#103: `#{$parent-selector} ::-ms-expand {`
+ * Found in scss/forms/_basics.scss#108: `#{$parent-selector} [type="file"],`
+ * Found in scss/forms/_basics.scss#109: `#{$parent-selector} [type="range"] {`
+ * Found in scss/forms/_basics.scss#118: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"]) {`
+ * Found in scss/forms/_basics.scss#127: `#{$parent-selector} fieldset {`
+ * Found in scss/forms/_basics.scss#136: `#{$parent-selector} label,`
+ * Found in scss/forms/_basics.scss#137: `#{$parent-selector} fieldset legend {`
+ * Found in scss/forms/_basics.scss#144: `#{$parent-selector} fieldset legend {`
+ * Found in scss/forms/_basics.scss#149: `#{$parent-selector} input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#150: `#{$parent-selector} button[type="submit"],`
+ * Found in scss/forms/_basics.scss#151: `#{$parent-selector} select,`
+ * Found in scss/forms/_basics.scss#152: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#157: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
+ * Found in scss/forms/_basics.scss#158: `#{$parent-selector} select,`
+ * Found in scss/forms/_basics.scss#159: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#166: `#{$parent-selector} input,`
+ * Found in scss/forms/_basics.scss#167: `#{$parent-selector} select,`
+ * Found in scss/forms/_basics.scss#168: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#191: `#{$parent-selector}`
+ * Found in scss/forms/_basics.scss#200: `#{$parent-selector} :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#209: `#{$parent-selector}`
+ * Found in scss/forms/_basics.scss#211: `#{$parent-selector} :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#218: `#{$parent-selector}`
+ * Found in scss/forms/_basics.scss#227: `#{$parent-selector} :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#238: `#{$parent-selector} input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
+ * Found in scss/forms/_basics.scss#239: `#{$parent-selector} select[disabled],`
+ * Found in scss/forms/_basics.scss#240: `#{$parent-selector} textarea[disabled],`
+ * Found in scss/forms/_basics.scss#241: `#{$parent-selector} label[aria-disabled="true"],`
+ * Found in scss/forms/_basics.scss#242: `#{$parent-selector}`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ * Found in scss/forms/_basics.scss#249: `#{$parent-selector} label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#254: `#{$parent-selector} :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#286: `&[aria-invalid="false"]:not(select) {`
+ * Found in scss/forms/_basics.scss#290: `&[aria-invalid="true"]:not(select) {`
+ * Found in scss/forms/_basics.scss#361: `#{$parent-selector} :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#371: `#{$parent-selector} input::placeholder,`
+ * Found in scss/forms/_basics.scss#372: `#{$parent-selector} input::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#373: `#{$parent-selector} textarea::placeholder,`
+ * Found in scss/forms/_basics.scss#374: `#{$parent-selector} textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#375: `#{$parent-selector} select:invalid {`
+ * Found in scss/forms/_basics.scss#381: `#{$parent-selector} input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#382: `#{$parent-selector} select,`
+ * Found in scss/forms/_basics.scss#383: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#388: `#{$parent-selector} select {`
+ * Found in scss/forms/_basics.scss#389: `// Unstyle the caret on `<select>`s in IE10+.`
+ * Found in scss/forms/_basics.scss#409: `background: var(#{$css-var-prefix}form-element-selected-background-color);`
+ * Found in scss/forms/_basics.scss#417: `#{$parent-selector} select {`
+ * Found in scss/forms/_basics.scss#425: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#445: `#{$parent-selector} :where(#{$helper-previous-tags}) {`
+ * Found in scss/forms/_basics.scss#466: `#{$parent-selector} label {`
+ * Found in scss/forms/_basics.scss#467: `> :where(input, select, textarea) {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#11: `#{$parent-selector} label {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#18: `#{$parent-selector} [type="checkbox"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#19: `#{$parent-selector} [type="radio"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#58: `#{$parent-selector} [type="checkbox"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#70: `#{$parent-selector} [type="radio"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#83: `#{$parent-selector} [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#139: `#{$parent-selector} [type="checkbox"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#140: `#{$parent-selector} [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#159: `#{$parent-selector} [type="checkbox"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#160: `#{$parent-selector} [type="radio"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#161: `#{$parent-selector} [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_input-color.scss#20: `#{$parent-selector} [type="color"] {`
+ * Found in scss/forms/_input-date.scss#10: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-date.scss#28: `#{$parent-selector} [type="date"],`
+ * Found in scss/forms/_input-date.scss#29: `#{$parent-selector} [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#30: `#{$parent-selector} [type="month"],`
+ * Found in scss/forms/_input-date.scss#31: `#{$parent-selector} [type="time"],`
+ * Found in scss/forms/_input-date.scss#32: `#{$parent-selector} [type="week"] {`
+ * Found in scss/forms/_input-date.scss#44: `#{$parent-selector} [type="date"],`
+ * Found in scss/forms/_input-date.scss#45: `#{$parent-selector} [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#46: `#{$parent-selector} [type="month"],`
+ * Found in scss/forms/_input-date.scss#47: `#{$parent-selector} [type="time"],`
+ * Found in scss/forms/_input-date.scss#48: `#{$parent-selector} [type="week"] {`
+ * Found in scss/forms/_input-date.scss#56: `#{$parent-selector}`
+ * Found in scss/forms/_input-file.scss#9: `// 1. Hack to display the outline on the focused file selector button`
+ * Found in scss/forms/_input-file.scss#11: `#{$parent-selector} [type="file"] {`
+ * Found in scss/forms/_input-file.scss#20: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#27: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#34: `&::file-selector-button {`
+ * Found in scss/forms/_input-range.scss#46: `#{$parent-selector} [type="range"] {`
+ * Found in scss/forms/_input-search.scss#10: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-search.scss#46: `#{$parent-selector} :where(input) {`
+ * Found in scss/layout/_landmarks.scss#27: `#{$parent-selector} #{$semantic-root-element} {`
+ * Found in scss/layout/_overflow-auto.scss#9: `#{$parent-selector} .overflow-auto {`
+ * Found in scss/layout/_section.scss#9: `#{$parent-selector} section {`
+ * Found in scss/utilities/_accessibility.scss#17: `#{$parent-selector} [aria-controls] {`
+ * Found in scss/utilities/_accessibility.scss#22: `#{$parent-selector} [aria-disabled="true"],`
+ * Found in scss/utilities/_accessibility.scss#23: `#{$parent-selector} [disabled] {`
+ * Found in scss/utilities/_accessibility.scss#28: `#{$parent-selector} [aria-hidden="false"][hidden] {`
+ * Found in scss/utilities/_accessibility.scss#32: `#{$parent-selector} [aria-hidden="false"][hidden]:not(:focus) {`
+ * Found in scss/utilities/_accessibility.scss#39: `#{$parent-selector} a,`
+ * Found in scss/utilities/_accessibility.scss#40: `#{$parent-selector} area,`
+ * Found in scss/utilities/_accessibility.scss#41: `#{$parent-selector} button,`
+ * Found in scss/utilities/_accessibility.scss#42: `#{$parent-selector} input,`
+ * Found in scss/utilities/_accessibility.scss#43: `#{$parent-selector} label,`
+ * Found in scss/utilities/_accessibility.scss#44: `#{$parent-selector} select,`
+ * Found in scss/utilities/_accessibility.scss#45: `#{$parent-selector} summary,`
+ * Found in scss/utilities/_accessibility.scss#46: `#{$parent-selector} textarea,`
+ * Found in scss/utilities/_accessibility.scss#47: `#{$parent-selector} [tabindex] {`
+ * Found in scss/utilities/_accessibility.scss#54: `#{$parent-selector} [dir="rtl"] {`
+ * Found in scss/utilities/_reduce-motion.scss#18: `#{$parent-selector} *:not([aria-busy="true"]),`
+ * Found in scss/utilities/_reduce-motion.scss#19: `#{$parent-selector} :not([aria-busy="true"])::before,`
+ * Found in scss/utilities/_reduce-motion.scss#20: `#{$parent-selector} :not([aria-busy="true"])::after {`
+ *
+ * Add your styles here
+ */

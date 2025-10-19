@@ -1,0 +1,28 @@
+/** SASS for the <table> HTML element
+ *
+ * Found in scss/content/_table.scss#4: `@if map.get($modules, "content/table") {`
+ * Found in scss/content/_table.scss#15: `// 2. Remove text indentation from table contents in Chrome, Edge, and Safari`
+ * Found in scss/content/_table.scss#16: `#{$parent-selector} :where(table) {`
+ * Found in scss/content/_table.scss#32: `var(#{$css-var-prefix}table-border-color);`
+ * Found in scss/content/_table.scss#46: `var(#{$css-var-prefix}table-border-color);`
+ * Found in scss/content/_table.scss#53: `#{$parent-selector} table {`
+ * Found in scss/content/_table.scss#57: `background-color: var(#{$css-var-prefix}table-row-stripped-background-color);`
+ * Found in scss/content/_typography.scss#44: `#{$parent-selector} table,`
+ * Found in scss/content/_typography.scss#90: `:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {`
+ * Found in scss/utilities/_accessibility.scss#21: `// Change the cursor on disabled, not-editable, or otherwise inoperable elements in all browsers (opinionated)`
+ *
+ * Add your styles here
+ */
+
+@use "sass:map";
+@use "../settings" as *;
+
+@if map.get($modules, "content/typography") {
+  #{$parent-selector} table {
+    margin-top: 0;
+    margin-bottom: var(#{$css-var-prefix}typography-spacing-vertical);
+    color: var(#{$css-var-prefix}color);
+    font-style: normal;
+    font-weight: var(#{$css-var-prefix}font-weight);
+  }
+}

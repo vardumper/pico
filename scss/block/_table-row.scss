@@ -1,0 +1,189 @@
+/** SASS for the <tr> HTML element
+ *
+ * Found in scss/components/_accordion.scss#18: `@if $enable-transitions {`
+ * Found in scss/components/_accordion.scss#19: `transition: color var(#{$css-var-prefix}transition);`
+ * Found in scss/components/_accordion.scss#46: `transform: rotate(-90deg);`
+ * Found in scss/components/_accordion.scss#53: `@if $enable-transitions {`
+ * Found in scss/components/_accordion.scss#54: `transition: transform var(#{$css-var-prefix}transition);`
+ * Found in scss/components/_accordion.scss#98: `transform: rotate(0);`
+ * Found in scss/components/_dropdown.scss#28: `transform: rotate(0deg) translateX(0.2rem);`
+ * Found in scss/components/_dropdown.scss#70: `@if $enable-transitions {`
+ * Found in scss/components/_dropdown.scss#71: `transition:`
+ * Found in scss/components/_dropdown.scss#72: `background-color var(#{$css-var-prefix}transition),`
+ * Found in scss/components/_dropdown.scss#73: `border-color var(#{$css-var-prefix}transition),`
+ * Found in scss/components/_dropdown.scss#74: `color var(#{$css-var-prefix}transition),`
+ * Found in scss/components/_dropdown.scss#75: `box-shadow var(#{$css-var-prefix}transition);`
+ * Found in scss/components/_dropdown.scss#110: `&[aria-invalid="true"] {`
+ * Found in scss/components/_dropdown.scss#131: `transform: rotate(0deg) translateX(0rem);`
+ * Found in scss/components/_dropdown.scss#178: `@if $enable-transitions {`
+ * Found in scss/components/_dropdown.scss#179: `transition:`
+ * Found in scss/components/_dropdown.scss#180: `opacity var(#{$css-var-prefix}transition),`
+ * Found in scss/components/_dropdown.scss#181: `transform 0s ease-in-out 1s;`
+ * Found in scss/components/_dropdown.scss#248: `transform: scaleY(1);`
+ * Found in scss/components/_dropdown.scss#251: `@if $enable-transitions {`
+ * Found in scss/components/_dropdown.scss#252: `transition:`
+ * Found in scss/components/_dropdown.scss#253: `opacity var(#{$css-var-prefix}transition),`
+ * Found in scss/components/_dropdown.scss#254: `transform 0s ease-in-out 0s;`
+ * Found in scss/components/_group.scss#18: `transition: box-shadow var(#{$css-var-prefix}transition);`
+ * Found in scss/components/_group.scss#72: `border-color: transparent;`
+ * Found in scss/components/_loading.scss#6: `* Loading ([aria-busy=true])`
+ * Found in scss/components/_loading.scss#10: `#{$parent-selector} [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/components/_loading.scss#42: `&[aria-busy="true"] {`
+ * Found in scss/components/_modal.scss#97: `background-color: transparent;`
+ * Found in scss/components/_modal.scss#100: `@if $enable-transitions {`
+ * Found in scss/components/_modal.scss#101: `transition: opacity var(#{$css-var-prefix}transition);`
+ * Found in scss/components/_modal.scss#133: `@if $enable-classes and $enable-transitions {`
+ * Found in scss/components/_modal.scss#166: `background-color: transparent;`
+ * Found in scss/components/_modal.scss#172: `transform: translateY(-100%);`
+ * Found in scss/components/_nav.scss#114: `background-color: transparent;`
+ * Found in scss/components/_progress.scss#53: `@if $enable-transitions {`
+ * Found in scss/components/_progress.scss#54: `transition: inline-size var(#{$css-var-prefix}transition);`
+ * Found in scss/components/_progress.scss#75: `background-color: transparent;`
+ * Found in scss/components/_progress.scss#79: `background-color: transparent;`
+ * Found in scss/components/_tooltip.scss#29: `transform: translate(-50%, -0.25rem);`
+ * Found in scss/components/_tooltip.scss#32: `content: attr(data-tooltip);`
+ * Found in scss/components/_tooltip.scss#48: `transform: translate(-50%, 0rem);`
+ * Found in scss/components/_tooltip.scss#50: `border-right: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#51: `border-left: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#53: `background-color: transparent;`
+ * Found in scss/components/_tooltip.scss#63: `transform: translate(-50%, 0.25rem);`
+ * Found in scss/components/_tooltip.scss#67: `transform: translate(-50%, -0.3rem);`
+ * Found in scss/components/_tooltip.scss#68: `border: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#80: `transform: translate(-0.25rem, -50%);`
+ * Found in scss/components/_tooltip.scss#84: `transform: translate(0.3rem, -50%);`
+ * Found in scss/components/_tooltip.scss#85: `border: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#97: `transform: translate(0.25rem, -50%);`
+ * Found in scss/components/_tooltip.scss#101: `transform: translate(-0.3rem, -50%);`
+ * Found in scss/components/_tooltip.scss#102: `border: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#116: `@if $enable-transitions {`
+ * Found in scss/components/_tooltip.scss#124: `#{$css-var-prefix}tooltip-slide-to: translate(-50%, -0.25rem);`
+ * Found in scss/components/_tooltip.scss#125: `transform: translate(-50%, 0.75rem);`
+ * Found in scss/components/_tooltip.scss#133: `#{$css-var-prefix}tooltip-caret-slide-to: translate(-50%, 0rem);`
+ * Found in scss/components/_tooltip.scss#134: `transform: translate(-50%, -0.25rem);`
+ * Found in scss/components/_tooltip.scss#145: `#{$css-var-prefix}tooltip-slide-to: translate(-50%, 0.25rem);`
+ * Found in scss/components/_tooltip.scss#146: `transform: translate(-50%, -0.75rem);`
+ * Found in scss/components/_tooltip.scss#151: `#{$css-var-prefix}tooltip-caret-slide-to: translate(-50%, -0.3rem);`
+ * Found in scss/components/_tooltip.scss#152: `transform: translate(-50%, -0.5rem);`
+ * Found in scss/components/_tooltip.scss#164: `#{$css-var-prefix}tooltip-slide-to: translate(-0.25rem, -50%);`
+ * Found in scss/components/_tooltip.scss#165: `transform: translate(0.75rem, -50%);`
+ * Found in scss/components/_tooltip.scss#170: `#{$css-var-prefix}tooltip-caret-slide-to: translate(0.3rem, -50%);`
+ * Found in scss/components/_tooltip.scss#171: `transform: translate(0.05rem, -50%);`
+ * Found in scss/components/_tooltip.scss#183: `#{$css-var-prefix}tooltip-slide-to: translate(0.25rem, -50%);`
+ * Found in scss/components/_tooltip.scss#184: `transform: translate(-0.75rem, -50%);`
+ * Found in scss/components/_tooltip.scss#189: `#{$css-var-prefix}tooltip-caret-slide-to: translate(-0.3rem, -50%);`
+ * Found in scss/components/_tooltip.scss#190: `transform: translate(-0.05rem, -50%);`
+ * Found in scss/components/_tooltip.scss#199: `transform: var(#{$css-var-prefix}tooltip-slide-to);`
+ * Found in scss/components/_tooltip.scss#209: `transform: var(#{$css-var-prefix}tooltip-caret-slide-to);`
+ * Found in scss/content/_button.scss#15: `// 2. Remove the margin on controls in Safari`
+ * Found in scss/content/_button.scss#21: `text-transform: none; // 1`
+ * Found in scss/content/_button.scss#61: `@if $enable-transitions {`
+ * Found in scss/content/_button.scss#62: `transition:`
+ * Found in scss/content/_button.scss#63: `background-color var(#{$css-var-prefix}transition),`
+ * Found in scss/content/_button.scss#64: `border-color var(#{$css-var-prefix}transition),`
+ * Found in scss/content/_button.scss#65: `color var(#{$css-var-prefix}transition),`
+ * Found in scss/content/_button.scss#66: `box-shadow var(#{$css-var-prefix}transition);`
+ * Found in scss/content/_button.scss#94: `// .secondary, .contrast & .outline`
+ * Found in scss/content/_button.scss#119: `// Contrast`
+ * Found in scss/content/_button.scss#120: `#{$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
+ * Found in scss/content/_button.scss#121: `#{$css-var-prefix}background-color: var(#{$css-var-prefix}contrast-background);`
+ * Found in scss/content/_button.scss#122: `#{$css-var-prefix}border-color: var(#{$css-var-prefix}contrast-border);`
+ * Found in scss/content/_button.scss#123: `#{$css-var-prefix}color: var(#{$css-var-prefix}contrast-inverse);`
+ * Found in scss/content/_button.scss#126: `#{$css-var-prefix}background-color: var(#{$css-var-prefix}contrast-hover-background);`
+ * Found in scss/content/_button.scss#127: `#{$css-var-prefix}border-color: var(#{$css-var-prefix}contrast-hover-border);`
+ * Found in scss/content/_button.scss#128: `#{$css-var-prefix}color: var(#{$css-var-prefix}contrast-inverse);`
+ * Found in scss/content/_button.scss#135: `0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}contrast-focus);`
+ * Found in scss/content/_button.scss#142: `#{$css-var-prefix}background-color: transparent;`
+ * Found in scss/content/_button.scss#147: `#{$css-var-prefix}background-color: transparent;`
+ * Found in scss/content/_button.scss#166: `// Outline (contrast)`
+ * Found in scss/content/_button.scss#168: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast {`
+ * Found in scss/content/_button.scss#169: `#{$css-var-prefix}color: var(#{$css-var-prefix}contrast);`
+ * Found in scss/content/_button.scss#170: `#{$css-var-prefix}border-color: var(#{$css-var-prefix}contrast);`
+ * Found in scss/content/_button.scss#173: `#{$css-var-prefix}color: var(#{$css-var-prefix}contrast-hover);`
+ * Found in scss/content/_button.scss#174: `#{$css-var-prefix}border-color: var(#{$css-var-prefix}contrast-hover);`
+ * Found in scss/content/_embedded.scss#26: `#{$parent-selector} audio:not([controls]) {`
+ * Found in scss/content/_link.scss#12: `#{$css-var-prefix}background-color: transparent;`
+ * Found in scss/content/_link.scss#21: `@if $enable-transitions {`
+ * Found in scss/content/_link.scss#22: `transition:`
+ * Found in scss/content/_link.scss#23: `background-color var(#{$css-var-prefix}transition),`
+ * Found in scss/content/_link.scss#24: `color var(#{$css-var-prefix}transition),`
+ * Found in scss/content/_link.scss#25: `text-decoration var(#{$css-var-prefix}transition),`
+ * Found in scss/content/_link.scss#26: `box-shadow var(#{$css-var-prefix}transition);`
+ * Found in scss/content/_link.scss#51: `// Contrast`
+ * Found in scss/content/_link.scss#52: `&.contrast {`
+ * Found in scss/content/_link.scss#53: `#{$css-var-prefix}color: var(#{$css-var-prefix}contrast);`
+ * Found in scss/content/_link.scss#54: `#{$css-var-prefix}underline: var(#{$css-var-prefix}contrast-underline);`
+ * Found in scss/content/_link.scss#57: `#{$css-var-prefix}color: var(#{$css-var-prefix}contrast-hover);`
+ * Found in scss/content/_link.scss#58: `#{$css-var-prefix}underline: var(#{$css-var-prefix}contrast-hover-underline);`
+ * Found in scss/content/_table.scss#51: `// Striped`
+ * Found in scss/content/_table.scss#54: `&.striped {`
+ * Found in scss/content/_table.scss#55: `tbody tr:nth-child(odd) th,`
+ * Found in scss/content/_table.scss#56: `tbody tr:nth-child(odd) td {`
+ * Found in scss/content/_table.scss#57: `background-color: var(#{$css-var-prefix}table-row-stripped-background-color);`
+ * Found in scss/content/_typography.scss#16: `#{$parent-selector} strong {`
+ * Found in scss/forms/_basics.scss#34: `// Remove the inheritance of text transform in Edge, Firefox, and IE`
+ * Found in scss/forms/_basics.scss#36: `text-transform: none;`
+ * Found in scss/forms/_basics.scss#181: `@if $enable-transitions {`
+ * Found in scss/forms/_basics.scss#182: `transition:`
+ * Found in scss/forms/_basics.scss#183: `background-color var(#{$css-var-prefix}transition),`
+ * Found in scss/forms/_basics.scss#184: `border-color var(#{$css-var-prefix}transition),`
+ * Found in scss/forms/_basics.scss#185: `color var(#{$css-var-prefix}transition),`
+ * Found in scss/forms/_basics.scss#186: `box-shadow var(#{$css-var-prefix}transition);`
+ * Found in scss/forms/_basics.scss#241: `#{$parent-selector} label[aria-disabled="true"],`
+ * Found in scss/forms/_basics.scss#249: `#{$parent-selector} label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#290: `&[aria-invalid="true"]:not(select) {`
+ * Found in scss/forms/_basics.scss#327: `&[aria-invalid="true"] {`
+ * Found in scss/forms/_basics.scss#363: `&:is([aria-invalid], [aria-invalid="true"], [aria-invalid="false"]) {`
+ * Found in scss/forms/_basics.scss#392: `background-color: transparent;`
+ * Found in scss/forms/_basics.scss#458: `&[aria-invalid="true"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#90: `$switch-transition: 0.1s ease-in-out;`
+ * Found in scss/forms/_checkbox-radio-switch.scss#113: `@if $enable-transitions {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#114: `transition: margin $switch-transition;`
+ * Found in scss/forms/_checkbox-radio-switch.scss#151: `&[aria-invalid="true"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#172: `&[aria-invalid="true"] {`
+ * Found in scss/forms/_input-range.scss#5: `$height-track: 0.375rem;`
+ * Found in scss/forms/_input-range.scss#10: `@mixin slider-track {`
+ * Found in scss/forms/_input-range.scss#12: `height: $height-track;`
+ * Found in scss/forms/_input-range.scss#16: `@if $enable-transitions {`
+ * Found in scss/forms/_input-range.scss#17: `transition:`
+ * Found in scss/forms/_input-range.scss#18: `background-color var(#{$css-var-prefix}transition),`
+ * Found in scss/forms/_input-range.scss#19: `box-shadow var(#{$css-var-prefix}transition);`
+ * Found in scss/forms/_input-range.scss#28: `margin-top: #{(-($height-thumb * 0.5) + ($height-track * 0.5))};`
+ * Found in scss/forms/_input-range.scss#34: `@if $enable-transitions {`
+ * Found in scss/forms/_input-range.scss#35: `transition:`
+ * Found in scss/forms/_input-range.scss#36: `background-color var(#{$css-var-prefix}transition),`
+ * Found in scss/forms/_input-range.scss#37: `transform var(#{$css-var-prefix}transition);`
+ * Found in scss/forms/_input-range.scss#55: `&::-webkit-slider-runnable-track {`
+ * Found in scss/forms/_input-range.scss#56: `@include slider-track;`
+ * Found in scss/forms/_input-range.scss#59: `&::-moz-range-track {`
+ * Found in scss/forms/_input-range.scss#60: `@include slider-track;`
+ * Found in scss/forms/_input-range.scss#63: `&::-ms-track {`
+ * Found in scss/forms/_input-range.scss#64: `@include slider-track;`
+ * Found in scss/forms/_input-range.scss#88: `transform: scale(1.25);`
+ * Found in scss/forms/_input-range.scss#92: `transform: scale(1.25);`
+ * Found in scss/forms/_input-range.scss#96: `transform: scale(1.25);`
+ * Found in scss/forms/_input-search.scss#39: `&[aria-invalid="true"] {`
+ * Found in scss/helpers/_functions.scss#2: `@use "sass:string";`
+ * Found in scss/helpers/_functions.scss#6: `@return string.unquote(`
+ * Found in scss/helpers/_functions.scss#20: `$box-shadow-blur-strength: 6rem;`
+ * Found in scss/helpers/_functions.scss#25: `$box-shadow-blur-strength * 0.029,`
+ * Found in scss/helpers/_functions.scss#31: `$box-shadow-blur-strength * 0.067,`
+ * Found in scss/helpers/_functions.scss#37: `$box-shadow-blur-strength * 0.125,`
+ * Found in scss/helpers/_functions.scss#43: `$box-shadow-blur-strength * 0.225,`
+ * Found in scss/helpers/_functions.scss#49: `$box-shadow-blur-strength * 0.417,`
+ * Found in scss/helpers/_functions.scss#53: `shadow-layer($box-shadow-elevation, $box-shadow-blur-strength, $box-shadow-opacity, $color),`
+ * Found in scss/layout/_container.scss#19: `$first-breakpoint: true;`
+ * Found in scss/layout/_document.scss#39: `-webkit-tap-highlight-color: transparent; // 4`
+ * Found in scss/layout/_landmarks.scss#33: `$first-breakpoint: true;`
+ * Found in scss/utilities/_accessibility.scss#16: `// Change the cursor on control elements in all browsers (opinionated)`
+ * Found in scss/utilities/_accessibility.scss#17: `#{$parent-selector} [aria-controls] {`
+ * Found in scss/utilities/_accessibility.scss#22: `#{$parent-selector} [aria-disabled="true"],`
+ * Found in scss/utilities/_reduce-motion.scss#4: `@if map.get($modules, "utilities/reduce-motion") and enable-transitions and enable-important {`
+ * Found in scss/utilities/_reduce-motion.scss#16: `// 4. Remove transitions when motion is reduced (opinionated)`
+ * Found in scss/utilities/_reduce-motion.scss#18: `#{$parent-selector} *:not([aria-busy="true"]),`
+ * Found in scss/utilities/_reduce-motion.scss#19: `#{$parent-selector} :not([aria-busy="true"])::before,`
+ * Found in scss/utilities/_reduce-motion.scss#20: `#{$parent-selector} :not([aria-busy="true"])::after {`
+ * Found in scss/utilities/_reduce-motion.scss#26: `transition-delay: 0s !important; // 4`
+ * Found in scss/utilities/_reduce-motion.scss#27: `transition-duration: 0s !important; // 4`
+ *
+ * Add your styles here
+ */

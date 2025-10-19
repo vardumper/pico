@@ -1,0 +1,25 @@
+/** SASS for the <textarea> HTML element
+ *
+ * Found in scss/components/_loading.scss#10: `#{$parent-selector} [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/forms/_basics.scss#6: `$helper-previous-tags: "input, select, textarea, fieldset";`
+ * Found in scss/forms/_basics.scss#21: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#51: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#152: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#159: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#168: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#200: `#{$parent-selector} :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#211: `#{$parent-selector} :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#227: `#{$parent-selector} :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#240: `#{$parent-selector} textarea[disabled],`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ * Found in scss/forms/_basics.scss#254: `#{$parent-selector} :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#361: `#{$parent-selector} :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#373: `#{$parent-selector} textarea::placeholder,`
+ * Found in scss/forms/_basics.scss#374: `#{$parent-selector} textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#383: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#425: `#{$parent-selector} textarea {`
+ * Found in scss/forms/_basics.scss#467: `> :where(input, select, textarea) {`
+ * Found in scss/utilities/_accessibility.scss#46: `#{$parent-selector} textarea,`
+ *
+ * Add your styles here
+ */

@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use PicoCss\Pico\Command\CreateSassForHtmlElements;
+use PicoCss\Pico\Command\MergeSpecifications;
+use Symfony\Component\Console\Output\OutputInterface;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$application = new Silly\Application('PicoCSS Specification Merger', '1.0.0');
+// Remove type-hint from $input argument to fix Silly closure error
+$application->command('merge:specs', function ($input, OutputInterface $output) {
+   return (new MergeSpecifications())(null, $input, $output);
+})->descriptions('Merges the PicoCSS specifications into the HTML5 specifications from Extended HTMLDocument');
+
+// $application->command('make:sass', function ($input, OutputInterface $output) {
+//    return (new CreateSassForHtmlElements())($input, $output);
+// })->descriptions('Creates SASS files for all HTML elements based on the compiled PHP Element classes');
+
+$application->run();

@@ -26,5 +26,13 @@
   "support": {
     "issues": "https://github.com/picocss/pico/issues/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "require": {
+    "vardumper/extended-htmldocument": "^0.1.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "PicoCss\\Pico\\": "src/"
+    }
+  }
 }
