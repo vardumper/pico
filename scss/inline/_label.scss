@@ -2,18 +2,18 @@
  *
  * Found in scss/components/_dropdown.scss#225: `label {`
  * Found in scss/components/_dropdown.scss#230: `&:has(label):hover {`
- * Found in scss/components/_dropdown.scss#277: `#{$parent-selector} label > details.dropdown {`
+ * Found in scss/components/_dropdown.scss#277: `#{\$parent-selector} label > details.dropdown {`
  * Found in scss/components/_nav.scss#83: `&[aria-label="breadcrumb"] {`
  * Found in scss/components/_nav.scss#149: `&[aria-label="breadcrumb"] {`
- * Found in scss/forms/_basics.scss#136: `#{$parent-selector} label,`
- * Found in scss/forms/_basics.scss#141: `font-weight: var(#{$css-var-prefix}form-label-font-weight, var(#{$css-var-prefix}font-weight));`
- * Found in scss/forms/_basics.scss#241: `#{$parent-selector} label[aria-disabled="true"],`
- * Found in scss/forms/_basics.scss#249: `#{$parent-selector} label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#136: `#{\$parent-selector} label,`
+ * Found in scss/forms/_basics.scss#141: `font-weight: var(#{\$css-var-prefix}form-label-font-weight, var(#{\$css-var-prefix}font-weight));`
+ * Found in scss/forms/_basics.scss#241: `#{\$parent-selector} label[aria-disabled="true"],`
+ * Found in scss/forms/_basics.scss#249: `#{\$parent-selector} label[aria-disabled="true"] input[disabled] {`
  * Found in scss/forms/_basics.scss#465: `// Styles for Input inside a label`
- * Found in scss/forms/_basics.scss#466: `#{$parent-selector} label {`
- * Found in scss/forms/_checkbox-radio-switch.scss#11: `#{$parent-selector} label {`
+ * Found in scss/forms/_basics.scss#466: `#{\$parent-selector} label {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#11: `#{\$parent-selector} label {`
  * Found in scss/forms/_checkbox-radio-switch.scss#46: `& ~ label {`
- * Found in scss/utilities/_accessibility.scss#43: `#{$parent-selector} label,`
+ * Found in scss/utilities/_accessibility.scss#43: `#{\$parent-selector} label,`
  *
  * Add your styles here
  */

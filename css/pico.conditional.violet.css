@@ -663,11 +663,6 @@ nav details.dropdown summary:focus-visible {
 /**
  * Landmarks
  */
-body {
-  width: 100%;
-  margin: 0;
-}
-
 main {
   display: block;
 }
@@ -775,79 +770,9 @@ main {
   top: -0.5em;
 }
 
-.pico address,
-.pico blockquote,
-.pico dl,
-.pico ol,
-.pico p,
-.pico pre,
-.pico table,
-.pico ul {
-  margin-top: 0;
-  margin-bottom: var(--pico-typography-spacing-vertical);
-  color: var(--pico-color);
-  font-style: normal;
-  font-weight: var(--pico-font-weight);
-}
-
-.pico h1,
-.pico h2,
-.pico h3,
-.pico h4,
-.pico h5,
-.pico h6 {
-  margin-top: 0;
-  margin-bottom: var(--pico-typography-spacing-vertical);
-  color: var(--pico-color);
-  font-weight: var(--pico-font-weight);
-  font-size: var(--pico-font-size);
-  line-height: var(--pico-line-height);
-  font-family: var(--pico-font-family);
-}
-
-.pico h1 {
-  --pico-color: var(--pico-h1-color);
-}
-
-.pico h2 {
-  --pico-color: var(--pico-h2-color);
-}
-
-.pico h3 {
-  --pico-color: var(--pico-h3-color);
-}
-
-.pico h4 {
-  --pico-color: var(--pico-h4-color);
-}
-
-.pico h5 {
-  --pico-color: var(--pico-h5-color);
-}
-
-.pico h6 {
-  --pico-color: var(--pico-h6-color);
-}
-
-.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
-  margin-top: var(--pico-typography-spacing-top);
-}
-
+/** @see moved to inline/block elements */
 .pico p {
   margin-bottom: var(--pico-typography-spacing-vertical);
-}
-
-.pico hgroup {
-  margin-bottom: var(--pico-typography-spacing-vertical);
-}
-.pico hgroup > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.pico hgroup > *:not(:first-child):last-child {
-  --pico-color: var(--pico-muted-color);
-  --pico-font-weight: unset;
-  font-size: 1rem;
 }
 
 .pico :where(ol, ul) li {
@@ -868,35 +793,6 @@ main {
   background-color: var(--pico-mark-background-color);
   color: var(--pico-mark-color);
   vertical-align: baseline;
-}
-
-.pico blockquote {
-  display: block;
-  margin: var(--pico-typography-spacing-vertical) 0;
-  padding: var(--pico-spacing);
-  border-right: none;
-  border-left: 0.25rem solid var(--pico-blockquote-border-color);
-  border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
-  border-inline-end: none;
-}
-.pico blockquote footer {
-  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.5);
-  color: var(--pico-blockquote-footer-color);
-}
-
-.pico abbr[title] {
-  border-bottom: 1px dotted;
-  text-decoration: none;
-  cursor: help;
-}
-
-.pico ins {
-  color: var(--pico-ins-color);
-  text-decoration: none;
-}
-
-.pico del {
-  color: var(--pico-del-color);
 }
 
 .pico ::-moz-selection {
@@ -1157,18 +1053,8 @@ main {
   vertical-align: middle;
 }
 
-.pico audio,
 .pico video {
   display: inline-block;
-}
-
-.pico audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-.pico :where(iframe) {
-  border-style: none;
 }
 
 .pico img {
@@ -1261,21 +1147,8 @@ main {
 /**
  * Misc
  */
-.pico hr {
-  height: 0;
-  margin: var(--pico-typography-spacing-vertical) 0;
-  border: 0;
-  border-top: 1px solid var(--pico-muted-border-color);
-  color: inherit;
-}
-
-.pico [hidden],
-.pico template {
+.pico [hidden] {
   display: none !important;
-}
-
-.pico canvas {
-  display: inline-block;
 }
 
 /**
@@ -1298,13 +1171,6 @@ main {
 
 .pico select {
   text-transform: none;
-}
-
-.pico legend {
-  max-width: 100%;
-  padding: 0;
-  color: inherit;
-  white-space: normal;
 }
 
 .pico textarea {
@@ -1362,24 +1228,11 @@ main {
   height: calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);
 }
 
-.pico fieldset {
-  width: 100%;
-  margin: 0;
-  margin-bottom: var(--pico-spacing);
-  padding: 0;
-  border: 0;
-}
-
-.pico label,
-.pico fieldset legend {
+.pico label {
   display: block;
   margin-bottom: calc(var(--pico-spacing) * 0.375);
   color: var(--pico-color);
   font-weight: var(--pico-form-label-font-weight, var(--pico-font-weight));
-}
-
-.pico fieldset legend {
-  margin-bottom: calc(var(--pico-spacing) * 0.5);
 }
 
 .pico input:not([type=checkbox], [type=radio]),
@@ -1558,20 +1411,6 @@ main {
   --pico-icon-height: calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);
   background-position: top right 0.75rem !important;
   background-size: 1rem var(--pico-icon-height) !important;
-}
-
-.pico :where(input, select, textarea, fieldset, .grid) + small {
-  display: block;
-  width: 100%;
-  margin-top: calc(var(--pico-spacing) * -0.75);
-  margin-bottom: var(--pico-spacing);
-  color: var(--pico-muted-color);
-}
-.pico :where(input, select, textarea, fieldset, .grid)[aria-invalid=false] + small {
-  color: var(--pico-ins-color);
-}
-.pico :where(input, select, textarea, fieldset, .grid)[aria-invalid=true] + small {
-  color: var(--pico-del-color);
 }
 
 .pico label > :where(input, select, textarea) {
@@ -1987,37 +1826,8 @@ main {
 }
 
 /**
- * Card (<article>)
+ * @see article, header and footer scss
  */
-.pico article {
-  margin-bottom: var(--pico-block-spacing-vertical);
-  padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
-  border-radius: var(--pico-border-radius);
-  background: var(--pico-card-background-color);
-  box-shadow: var(--pico-card-box-shadow);
-}
-.pico article > header,
-.pico article > footer {
-  margin-right: calc(var(--pico-block-spacing-horizontal) * -1);
-  margin-left: calc(var(--pico-block-spacing-horizontal) * -1);
-  padding: calc(var(--pico-block-spacing-vertical) * 0.66) var(--pico-block-spacing-horizontal);
-  background-color: var(--pico-card-sectioning-background-color);
-}
-.pico article > header {
-  margin-top: calc(var(--pico-block-spacing-vertical) * -1);
-  margin-bottom: var(--pico-block-spacing-vertical);
-  border-bottom: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-top-right-radius: var(--pico-border-radius);
-  border-top-left-radius: var(--pico-border-radius);
-}
-.pico article > footer {
-  margin-top: var(--pico-block-spacing-vertical);
-  margin-bottom: calc(var(--pico-block-spacing-vertical) * -1);
-  border-top: var(--pico-border-width) solid var(--pico-card-border-color);
-  border-bottom-right-radius: var(--pico-border-radius);
-  border-bottom-left-radius: var(--pico-border-radius);
-}
-
 /**
  * Dropdown (details.dropdown)
  */
@@ -2834,296 +2644,2043 @@ main {
   }
 }
 /** SASS for the <article> HTML element
+ *
  * Add your styles here
  */
+.pico article {
+  margin-bottom: var(--pico-block-spacing-vertical);
+  padding: var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);
+  border-radius: var(--pico-border-radius);
+  background: var(--pico-card-background-color);
+  box-shadow: var(--pico-card-box-shadow);
+}
+
 /** SASS for the <aside> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <audio> HTML element
+ *
  * Add your styles here
  */
+.pico :where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+.pico audio {
+  display: inline-block;
+}
+
+.pico audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
 /** SASS for the <blockquote> HTML element
+ *
  * Add your styles here
  */
+.pico blockquote {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
+.pico blockquote {
+  display: block;
+  margin: var(--pico-typography-spacing-vertical) 0;
+  padding: var(--pico-spacing);
+  border-right: none;
+  border-left: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-start: 0.25rem solid var(--pico-blockquote-border-color);
+  border-inline-end: none;
+}
+.pico blockquote footer {
+  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.5);
+  color: var(--pico-blockquote-footer-color);
+}
+
 /** SASS for the <body> HTML element
+ *
  * Add your styles here
  */
+body {
+  width: 100%;
+  margin: 0;
+}
+
 /** SASS for the <canvas> HTML element
+ *
  * Add your styles here
  */
+.pico :where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+.pico canvas {
+  display: inline-block;
+}
+
 /** SASS for the <caption> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <colgroup> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <datalist> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <dd> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <dl> HTML element
+ *
  * Add your styles here
  */
+.pico dl {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
+.pico :where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.25);
+}
+
 /** SASS for the <dt> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <del> HTML element
+ *
  * Add your styles here
  */
+.pico del {
+  color: var(--pico-del-color);
+}
+
 /** SASS for the <details> HTML element
+ *
+ * @see only used in component/accordion - no default styles
  * Add your styles here
  */
 /** SASS for the <dialog> HTML element
+ *
+ * @see only used in component/modal - no default styles
  * Add your styles here
  */
 /** SASS for the <div> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <embed> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <fieldset> HTML element
+ *
  * Add your styles here
  */
+.pico fieldset {
+  width: 100%;
+  margin: 0;
+  margin-bottom: var(--pico-spacing);
+  padding: 0;
+  border: 0;
+}
+
 /** SASS for the <figure> HTML element
+ *
  * Add your styles here
  */
+.pico figure {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 /** SASS for the <figcaption> HTML element
+ *
  * Add your styles here
  */
+.pico figure figcaption {
+  padding: calc(var(--pico-spacing) * 0.5) 0;
+  color: var(--pico-muted-color);
+}
+
 /** SASS for the <footer> HTML element
+ *
+ * Found in scss/components/_modal.scss#71: `> footer {`
+ *
  * Add your styles here
  */
+.pico blockquote footer {
+  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.5);
+  color: var(--pico-blockquote-footer-color);
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.pico body > footer {
+  padding-block: var(--pico-block-spacing-vertical);
+}
+
+/**
+ * Card (<article>)
+ */
+.pico article > footer {
+  margin-top: var(--pico-block-spacing-vertical);
+  margin-right: calc(var(--pico-block-spacing-horizontal) * -1);
+  margin-bottom: calc(var(--pico-block-spacing-vertical) * -1);
+  margin-left: calc(var(--pico-block-spacing-horizontal) * -1);
+  padding: calc(var(--pico-block-spacing-vertical) * 0.66) var(--pico-block-spacing-horizontal);
+  border-top: var(--pico-border-width) solid var(--pico-card-border-color);
+  border-bottom-right-radius: var(--pico-border-radius);
+  border-bottom-left-radius: var(--pico-border-radius);
+  background-color: var(--pico-card-sectioning-background-color);
+}
+
 /** SASS for the <form> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <html> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <header> HTML element
+ *
+ * Found in scss/components/_card.scss#17: `> header,`
+ * Found in scss/components/_card.scss#26: `> header {`
+ * Found in scss/components/_modal.scss#58: `> header {`
+ *
  * Add your styles here
  */
+.pico body > header {
+  padding-block: var(--pico-block-spacing-vertical);
+}
+
+/**
+ * Card (<article>)
+ */
+.pico article > header {
+  margin-top: calc(var(--pico-block-spacing-vertical) * -1);
+  margin-right: calc(var(--pico-block-spacing-horizontal) * -1);
+  margin-bottom: var(--pico-block-spacing-vertical);
+  margin-left: calc(var(--pico-block-spacing-horizontal) * -1);
+  padding: calc(var(--pico-block-spacing-vertical) * 0.66) var(--pico-block-spacing-horizontal);
+  border-bottom: var(--pico-border-width) solid var(--pico-card-border-color);
+  border-top-right-radius: var(--pico-border-radius);
+  border-top-left-radius: var(--pico-border-radius);
+  background-color: var(--pico-card-sectioning-background-color);
+}
+
 /** SASS for the <h1> HTML element
+ *
  * Add your styles here
  */
+.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+
+.pico h1 {
+  --pico-color: var(--pico-h1-color);
+}
+
+.pico h1 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
 /** SASS for the <h2> HTML element
+ *
  * Add your styles here
  */
+.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+
+.pico h2 {
+  --pico-color: var(--pico-h2-color);
+}
+
+.pico h2 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
 /** SASS for the <h3> HTML element
+ *
  * Add your styles here
  */
+.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+
+.pico h3 {
+  --pico-color: var(--pico-h3-color);
+}
+
+.pico h3 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
 /** SASS for the <h4> HTML element
+ *
  * Add your styles here
  */
+.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+
+.pico h4 {
+  --pico-color: var(--pico-h4-color);
+}
+
+.pico h4 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
 /** SASS for the <h5> HTML element
+ *
  * Add your styles here
  */
+.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+
+.pico h5 {
+  --pico-color: var(--pico-h5-color);
+}
+
+.pico h5 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
 /** SASS for the <h6> HTML element
+ *
  * Add your styles here
  */
+.pico :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) ~ :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: var(--pico-typography-spacing-top);
+}
+
+.pico h6 {
+  --pico-color: var(--pico-h6-color);
+}
+
+.pico h6 {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  font-size: var(--pico-font-size);
+  line-height: var(--pico-line-height);
+  font-family: var(--pico-font-family);
+}
+
 /** SASS for the <hgroup> HTML element
+ *
  * Add your styles here
  */
+.pico hgroup {
+  margin-bottom: var(--pico-typography-spacing-vertical);
+}
+.pico hgroup > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.pico hgroup > *:not(:first-child):last-child {
+  --pico-color: var(--pico-muted-color);
+  --pico-font-weight: unset;
+  font-size: 1rem;
+}
+
 /** SASS for the <hr> HTML element
+ *
  * Add your styles here
  */
+.pico hr {
+  height: 0;
+  margin: var(--pico-typography-spacing-vertical) 0;
+  border: 0;
+  border-top: 1px solid var(--pico-muted-border-color);
+  color: inherit;
+}
+
 /** SASS for the <iframe> HTML element
+ *
  * Add your styles here
  */
+.pico :where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+.pico :where(iframe) {
+  border-style: none;
+}
+
 /** SASS for the <ins> HTML element
+ *
  * Add your styles here
  */
+.pico ins {
+  color: var(--pico-ins-color);
+  text-decoration: none;
+}
+
 /** SASS for the <legend> HTML element
+ *
  * Add your styles here
  */
+.pico legend {
+  max-width: 100%;
+  padding: 0;
+  color: inherit;
+  white-space: normal;
+}
+
+.pico fieldset legend {
+  display: block;
+  margin-bottom: calc(var(--pico-spacing) * 0.375);
+  margin-bottom: calc(var(--pico-spacing) * 0.5);
+  color: var(--pico-color);
+  font-weight: var(--pico-form-label-font-weight, var(--pico-font-weight));
+}
+
 /** SASS for the <li> HTML element
- * Add your styles here
+ *
+ * Found in scss/components/_dropdown.scss#189: `li {`
+ * Found in scss/components/_nav.scss#45: `li {`
+ * Found in scss/components/_nav.scss#87: `& ul li {`
+ * Found in scss/components/_nav.scss#127: `li {`
+ * Found in scss/components/_nav.scss#131: `li {`
+ * Found in scss/components/_nav.scss#150: `& ul li {`
+ * Found in scss/content/_typography.scss#119: `li {`
+ * Found in scss/content/_typography.scss#131: `\$parent-selector ul li {`
+  * Add your styles here
  */
 /** SASS for the <main> HTML element
+ *
+ * Found in scss/colors/_index.scss#466: `main: $red,`
+ * Found in scss/colors/_index.scss#488: `main: $pink,`
+ * Found in scss/colors/_index.scss#510: `main: $fuchsia,`
+ * Found in scss/colors/_index.scss#532: `main: $purple,`
+ * Found in scss/colors/_index.scss#554: `main: $violet,`
+ * Found in scss/colors/_index.scss#576: `main: $indigo,`
+ * Found in scss/colors/_index.scss#598: `main: $blue,`
+ * Found in scss/colors/_index.scss#620: `main: $azure,`
+ * Found in scss/colors/_index.scss#642: `main: $cyan,`
+ * Found in scss/colors/_index.scss#664: `main: $jade,`
+ * Found in scss/colors/_index.scss#686: `main: $green,`
+ * Found in scss/colors/_index.scss#708: `main: $lime,`
+ * Found in scss/colors/_index.scss#730: `main: $yellow,`
+ * Found in scss/colors/_index.scss#752: `main: $amber,`
+ * Found in scss/colors/_index.scss#774: `main: $pumpkin,`
+ * Found in scss/colors/_index.scss#796: `main: $orange,`
+ * Found in scss/colors/_index.scss#818: `main: $sand,`
+ * Found in scss/colors/_index.scss#840: `main: $grey,`
+ * Found in scss/colors/_index.scss#862: `main: $zinc,`
+ * Found in scss/colors/_index.scss#884: `main: $slate,`
+ * Found in scss/layout/_landmarks.scss#20: `// Render the `main` element consistently in IE`
+ * Found in scss/layout/_landmarks.scss#21: `main {`
+ * Found in scss/layout/_landmarks.scss#29: `> main,`
+ * Found in scss/layout/_landmarks.scss#31: `// <header>, <main>, <footer> as containers`
+ * Found in scss/layout/_landmarks.scss#56: `// Regular vertical spacings for <header>, <main>, <footer>`
+ *
  * Add your styles here
  */
 /** SASS for the <map> HTML element
+ *
+ * Found in scss/components/_accordion.scss#1: `@use "sass:map";`
+ * Found in scss/components/_accordion.scss#4: `@if map.get($modules, "components/accordion") {`
+ * Found in scss/components/_card.scss#1: `@use "sass:map";`
+ * Found in scss/components/_card.scss#4: `@if map.get($modules, "components/card") {`
+ * Found in scss/components/_dropdown.scss#1: `@use "sass:map";`
+ * Found in scss/components/_dropdown.scss#4: `@if map.get($modules, "components/dropdown") and $enable-classes {`
+ * Found in scss/components/_group.scss#1: `@use "sass:map";`
+ * Found in scss/components/_group.scss#4: `@if map.get($modules, "components/group") {`
+ * Found in scss/components/_loading.scss#1: `@use "sass:map";`
+ * Found in scss/components/_loading.scss#4: `@if map.get($modules, "components/loading") {`
+ * Found in scss/components/_modal.scss#1: `@use "sass:map";`
+ * Found in scss/components/_modal.scss#4: `@if map.get($modules, "components/modal") {`
+ * Found in scss/components/_modal.scss#46: `@if map.get($breakpoints, "sm") {`
+ * Found in scss/components/_modal.scss#47: `@media (min-width: map.get(map.get($breakpoints, "sm"), "breakpoint")) {`
+ * Found in scss/components/_modal.scss#48: `max-width: map.get(map.get($breakpoints, "sm"), "viewport");`
+ * Found in scss/components/_modal.scss#52: `@if map.get($breakpoints, "md") {`
+ * Found in scss/components/_modal.scss#53: `@media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {`
+ * Found in scss/components/_modal.scss#54: `max-width: map.get(map.get($breakpoints, "md"), "viewport");`
+ * Found in scss/components/_nav.scss#1: `@use "sass:map";`
+ * Found in scss/components/_nav.scss#4: `@if map.get($modules, "components/nav") {`
+ * Found in scss/components/_progress.scss#1: `@use "sass:map";`
+ * Found in scss/components/_progress.scss#4: `@if map.get($modules, "components/progress") {`
+ * Found in scss/components/_tooltip.scss#1: `@use "sass:map";`
+ * Found in scss/components/_tooltip.scss#4: `@if map.get($modules, "components/tooltip") {`
+ * Found in scss/content/_button.scss#1: `@use "sass:map";`
+ * Found in scss/content/_button.scss#4: `@if map.get($modules, "content/button") {`
+ * Found in scss/content/_code.scss#1: `@use "sass:map";`
+ * Found in scss/content/_code.scss#4: `@if map.get($modules, "content/code") {`
+ * Found in scss/content/_embedded.scss#1: `@use "sass:map";`
+ * Found in scss/content/_embedded.scss#4: `@if map.get($modules, "content/embedded") {`
+ * Found in scss/content/_figure.scss#1: `@use "sass:map";`
+ * Found in scss/content/_figure.scss#4: `@if map.get($modules, "content/figure") {`
+ * Found in scss/content/_link.scss#1: `@use "sass:map";`
+ * Found in scss/content/_link.scss#4: `@if map.get($modules, "content/link") {`
+ * Found in scss/content/_misc.scss#1: `@use "sass:map";`
+ * Found in scss/content/_misc.scss#4: `@if map.get($modules, "content/misc") {`
+ * Found in scss/content/_table.scss#1: `@use "sass:map";`
+ * Found in scss/content/_table.scss#4: `@if map.get($modules, "content/table") {`
+ * Found in scss/content/_typography.scss#1: `@use "sass:map";`
+ * Found in scss/content/_typography.scss#4: `@if map.get($modules, "content/typography") {`
+ * Found in scss/forms/_basics.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_basics.scss#4: `@if map.get($modules, "forms/basics") {`
+ * Found in scss/forms/_basics.scss#441: `@if map.get($modules, "layout/grid") and $enable-classes {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_checkbox-radio-switch.scss#4: `@if map.get($modules, "forms/checkbox-radio-switch") {`
+ * Found in scss/forms/_input-color.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_input-color.scss#15: `@if map.get($modules, "forms/input-color") {`
+ * Found in scss/forms/_input-date.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_input-date.scss#4: `@if map.get($modules, "forms/input-date") {`
+ * Found in scss/forms/_input-file.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_input-file.scss#4: `@if map.get($modules, "forms/input-file") {`
+ * Found in scss/forms/_input-range.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_input-range.scss#41: `@if map.get($modules, "forms/input-range") {`
+ * Found in scss/forms/_input-search.scss#1: `@use "sass:map";`
+ * Found in scss/forms/_input-search.scss#4: `@if map.get($modules, "forms/input-search") {`
+ * Found in scss/layout/_container.scss#1: `@use "sass:map";`
+ * Found in scss/layout/_container.scss#4: `@if map.get($modules, "layout/container") and $enable-classes {`
+ * Found in scss/layout/_container.scss#22: `@media (min-width: map.get($values, "breakpoint")) {`
+ * Found in scss/layout/_container.scss#23: `max-width: map.get($values, "viewport");`
+ * Found in scss/layout/_document.scss#1: `@use "sass:map";`
+ * Found in scss/layout/_document.scss#4: `@if map.get($modules, "layout/document") {`
+ * Found in scss/layout/_grid.scss#1: `@use "sass:map";`
+ * Found in scss/layout/_grid.scss#4: `@if map.get($modules, "layout/grid") and $enable-classes {`
+ * Found in scss/layout/_grid.scss#16: `@if map.get($breakpoints, "md") {`
+ * Found in scss/layout/_grid.scss#17: `@media (min-width: map.get(map.get($breakpoints, "md"), "breakpoint")) {`
+ * Found in scss/layout/_landmarks.scss#1: `@use "sass:map";`
+ * Found in scss/layout/_landmarks.scss#4: `@if map.get($modules, "layout/landmarks") {`
+ * Found in scss/layout/_landmarks.scss#43: `@media (min-width: map.get($values, "breakpoint")) {`
+ * Found in scss/layout/_landmarks.scss#44: `max-width: map.get($values, "viewport");`
+ * Found in scss/layout/_overflow-auto.scss#1: `@use "sass:map";`
+ * Found in scss/layout/_overflow-auto.scss#4: `@if map.get($modules, "layout/overflow-auto") and $enable-classes {`
+ * Found in scss/layout/_section.scss#1: `@use "sass:map";`
+ * Found in scss/layout/_section.scss#4: `@if map.get($modules, "layout/section") {`
+ * Found in scss/utilities/_accessibility.scss#1: `@use "sass:map";`
+ * Found in scss/utilities/_accessibility.scss#4: `@if map.get($modules, "utilities/accessibility") {`
+ * Found in scss/utilities/_reduce-motion.scss#1: `@use "sass:map";`
+ * Found in scss/utilities/_reduce-motion.scss#4: `@if map.get($modules, "utilities/reduce-motion") and enable-transitions and enable-important {`
+ *
  * Add your styles here
  */
 /** SASS for the <menu> HTML element
+ *
+ * Found in scss/components/_dropdown.scss#157: `// Submenu`
+ *
  * Add your styles here
  */
 /** SASS for the <nav> HTML element
+ *
+ * Found in scss/components/_dropdown.scss#39: `// inside a nav`
+ * Found in scss/components/_dropdown.scss#41: `\$parent-selector nav details.dropdown {`
+ * Found in scss/components/_dropdown.scss#123: `// Dropdown inside a nav`
+ * Found in scss/components/_dropdown.scss#125: `\$parent-selector nav details.dropdown {`
+ * Found in scss/components/_dropdown.scss#127: `margin: calc(var(\$css-var-prefixnav-element-spacing-vertical) * -1) 0;`
+ * Found in scss/components/_dropdown.scss#138: `(var(\$css-var-prefixnav-link-spacing-vertical) * 2)`
+ * Found in scss/components/_dropdown.scss#141: `var(\$css-var-prefixnav-link-spacing-vertical) -`
+ * Found in scss/components/_dropdown.scss#144: `var(\$css-var-prefixnav-link-spacing-horizontal);`
+ * Found in scss/components/_nav.scss#4: `@if map.get($modules, "components/nav") {`
+ * Found in scss/components/_nav.scss#13: `:where(nav li)::before {`
+ * Found in scss/components/_nav.scss#21: `\$parent-selector nav,`
+ * Found in scss/components/_nav.scss#22: `\$parent-selector nav ul {`
+ * Found in scss/components/_nav.scss#26: `\$parent-selector nav {`
+ * Found in scss/components/_nav.scss#38: `margin-left: calc(var(\$css-var-prefixnav-element-spacing-horizontal) * -1);`
+ * Found in scss/components/_nav.scss#41: `margin-right: calc(var(\$css-var-prefixnav-element-spacing-horizontal) * -1);`
+ * Found in scss/components/_nav.scss#48: `padding: var(\$css-var-prefixnav-element-spacing-vertical)`
+ * Found in scss/components/_nav.scss#49: `var(\$css-var-prefixnav-element-spacing-horizontal);`
+ * Found in scss/components/_nav.scss#53: `margin: calc(var(\$css-var-prefixnav-link-spacing-vertical) * -1)`
+ * Found in scss/components/_nav.scss#54: `calc(var(\$css-var-prefixnav-link-spacing-horizontal) * -1);`
+ * Found in scss/components/_nav.scss#55: `padding: var(\$css-var-prefixnav-link-spacing-vertical)`
+ * Found in scss/components/_nav.scss#56: `var(\$css-var-prefixnav-link-spacing-horizontal);`
+ * Found in scss/components/_nav.scss#75: `var(\$css-var-prefixnav-link-spacing-vertical) -`
+ * Found in scss/components/_nav.scss#78: `var(\$css-var-prefixnav-link-spacing-horizontal);`
+ * Found in scss/components/_nav.scss#89: `margin-inline-start: var(\$css-var-prefixnav-link-spacing-horizontal);`
+ * Found in scss/components/_nav.scss#93: `margin: calc(var(\$css-var-prefixnav-link-spacing-vertical) * -1) 0;`
+ * Found in scss/components/_nav.scss#94: `margin-inline-start: calc(var(\$css-var-prefixnav-link-spacing-horizontal) * -1);`
+ * Found in scss/components/_nav.scss#101: `width: calc(var(\$css-var-prefixnav-link-spacing-horizontal) * 4);`
+ * Found in scss/components/_nav.scss#102: `margin: 0 calc(var(\$css-var-prefixnav-link-spacing-horizontal) * -1);`
+ * Found in scss/components/_nav.scss#103: `content: var(\$css-var-prefixnav-breadcrumb-divider);`
+ * Found in scss/components/_nav.scss#124: `nav,`
+ * Found in scss/components/_nav.scss#132: `padding: calc(var(\$css-var-prefixnav-element-spacing-vertical) * 0.5)`
+ * Found in scss/components/_nav.scss#133: `var(\$css-var-prefixnav-element-spacing-horizontal);`
+ * Found in scss/components/_nav.scss#148: `\$parent-selector nav {`
+ *
  * Add your styles here
  */
 /** SASS for the <noscript> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <object> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <option> HTML element
+ *
+ * Found in scss/forms/_basics.scss#407: `option {`
+ *
  * Add your styles here
  */
 /** SASS for the <optgroup> HTML element
+ *
+ * Found in scss/forms/_basics.scss#19: `\$parent-selector optgroup,`
+ *
  * Add your styles here
  */
 /** SASS for the <ol> HTML element
+ *
+ * Found in scss/colors/_index.scss#93: `// Violet`
+ * Found in scss/colors/_index.scss#94: `$violet-950: #190928;`
+ * Found in scss/colors/_index.scss#95: `$violet-900: #251140;`
+ * Found in scss/colors/_index.scss#96: `$violet-850: #321856;`
+ * Found in scss/colors/_index.scss#97: `$violet-800: #3f1e6d;`
+ * Found in scss/colors/_index.scss#98: `$violet-750: #4d2585;`
+ * Found in scss/colors/_index.scss#99: `$violet-700: #5b2d9c;`
+ * Found in scss/colors/_index.scss#100: `$violet-650: #6935b3;`
+ * Found in scss/colors/_index.scss#101: `$violet-600: #7540bf;`
+ * Found in scss/colors/_index.scss#102: `$violet-550: #8352c5;`
+ * Found in scss/colors/_index.scss#103: `$violet-500: #9062ca;`
+ * Found in scss/colors/_index.scss#104: `$violet-450: #9b71cf;`
+ * Found in scss/colors/_index.scss#105: `$violet-400: #a780d4;`
+ * Found in scss/colors/_index.scss#106: `$violet-350: #b290d9;`
+ * Found in scss/colors/_index.scss#107: `$violet-300: #bd9fdf;`
+ * Found in scss/colors/_index.scss#108: `$violet-250: #c9afe4;`
+ * Found in scss/colors/_index.scss#109: `$violet-200: #d3bfe8;`
+ * Found in scss/colors/_index.scss#110: `$violet-150: #decfed;`
+ * Found in scss/colors/_index.scss#111: `$violet-100: #e8dff2;`
+ * Found in scss/colors/_index.scss#112: `$violet-50: #f3eff7;`
+ * Found in scss/colors/_index.scss#113: `$violet: $violet-600;`
+ * Found in scss/colors/_index.scss#445: `$colors: (`
+ * Found in scss/colors/_index.scss#534: `violet: (`
+ * Found in scss/colors/_index.scss#535: `950: $violet-950,`
+ * Found in scss/colors/_index.scss#536: `900: $violet-900,`
+ * Found in scss/colors/_index.scss#537: `850: $violet-850,`
+ * Found in scss/colors/_index.scss#538: `800: $violet-800,`
+ * Found in scss/colors/_index.scss#539: `750: $violet-750,`
+ * Found in scss/colors/_index.scss#540: `700: $violet-700,`
+ * Found in scss/colors/_index.scss#541: `650: $violet-650,`
+ * Found in scss/colors/_index.scss#542: `600: $violet-600,`
+ * Found in scss/colors/_index.scss#543: `550: $violet-550,`
+ * Found in scss/colors/_index.scss#544: `500: $violet-500,`
+ * Found in scss/colors/_index.scss#545: `450: $violet-450,`
+ * Found in scss/colors/_index.scss#546: `400: $violet-400,`
+ * Found in scss/colors/_index.scss#547: `350: $violet-350,`
+ * Found in scss/colors/_index.scss#548: `300: $violet-300,`
+ * Found in scss/colors/_index.scss#549: `250: $violet-250,`
+ * Found in scss/colors/_index.scss#550: `200: $violet-200,`
+ * Found in scss/colors/_index.scss#551: `150: $violet-150,`
+ * Found in scss/colors/_index.scss#552: `100: $violet-100,`
+ * Found in scss/colors/_index.scss#553: `50: $violet-50,`
+ * Found in scss/colors/_index.scss#554: `main: $violet,`
+ * Found in scss/components/_accordion.scss#19: `transition: color var(\$css-var-prefixtransition);`
+ * Found in scss/components/_accordion.scss#22: `&:not([role]) {`
+ * Found in scss/components/_accordion.scss#23: `color: var(\$css-var-prefixaccordion-close-summary-color);`
+ * Found in scss/components/_accordion.scss#61: `&:not([role]) {`
+ * Found in scss/components/_accordion.scss#62: `color: var(\$css-var-prefixaccordion-active-summary-color);`
+ * Found in scss/components/_accordion.scss#67: `&:not([role]) {`
+ * Found in scss/components/_accordion.scss#68: `outline: var(\$css-var-prefixoutline-width) solid var(\$css-var-prefixprimary-focus);`
+ * Found in scss/components/_accordion.scss#70: `color: var(\$css-var-prefixprimary);`
+ * Found in scss/components/_accordion.scss#75: `&[role="button"] {`
+ * Found in scss/components/_accordion.scss#91: `&:not([role]) {`
+ * Found in scss/components/_accordion.scss#93: `color: var(\$css-var-prefixaccordion-open-summary-color);`
+ * Found in scss/components/_card.scss#14: `background: var(\$css-var-prefixcard-background-color);`
+ * Found in scss/components/_card.scss#23: `background-color: var(\$css-var-prefixcard-sectioning-background-color);`
+ * Found in scss/components/_card.scss#30: `solid`
+ * Found in scss/components/_card.scss#31: `var(\$css-var-prefixcard-border-color);`
+ * Found in scss/components/_card.scss#40: `solid`
+ * Found in scss/components/_card.scss#41: `var(\$css-var-prefixcard-border-color);`
+ * Found in scss/components/_dropdown.scss#49: `\$parent-selector details.dropdown > summary:not([role]) {`
+ * Found in scss/components/_dropdown.scss#61: `solid`
+ * Found in scss/components/_dropdown.scss#62: `var(\$css-var-prefixform-element-border-color);`
+ * Found in scss/components/_dropdown.scss#64: `background-color: var(\$css-var-prefixform-element-background-color);`
+ * Found in scss/components/_dropdown.scss#65: `color: var(\$css-var-prefixform-element-placeholder-color);`
+ * Found in scss/components/_dropdown.scss#72: `background-color var(\$css-var-prefixtransition),`
+ * Found in scss/components/_dropdown.scss#73: `border-color var(\$css-var-prefixtransition),`
+ * Found in scss/components/_dropdown.scss#74: `color var(\$css-var-prefixtransition),`
+ * Found in scss/components/_dropdown.scss#80: `border-color: var(\$css-var-prefixform-element-active-border-color);`
+ * Found in scss/components/_dropdown.scss#81: `background-color: var(\$css-var-prefixform-element-active-background-color);`
+ * Found in scss/components/_dropdown.scss#89: `var(\$css-var-prefixform-element-focus-color);`
+ * Found in scss/components/_dropdown.scss#99: `\$css-var-prefixform-element-border-color: var(`
+ * Found in scss/components/_dropdown.scss#100: `\$css-var-prefixform-element-valid-border-color`
+ * Found in scss/components/_dropdown.scss#102: `\$css-var-prefixform-element-active-border-color: var(`
+ * Found in scss/components/_dropdown.scss#103: `\$css-var-prefixform-element-valid-focus-color`
+ * Found in scss/components/_dropdown.scss#105: `\$css-var-prefixform-element-focus-color: var(`
+ * Found in scss/components/_dropdown.scss#106: `\$css-var-prefixform-element-valid-focus-color`
+ * Found in scss/components/_dropdown.scss#111: `\$css-var-prefixform-element-border-color: var(`
+ * Found in scss/components/_dropdown.scss#112: `\$css-var-prefixform-element-invalid-border-color`
+ * Found in scss/components/_dropdown.scss#114: `\$css-var-prefixform-element-active-border-color: var(`
+ * Found in scss/components/_dropdown.scss#115: `\$css-var-prefixform-element-invalid-focus-color`
+ * Found in scss/components/_dropdown.scss#117: `\$css-var-prefixform-element-focus-color: var(`
+ * Found in scss/components/_dropdown.scss#118: `\$css-var-prefixform-element-invalid-focus-color`
+ * Found in scss/components/_dropdown.scss#134: `&:not([role]) {`
+ * Found in scss/components/_dropdown.scss#162: `position: absolute;`
+ * Found in scss/components/_dropdown.scss#164: `flex-direction: column;`
+ * Found in scss/components/_dropdown.scss#170: `border: var(\$css-var-prefixborder-width) solid var(\$css-var-prefixdropdown-border-color);`
+ * Found in scss/components/_dropdown.scss#172: `background-color: var(\$css-var-prefixdropdown-background-color);`
+ * Found in scss/components/_dropdown.scss#174: `color: var(\$css-var-prefixdropdown-color);`
+ * Found in scss/components/_dropdown.scss#212: `color: var(\$css-var-prefixdropdown-color);`
+ * Found in scss/components/_dropdown.scss#221: `background-color: var(\$css-var-prefixdropdown-hover-background-color);`
+ * Found in scss/components/_dropdown.scss#231: `background-color: var(\$css-var-prefixdropdown-hover-background-color);`
+ * Found in scss/components/_group.scss#6: `* Group ([role="group"], [role="search"])`
+ * Found in scss/components/_group.scss#9: `\$parent-selector [role="search"],`
+ * Found in scss/components/_group.scss#10: `\$parent-selector [role="group"] {`
+ * Found in scss/components/_group.scss#47: `[role="button"],`
+ * Found in scss/components/_group.scss#59: `[role="button"] {`
+ * Found in scss/components/_group.scss#65: `&:has(button:focus, [type="submit"]:focus, [type="button"]:focus, [role="button"]:focus) {`
+ * Found in scss/components/_group.scss#72: `border-color: transparent;`
+ * Found in scss/components/_group.scss#86: `[role="button"] {`
+ * Found in scss/components/_group.scss#99: `[role="button"] {`
+ * Found in scss/components/_group.scss#107: `\$parent-selector [role="search"] {`
+ * Found in scss/components/_loading.scss#40: `\$parent-selector [role="button"],`
+ * Found in scss/components/_modal.scss#11: `\$css-var-prefixscrollbar-width: 0px;`
+ * Found in scss/components/_modal.scss#31: `background-color: var(\$css-var-prefixmodal-overlay-background-color);`
+ * Found in scss/components/_modal.scss#32: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/components/_modal.scss#75: `[role="button"] {`
+ * Found in scss/components/_modal.scss#97: `background-color: transparent;`
+ * Found in scss/components/_modal.scss#120: `padding-right: var(\$css-var-prefixscrollbar-width, 0px);`
+ * Found in scss/components/_modal.scss#166: `background-color: transparent;`
+ * Found in scss/components/_nav.scss#10: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/components/_nav.scss#30: `ol,`
+ * Found in scss/components/_nav.scss#51: `:where(a, [role="link"]) {`
+ * Found in scss/components/_nav.scss#66: `[role="button"],`
+ * Found in scss/components/_nav.scss#100: `position: absolute;`
+ * Found in scss/components/_nav.scss#104: `color: var(\$css-var-prefixmuted-color);`
+ * Found in scss/components/_nav.scss#114: `background-color: transparent;`
+ * Found in scss/components/_nav.scss#115: `color: inherit;`
+ * Found in scss/components/_nav.scss#125: `ol,`
+ * Found in scss/components/_nav.scss#140: `[role="button"] {`
+ * Found in scss/components/_progress.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/components/_progress.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/components/_progress.scss#40: `background-color: var(\$css-var-prefixprogress-background-color);`
+ * Found in scss/components/_progress.scss#42: `// IE10 uses `color` to set the bar background-color`
+ * Found in scss/components/_progress.scss#43: `color: var(\$css-var-prefixprogress-color);`
+ * Found in scss/components/_progress.scss#51: `background-color: var(\$css-var-prefixprogress-color);`
+ * Found in scss/components/_progress.scss#59: `background-color: var(\$css-var-prefixprogress-color);`
+ * Found in scss/components/_progress.scss#65: `background: var(\$css-var-prefixprogress-background-color)`
+ * Found in scss/components/_progress.scss#68: `var(\$css-var-prefixprogress-color) 30%,`
+ * Found in scss/components/_progress.scss#69: `var(\$css-var-prefixprogress-background-color) 30%`
+ * Found in scss/components/_progress.scss#75: `background-color: transparent;`
+ * Found in scss/components/_progress.scss#79: `background-color: transparent;`
+ * Found in scss/components/_tooltip.scss#4: `@if map.get($modules, "components/tooltip") {`
+ * Found in scss/components/_tooltip.scss#6: `* Tooltip ([data-tooltip])`
+ * Found in scss/components/_tooltip.scss#9: `\$parent-selector [data-tooltip] {`
+ * Found in scss/components/_tooltip.scss#12: `&:not(a, button, input, [role="button"]) {`
+ * Found in scss/components/_tooltip.scss#24: `position: absolute;`
+ * Found in scss/components/_tooltip.scss#31: `background: var(\$css-var-prefixtooltip-background-color);`
+ * Found in scss/components/_tooltip.scss#32: `content: attr(data-tooltip);`
+ * Found in scss/components/_tooltip.scss#33: `color: var(\$css-var-prefixtooltip-color);`
+ * Found in scss/components/_tooltip.scss#49: `border-top: 0.3rem solid;`
+ * Found in scss/components/_tooltip.scss#50: `border-right: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#51: `border-left: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#53: `background-color: transparent;`
+ * Found in scss/components/_tooltip.scss#55: `color: var(\$css-var-prefixtooltip-background-color);`
+ * Found in scss/components/_tooltip.scss#68: `border: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#69: `border-bottom: 0.3rem solid;`
+ * Found in scss/components/_tooltip.scss#85: `border: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#86: `border-left: 0.3rem solid;`
+ * Found in scss/components/_tooltip.scss#102: `border: 0.3rem solid transparent;`
+ * Found in scss/components/_tooltip.scss#103: `border-right: 0.3rem solid;`
+ * Found in scss/components/_tooltip.scss#124: `\$css-var-prefixtooltip-slide-to: translate(-50%, -0.25rem);`
+ * Found in scss/components/_tooltip.scss#128: `animation-name: tooltip-slide;`
+ * Found in scss/components/_tooltip.scss#133: `\$css-var-prefixtooltip-caret-slide-to: translate(-50%, 0rem);`
+ * Found in scss/components/_tooltip.scss#135: `animation-name: tooltip-caret-slide;`
+ * Found in scss/components/_tooltip.scss#145: `\$css-var-prefixtooltip-slide-to: translate(-50%, 0.25rem);`
+ * Found in scss/components/_tooltip.scss#147: `animation-name: tooltip-slide;`
+ * Found in scss/components/_tooltip.scss#151: `\$css-var-prefixtooltip-caret-slide-to: translate(-50%, -0.3rem);`
+ * Found in scss/components/_tooltip.scss#153: `animation-name: tooltip-caret-slide;`
+ * Found in scss/components/_tooltip.scss#164: `\$css-var-prefixtooltip-slide-to: translate(-0.25rem, -50%);`
+ * Found in scss/components/_tooltip.scss#166: `animation-name: tooltip-slide;`
+ * Found in scss/components/_tooltip.scss#170: `\$css-var-prefixtooltip-caret-slide-to: translate(0.3rem, -50%);`
+ * Found in scss/components/_tooltip.scss#172: `animation-name: tooltip-caret-slide;`
+ * Found in scss/components/_tooltip.scss#183: `\$css-var-prefixtooltip-slide-to: translate(0.25rem, -50%);`
+ * Found in scss/components/_tooltip.scss#185: `animation-name: tooltip-slide;`
+ * Found in scss/components/_tooltip.scss#189: `\$css-var-prefixtooltip-caret-slide-to: translate(-0.3rem, -50%);`
+ * Found in scss/components/_tooltip.scss#191: `animation-name: tooltip-caret-slide;`
+ * Found in scss/components/_tooltip.scss#197: `@keyframes tooltip-slide {`
+ * Found in scss/components/_tooltip.scss#199: `transform: var(\$css-var-prefixtooltip-slide-to);`
+ * Found in scss/components/_tooltip.scss#204: `@keyframes tooltip-caret-slide {`
+ * Found in scss/components/_tooltip.scss#209: `transform: var(\$css-var-prefixtooltip-caret-slide-to);`
+ * Found in scss/content/_button.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/content/_button.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/content/_button.scss#15: `// 2. Remove the margin on controls in Safari`
+ * Found in scss/content/_button.scss#40: `\$parent-selector [role="button"] {`
+ * Found in scss/content/_button.scss#41: `\$css-var-prefixbackground-color: var(\$css-var-prefixprimary-background);`
+ * Found in scss/content/_button.scss#42: `\$css-var-prefixborder-color: var(\$css-var-prefixprimary-border);`
+ * Found in scss/content/_button.scss#43: `\$css-var-prefixcolor: var(\$css-var-prefixprimary-inverse);`
+ * Found in scss/content/_button.scss#47: `border: var(\$css-var-prefixborder-width) solid var(\$css-var-prefixborder-color);`
+ * Found in scss/content/_button.scss#50: `background-color: var(\$css-var-prefixbackground-color);`
+ * Found in scss/content/_button.scss#52: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/content/_button.scss#63: `background-color var(\$css-var-prefixtransition),`
+ * Found in scss/content/_button.scss#64: `border-color var(\$css-var-prefixtransition),`
+ * Found in scss/content/_button.scss#65: `color var(\$css-var-prefixtransition),`
+ * Found in scss/content/_button.scss#71: `\$css-var-prefixbackground-color: var(\$css-var-prefixprimary-hover-background);`
+ * Found in scss/content/_button.scss#72: `\$css-var-prefixborder-color: var(\$css-var-prefixprimary-hover-border);`
+ * Found in scss/content/_button.scss#77: `\$css-var-prefixcolor: var(\$css-var-prefixprimary-inverse);`
+ * Found in scss/content/_button.scss#97: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).secondary,`
+ * Found in scss/content/_button.scss#100: `\$css-var-prefixbackground-color: var(\$css-var-prefixsecondary-background);`
+ * Found in scss/content/_button.scss#101: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary-border);`
+ * Found in scss/content/_button.scss#102: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary-inverse);`
+ * Found in scss/content/_button.scss#106: `\$css-var-prefixbackground-color: var(\$css-var-prefixsecondary-hover-background);`
+ * Found in scss/content/_button.scss#107: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary-hover-border);`
+ * Found in scss/content/_button.scss#108: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary-inverse);`
+ * Found in scss/content/_button.scss#120: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
+ * Found in scss/content/_button.scss#121: `\$css-var-prefixbackground-color: var(\$css-var-prefixcontrast-background);`
+ * Found in scss/content/_button.scss#122: `\$css-var-prefixborder-color: var(\$css-var-prefixcontrast-border);`
+ * Found in scss/content/_button.scss#123: `\$css-var-prefixcolor: var(\$css-var-prefixcontrast-inverse);`
+ * Found in scss/content/_button.scss#126: `\$css-var-prefixbackground-color: var(\$css-var-prefixcontrast-hover-background);`
+ * Found in scss/content/_button.scss#127: `\$css-var-prefixborder-color: var(\$css-var-prefixcontrast-hover-border);`
+ * Found in scss/content/_button.scss#128: `\$css-var-prefixcolor: var(\$css-var-prefixcontrast-inverse);`
+ * Found in scss/content/_button.scss#140: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).outline,`
+ * Found in scss/content/_button.scss#142: `\$css-var-prefixbackground-color: transparent;`
+ * Found in scss/content/_button.scss#143: `\$css-var-prefixcolor: var(\$css-var-prefixprimary);`
+ * Found in scss/content/_button.scss#144: `\$css-var-prefixborder-color: var(\$css-var-prefixprimary);`
+ * Found in scss/content/_button.scss#147: `\$css-var-prefixbackground-color: transparent;`
+ * Found in scss/content/_button.scss#148: `\$css-var-prefixcolor: var(\$css-var-prefixprimary-hover);`
+ * Found in scss/content/_button.scss#149: `\$css-var-prefixborder-color: var(\$css-var-prefixprimary-hover);`
+ * Found in scss/content/_button.scss#155: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary,`
+ * Found in scss/content/_button.scss#157: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary);`
+ * Found in scss/content/_button.scss#158: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary);`
+ * Found in scss/content/_button.scss#161: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary-hover);`
+ * Found in scss/content/_button.scss#162: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary-hover);`
+ * Found in scss/content/_button.scss#168: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast {`
+ * Found in scss/content/_button.scss#169: `\$css-var-prefixcolor: var(\$css-var-prefixcontrast);`
+ * Found in scss/content/_button.scss#170: `\$css-var-prefixborder-color: var(\$css-var-prefixcontrast);`
+ * Found in scss/content/_button.scss#173: `\$css-var-prefixcolor: var(\$css-var-prefixcontrast-hover);`
+ * Found in scss/content/_button.scss#174: `\$css-var-prefixborder-color: var(\$css-var-prefixcontrast-hover);`
+ * Found in scss/content/_button.scss#181: `\$css-var-prefixbackground-color: var(\$css-var-prefixsecondary-background);`
+ * Found in scss/content/_button.scss#182: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary-border);`
+ * Found in scss/content/_button.scss#183: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary-inverse);`
+ * Found in scss/content/_button.scss#187: `\$css-var-prefixbackground-color: var(\$css-var-prefixsecondary-hover-background);`
+ * Found in scss/content/_button.scss#188: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary-hover-border);`
+ * Found in scss/content/_button.scss#189: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary-inverse);`
+ * Found in scss/content/_button.scss#202: `:where(button, [type="submit"], [type="reset"], [type="button"], [role="button"])[disabled],`
+ * Found in scss/content/_button.scss#205: `:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]) {`
+ * Found in scss/content/_code.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/content/_code.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/content/_code.scss#32: `-ms-overflow-style: scrollbar;`
+ * Found in scss/content/_code.scss#44: `background: var(\$css-var-prefixcode-background-color);`
+ * Found in scss/content/_code.scss#45: `color: var(\$css-var-prefixcode-color);`
+ * Found in scss/content/_code.scss#73: `background-color: var(\$css-var-prefixcode-kbd-background-color);`
+ * Found in scss/content/_code.scss#74: `color: var(\$css-var-prefixcode-kbd-color);`
+ * Found in scss/content/_embedded.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/content/_embedded.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/content/_embedded.scss#26: `\$parent-selector audio:not([controls]) {`
+ * Found in scss/content/_embedded.scss#44: `// Change the fill color to match the text color in all browsers (opinionated)`
+ * Found in scss/content/_embedded.scss#46: `fill: currentColor;`
+ * Found in scss/content/_figure.scss#16: `color: var(\$css-var-prefixmuted-color);`
+ * Found in scss/content/_link.scss#9: `\$parent-selector :where(a:not([role="button"])),`
+ * Found in scss/content/_link.scss#10: `\$parent-selector [role="link"] {`
+ * Found in scss/content/_link.scss#11: `\$css-var-prefixcolor: var(\$css-var-prefixprimary);`
+ * Found in scss/content/_link.scss#12: `\$css-var-prefixbackground-color: transparent;`
+ * Found in scss/content/_link.scss#15: `background-color: var(\$css-var-prefixbackground-color); // 1`
+ * Found in scss/content/_link.scss#16: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/content/_link.scss#18: `text-decoration-color: var(\$css-var-prefixunderline);`
+ * Found in scss/content/_link.scss#23: `background-color var(\$css-var-prefixtransition),`
+ * Found in scss/content/_link.scss#24: `color var(\$css-var-prefixtransition),`
+ * Found in scss/content/_link.scss#30: `\$css-var-prefixcolor: var(\$css-var-prefixprimary-hover);`
+ * Found in scss/content/_link.scss#42: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary);`
+ * Found in scss/content/_link.scss#46: `\$css-var-prefixcolor: var(\$css-var-prefixsecondary-hover);`
+ * Found in scss/content/_link.scss#53: `\$css-var-prefixcolor: var(\$css-var-prefixcontrast);`
+ * Found in scss/content/_link.scss#57: `\$css-var-prefixcolor: var(\$css-var-prefixcontrast-hover);`
+ * Found in scss/content/_link.scss#65: `&[role="button"] {`
+ * Found in scss/content/_misc.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/content/_misc.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/content/_misc.scss#14: `// 1. Correct the inheritance of border color in Firefox`
+ * Found in scss/content/_misc.scss#20: `border-top: 1px solid var(\$css-var-prefixmuted-border-color);`
+ * Found in scss/content/_misc.scss#21: `color: inherit; // 1`
+ * Found in scss/content/_table.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/content/_table.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/content/_table.scss#14: `// 1. Collapse border spacing in all browsers (opinionated)`
+ * Found in scss/content/_table.scss#18: `border-collapse: collapse; // 1`
+ * Found in scss/content/_table.scss#31: `solid`
+ * Found in scss/content/_table.scss#32: `var(\$css-var-prefixtable-border-color);`
+ * Found in scss/content/_table.scss#33: `background-color: var(\$css-var-prefixbackground-color);`
+ * Found in scss/content/_table.scss#34: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/content/_table.scss#45: `solid`
+ * Found in scss/content/_table.scss#46: `var(\$css-var-prefixtable-border-color);`
+ * Found in scss/content/_table.scss#57: `background-color: var(\$css-var-prefixtable-row-stripped-background-color);`
+ * Found in scss/content/_typography.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/content/_typography.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/content/_typography.scss#17: `font-weight: bolder;`
+ * Found in scss/content/_typography.scss#41: `\$parent-selector ol,`
+ * Found in scss/content/_typography.scss#48: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/content/_typography.scss#62: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/content/_typography.scss#70: `\$css-var-prefixcolor: var(\$css-var-prefixh1-color);`
+ * Found in scss/content/_typography.scss#73: `\$css-var-prefixcolor: var(\$css-var-prefixh2-color);`
+ * Found in scss/content/_typography.scss#76: `\$css-var-prefixcolor: var(\$css-var-prefixh3-color);`
+ * Found in scss/content/_typography.scss#79: `\$css-var-prefixcolor: var(\$css-var-prefixh4-color);`
+ * Found in scss/content/_typography.scss#82: `\$css-var-prefixcolor: var(\$css-var-prefixh5-color);`
+ * Found in scss/content/_typography.scss#85: `\$css-var-prefixcolor: var(\$css-var-prefixh6-color);`
+ * Found in scss/content/_typography.scss#90: `:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {`
+ * Found in scss/content/_typography.scss#111: `\$css-var-prefixcolor: var(\$css-var-prefixmuted-color);`
+ * Found in scss/content/_typography.scss#118: `\$parent-selector :where(ol, ul) {`
+ * Found in scss/content/_typography.scss#126: `\$parent-selector :where(dl, ol, ul) :where(dl, ol, ul) {`
+ * Found in scss/content/_typography.scss#138: `background-color: var(\$css-var-prefixmark-background-color);`
+ * Found in scss/content/_typography.scss#139: `color: var(\$css-var-prefixmark-color);`
+ * Found in scss/content/_typography.scss#149: `border-left: 0.25rem solid var(\$css-var-prefixblockquote-border-color);`
+ * Found in scss/content/_typography.scss#150: `border-inline-start: 0.25rem solid var(\$css-var-prefixblockquote-border-color);`
+ * Found in scss/content/_typography.scss#155: `color: var(\$css-var-prefixblockquote-footer-color);`
+ * Found in scss/content/_typography.scss#169: `color: var(\$css-var-prefixins-color);`
+ * Found in scss/content/_typography.scss#175: `color: var(\$css-var-prefixdel-color);`
+ * Found in scss/content/_typography.scss#180: `background-color: var(\$css-var-prefixtext-selection-color);`
+ * Found in scss/forms/_basics.scss#12: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/forms/_basics.scss#13: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/forms/_basics.scss#40: `// 2. Correct the color inheritance from `fieldset` elements in IE`
+ * Found in scss/forms/_basics.scss#46: `color: inherit; // 2`
+ * Found in scss/forms/_basics.scss#50: `// 1. Remove the default vertical scrollbar in IE`
+ * Found in scss/forms/_basics.scss#140: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/forms/_basics.scss#169: `\$css-var-prefixbackground-color: var(\$css-var-prefixform-element-background-color);`
+ * Found in scss/forms/_basics.scss#170: `\$css-var-prefixborder-color: var(\$css-var-prefixform-element-border-color);`
+ * Found in scss/forms/_basics.scss#171: `\$css-var-prefixcolor: var(\$css-var-prefixform-element-color);`
+ * Found in scss/forms/_basics.scss#173: `border: var(\$css-var-prefixborder-width) solid var(\$css-var-prefixborder-color);`
+ * Found in scss/forms/_basics.scss#176: `background-color: var(\$css-var-prefixbackground-color);`
+ * Found in scss/forms/_basics.scss#178: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/forms/_basics.scss#183: `background-color var(\$css-var-prefixtransition),`
+ * Found in scss/forms/_basics.scss#184: `border-color var(\$css-var-prefixtransition),`
+ * Found in scss/forms/_basics.scss#185: `color var(\$css-var-prefixtransition),`
+ * Found in scss/forms/_basics.scss#202: `\$css-var-prefixbackground-color: var(`
+ * Found in scss/forms/_basics.scss#203: `\$css-var-prefixform-element-active-background-color`
+ * Found in scss/forms/_basics.scss#210: `input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]),`
+ * Found in scss/forms/_basics.scss#213: `\$css-var-prefixborder-color: var(\$css-var-prefixform-element-active-border-color);`
+ * Found in scss/forms/_basics.scss#233: `var(\$css-var-prefixform-element-focus-color);`
+ * Found in scss/forms/_basics.scss#296: `\$css-var-prefixborder-color: var(\$css-var-prefixform-element-valid-border-color);`
+ * Found in scss/forms/_basics.scss#300: `\$css-var-prefixborder-color: var(`
+ * Found in scss/forms/_basics.scss#301: `\$css-var-prefixform-element-valid-active-border-color`
+ * Found in scss/forms/_basics.scss#309: `var(\$css-var-prefixform-element-valid-focus-color) !important;`
+ * Found in scss/forms/_basics.scss#312: `\$css-var-prefixborder-color: var(`
+ * Found in scss/forms/_basics.scss#313: `\$css-var-prefixform-element-valid-active-border-color`
+ * Found in scss/forms/_basics.scss#321: `var(\$css-var-prefixform-element-valid-focus-color);`
+ * Found in scss/forms/_basics.scss#328: `\$css-var-prefixborder-color: var(\$css-var-prefixform-element-invalid-border-color);`
+ * Found in scss/forms/_basics.scss#332: `\$css-var-prefixborder-color: var(`
+ * Found in scss/forms/_basics.scss#333: `\$css-var-prefixform-element-invalid-active-border-color`
+ * Found in scss/forms/_basics.scss#341: `var(\$css-var-prefixform-element-invalid-focus-color) !important;`
+ * Found in scss/forms/_basics.scss#344: `\$css-var-prefixborder-color: var(`
+ * Found in scss/forms/_basics.scss#345: `\$css-var-prefixform-element-invalid-active-border-color`
+ * Found in scss/forms/_basics.scss#353: `var(\$css-var-prefixform-element-invalid-focus-color);`
+ * Found in scss/forms/_basics.scss#370: `// Placeholder`
+ * Found in scss/forms/_basics.scss#371: `\$parent-selector input::placeholder,`
+ * Found in scss/forms/_basics.scss#372: `\$parent-selector input::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#373: `\$parent-selector textarea::placeholder,`
+ * Found in scss/forms/_basics.scss#374: `\$parent-selector textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#376: `color: var(\$css-var-prefixform-element-placeholder-color);`
+ * Found in scss/forms/_basics.scss#392: `background-color: transparent;`
+ * Found in scss/forms/_basics.scss#409: `background: var(\$css-var-prefixform-element-selected-background-color);`
+ * Found in scss/forms/_basics.scss#410: `color: var(\$css-var-prefixform-element-color);`
+ * Found in scss/forms/_basics.scss#451: `color: var(\$css-var-prefixmuted-color);`
+ * Found in scss/forms/_basics.scss#455: `color: var(\$css-var-prefixins-color);`
+ * Found in scss/forms/_basics.scss#460: `color: var(\$css-var-prefixdel-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#38: `\$css-var-prefixbackground-color: var(\$css-var-prefixprimary-background);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#39: `\$css-var-prefixborder-color: var(\$css-var-prefixprimary-border);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#60: `\$css-var-prefixbackground-color: var(\$css-var-prefixprimary-background);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#61: `\$css-var-prefixborder-color: var(\$css-var-prefixprimary-border);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#76: `\$css-var-prefixbackground-color: var(\$css-var-prefixprimary-inverse);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#83: `\$parent-selector [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#84: `\$css-var-prefixbackground-color: var(\$css-var-prefixswitch-background-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#85: `\$css-var-prefixcolor: var(\$css-var-prefixswitch-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#95: `border: var(\$css-var-prefixborder-width) solid var(\$css-var-prefixborder-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#97: `background-color: var(\$css-var-prefixbackground-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#101: `\$css-var-prefixborder-color: var(\$css-var-prefixswitch-background-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#109: `background-color: var(\$css-var-prefixcolor);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#119: `\$css-var-prefixbackground-color: var(\$css-var-prefixswitch-background-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#120: `\$css-var-prefixborder-color: var(\$css-var-prefixswitch-background-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#124: `\$css-var-prefixbackground-color: var(\$css-var-prefixswitch-checked-background-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#125: `\$css-var-prefixborder-color: var(\$css-var-prefixswitch-checked-background-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#134: `\$css-var-prefixbackground-color: var(\$css-var-prefixborder-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#140: `\$parent-selector [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#145: `\$css-var-prefixbackground-color: var(\$css-var-prefixform-element-valid-border-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#152: `\$css-var-prefixbackground-color: var(`
+ * Found in scss/forms/_checkbox-radio-switch.scss#153: `\$css-var-prefixform-element-invalid-border-color`
+ * Found in scss/forms/_checkbox-radio-switch.scss#161: `\$parent-selector [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#166: `\$css-var-prefixborder-color: var(\$css-var-prefixform-element-valid-border-color);`
+ * Found in scss/forms/_checkbox-radio-switch.scss#173: `\$css-var-prefixborder-color: var(\$css-var-prefixform-element-invalid-border-color);`
+ * Found in scss/forms/_input-color.scss#5: `@mixin color-wrapper {`
+ * Found in scss/forms/_input-color.scss#10: `@mixin color-swatch {`
+ * Found in scss/forms/_input-color.scss#15: `@if map.get($modules, "forms/input-color") {`
+ * Found in scss/forms/_input-color.scss#17: `* Input type color`
+ * Found in scss/forms/_input-color.scss#20: `\$parent-selector [type="color"] {`
+ * Found in scss/forms/_input-color.scss#21: `&::-webkit-color-swatch-wrapper {`
+ * Found in scss/forms/_input-color.scss#22: `@include color-wrapper;`
+ * Found in scss/forms/_input-color.scss#26: `@include color-wrapper;`
+ * Found in scss/forms/_input-color.scss#29: `&::-webkit-color-swatch {`
+ * Found in scss/forms/_input-color.scss#30: `@include color-swatch;`
+ * Found in scss/forms/_input-color.scss#33: `&::-moz-color-swatch {`
+ * Found in scss/forms/_input-color.scss#34: `@include color-swatch;`
+ * Found in scss/forms/_input-file.scss#12: `\$css-var-prefixcolor: var(\$css-var-prefixmuted-color);`
+ * Found in scss/forms/_input-file.scss#28: `\$css-var-prefixbackground-color: var(\$css-var-prefixsecondary-hover-background);`
+ * Found in scss/forms/_input-file.scss#29: `\$css-var-prefixborder-color: var(\$css-var-prefixsecondary-hover-border);`
+ * Found in scss/forms/_input-range.scss#14: `background-color: var(\$css-var-prefixrange-border-color);`
+ * Found in scss/forms/_input-range.scss#18: `background-color var(\$css-var-prefixtransition),`
+ * Found in scss/forms/_input-range.scss#29: `border: $border-thumb solid var(\$css-var-prefixrange-thumb-border-color);`
+ * Found in scss/forms/_input-range.scss#31: `background-color: var(\$css-var-prefixrange-thumb-color);`
+ * Found in scss/forms/_input-range.scss#36: `background-color var(\$css-var-prefixtransition),`
+ * Found in scss/forms/_input-range.scss#81: `\$css-var-prefixrange-border-color: var(\$css-var-prefixrange-active-border-color);`
+ * Found in scss/forms/_input-range.scss#82: `\$css-var-prefixrange-thumb-color: var(\$css-var-prefixrange-thumb-active-color);`
+ * Found in scss/helpers/_functions.scss#1: `@use "sass:color";`
+ * Found in scss/helpers/_functions.scss#4: `// Display color as RGB`
+ * Found in scss/helpers/_functions.scss#5: `@function display-rgb($color) {`
+ * Found in scss/helpers/_functions.scss#7: `"rgb(" + color.channel($color, "red") + ", " + color.channel($color, "green") + ", " +`
+ * Found in scss/helpers/_functions.scss#8: `color.channel($color, "blue") + ")"`
+ * Found in scss/helpers/_functions.scss#18: `@function shadow($color) {`
+ * Found in scss/helpers/_functions.scss#27: `$color`
+ * Found in scss/helpers/_functions.scss#33: `$color`
+ * Found in scss/helpers/_functions.scss#39: `$color`
+ * Found in scss/helpers/_functions.scss#45: `$color`
+ * Found in scss/helpers/_functions.scss#51: `$color`
+ * Found in scss/layout/_document.scss#11: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/layout/_document.scss#12: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/layout/_document.scss#39: `-webkit-tap-highlight-color: transparent; // 4`
+ * Found in scss/layout/_document.scss#42: `background-color: var(\$css-var-prefixbackground-color);`
+ * Found in scss/layout/_document.scss#43: `color: var(\$css-var-prefixcolor);`
+ * Found in scss/layout/_grid.scss#7: `* Minimal grid system with auto-layout columns`
+ * Found in scss/layout/_grid.scss#11: `grid-column-gap: var(\$css-var-prefixgrid-column-gap);`
+ * Found in scss/layout/_grid.scss#14: `grid-template-columns: 1fr;`
+ * Found in scss/layout/_grid.scss#18: `grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));`
+ * Found in scss/layout/_landmarks.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/layout/_landmarks.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/themes/_default.scss#4: `// Colors schemes`
+ * Found in scss/utilities/_accessibility.scss#10: `// - normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css`
+ * Found in scss/utilities/_accessibility.scss#11: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/utilities/_accessibility.scss#16: `// Change the cursor on control elements in all browsers (opinionated)`
+ * Found in scss/utilities/_accessibility.scss#17: `\$parent-selector [aria-controls] {`
+ * Found in scss/utilities/_accessibility.scss#34: `position: absolute;`
+ * Found in scss/utilities/_reduce-motion.scss#10: `// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css`
+ * Found in scss/utilities/_reduce-motion.scss#15: `// 3. Remove timed scrolling behaviors when motion is reduced (opinionated)`
+ * Found in scss/utilities/_reduce-motion.scss#25: `scroll-behavior: auto !important; // 3`
+ *
  * Add your styles here
  */
+.pico ol {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
+.pico :where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.25);
+}
+
 /** SASS for the <p> HTML element
+ *
  * Add your styles here
  */
+.pico p {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
 /** SASS for the <picture> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <pre> HTML element
+ *
+ * * Found in scss/content/_code.scss#31: `\$parent-selector pre {`
+ * Found in scss/content/_code.scss#39: `\$parent-selector pre,`
+ * Found in scss/content/_code.scss#57: `\$parent-selector pre {`
+ * Found in scss/content/_typography.scss#43: `\$parent-selector pre,`
+ * Found in scss/content/_typography.scss#90: `:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {`
+ *
  * Add your styles here
  */
+.pico pre {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
 /** SASS for the <section> HTML element
+ *
+ * Found in scss/components/_card.scss#23: `background-color: var(\$css-var-prefixcard-sectioning-background-color);`
+ * Found in scss/layout/_section.scss#4: `@if map.get($modules, "layout/section") {`
+ * Found in scss/layout/_section.scss#9: `\$parent-selector section {`
+ *
  * Add your styles here
  */
 /** SASS for the <summary> HTML element
+ *
+ * Found in scss/components/_accordion.scss#13: `summary {`
+ * Found in scss/components/_accordion.scss#88: `> summary {`
+ * Found in scss/components/_dropdown.scss#17: `> summary,`
+ * Found in scss/components/_dropdown.scss#49: `\$parent-selector details.dropdown > summary:not([role]) {`
+ * Found in scss/components/_dropdown.scss#129: `> summary {`
+ * Found in scss/components/_dropdown.scss#239: `\$parent-selector details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#246: `\$parent-selector details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#262: `\$parent-selector details.dropdown[open] > summary {`
+ * Found in scss/utilities/_accessibility.scss#45: `\$parent-selector summary,`
+ *
  * Add your styles here
  */
 /** SASS for the <table> HTML element
+ *
+ * Found in scss/content/_table.scss#16: `\$parent-selector :where(table) {`
+ * Found in scss/content/_table.scss#53: `\$parent-selector table {`
+ * Found in scss/content/_typography.scss#44: `\$parent-selector table,`
+ * Found in scss/content/_typography.scss#90: `:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {`
+ *
  * Add your styles here
  */
+.pico table {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
 /** SASS for the <tbody> HTML element
+ *
+ * Found in scss/content/_table.scss#55: `tbody tr:nth-child(odd) th,`
+ * Found in scss/content/_table.scss#56: `tbody tr:nth-child(odd) td {`
+ *
  * Add your styles here
  */
 /** SASS for the <td> HTML element
+ *
+ * Found in scss/content/_table.scss#28: `\$parent-selector td {`
+ * Found in scss/content/_table.scss#43: `td {`
+ * Found in scss/content/_table.scss#56: `tbody tr:nth-child(odd) td {`
+ *
  * Add your styles here
  */
 /** SASS for the <tfoot> HTML element
+ *
+ * Found in scss/content/_table.scss#41: `\$parent-selector tfoot {`
+ *
  * Add your styles here
  */
 /** SASS for the <thead> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <th> HTML element
+ *
+ * Found in scss/content/_table.scss#27: `\$parent-selector th,`
+ * Found in scss/content/_table.scss#42: `th,`
+ * Found in scss/content/_table.scss#55: `tbody tr:nth-child(odd) th,`
+ *
  * Add your styles here
  */
 /** SASS for the <tr> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <template> HTML element
+ *
  * Add your styles here
  */
+.pico template {
+  display: none !important;
+}
+
 /** SASS for the <ul> HTML element
+ *
+ * Found in scss/components/_dropdown.scss#159: `\$parent-selector details.dropdown > summary + ul {`
+ * Found in scss/components/_dropdown.scss#247: `+ ul {`
+ * * Found in scss/components/_nav.scss#22: `\$parent-selector nav ul {`
+ * Found in scss/components/_nav.scss#31: `ul {`
+ * Found in scss/components/_nav.scss#126: `ul,`
+ * Found in scss/content/_typography.scss#45: `\$parent-selector ul {`
+ * Found in scss/content/_typography.scss#90: `:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {`
+ * Found in scss/content/_typography.scss#118: `\$parent-selector :where(ol, ul) {`
+ * Found in scss/content/_typography.scss#126: `\$parent-selector :where(dl, ol, ul) :where(dl, ol, ul) {`
+ *
  * Add your styles here
  */
+.pico ul {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
+.pico :where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+  margin-top: calc(var(--pico-typography-spacing-vertical) * 0.25);
+}
+
 /** SASS for the <video> HTML element
+ *
+ * Found in scss/content/_embedded.scss#15: `\$parent-selector :where(audio, canvas, iframe, img, svg, video) {`
+ * Found in scss/content/_embedded.scss#21: `\$parent-selector video {`
+ *
  * Add your styles here
  */
 /** SASS for the <abbr> HTML element
+ *
  * Add your styles here
  */
+.pico abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: help;
+}
+
 /** SASS for the <address> HTML element
+ *
  * Add your styles here
  */
+.pico address {
+  margin-top: 0;
+  margin-bottom: var(--pico-typography-spacing-vertical);
+  color: var(--pico-color);
+  font-style: normal;
+  font-weight: var(--pico-font-weight);
+}
+
 /** SASS for the <a> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <bdi> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <bdo> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <b> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <button> HTML element
+ *
+ * Found in scss/components/_accordion.scss#74: `// Type button`
+ * Found in scss/components/_accordion.scss#75: `&[role="button"] {`
+ * Found in scss/components/_dropdown.scss#18: `> button,`
+ * Found in scss/components/_group.scss#43: `button,`
+ * Found in scss/components/_group.scss#46: `[type="button"],`
+ * Found in scss/components/_group.scss#47: `[role="button"],`
+ * Found in scss/components/_group.scss#55: `button,`
+ * Found in scss/components/_group.scss#58: `[type="button"],`
+ * Found in scss/components/_group.scss#59: `[role="button"] {`
+ * Found in scss/components/_group.scss#64: `// Group box shadow when a button is focused`
+ * Found in scss/components/_group.scss#65: `&:has(button:focus, [type="submit"]:focus, [type="button"]:focus, [role="button"]:focus) {`
+ * Found in scss/components/_group.scss#67: `\$css-var-prefixgroup-box-shadow-focus-with-button`
+ * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
+ * Found in scss/components/_group.scss#82: `// Adapt box shadow for buttons`
+ * Found in scss/components/_group.scss#83: `button,`
+ * Found in scss/components/_group.scss#85: `[type="button"],`
+ * Found in scss/components/_group.scss#86: `[role="button"] {`
+ * Found in scss/components/_group.scss#87: `\$css-var-prefixbutton-box-shadow: 0 0 0 var(\$css-var-prefixborder-width)`
+ * Found in scss/components/_group.scss#89: `\$css-var-prefixbutton-hover-box-shadow: 0 0 0 var(\$css-var-prefixborder-width)`
+ * Found in scss/components/_group.scss#94: `// Remove button box shadow if we have a group box shadow`
+ * Found in scss/components/_group.scss#95: `button,`
+ * Found in scss/components/_group.scss#98: `[type="button"],`
+ * Found in scss/components/_group.scss#99: `[role="button"] {`
+ * Found in scss/components/_loading.scss#36: `\$parent-selector button,`
+ * Found in scss/components/_loading.scss#38: `\$parent-selector [type="button"],`
+ * Found in scss/components/_loading.scss#40: `\$parent-selector [role="button"],`
+ * Found in scss/components/_modal.scss#38: `".close, :is(a, button)[rel=prev]",`
+ * Found in scss/components/_modal.scss#39: `":is(a, button)[rel=prev]"`
+ * Found in scss/components/_modal.scss#74: `button,`
+ * Found in scss/components/_modal.scss#75: `[role="button"] {`
+ * Found in scss/components/_nav.scss#64: `// Minimal support for buttons and forms elements`
+ * Found in scss/components/_nav.scss#65: `button,`
+ * Found in scss/components/_nav.scss#66: `[role="button"],`
+ * Found in scss/components/_nav.scss#67: `[type="button"],`
+ * Found in scss/components/_nav.scss#139: `// Minimal support for links as buttons`
+ * Found in scss/components/_nav.scss#140: `[role="button"] {`
+ * Found in scss/components/_tooltip.scss#12: `&:not(a, button, input, [role="button"]) {`
+ * Found in scss/content/_button.scss#4: `@if map.get($modules, "content/button") {`
+ * Found in scss/content/_button.scss#17: `\$parent-selector button {`
+ * Found in scss/content/_button.scss#24: `// Correct the inability to style buttons in iOS and Safari`
+ * Found in scss/content/_button.scss#25: `\$parent-selector button,`
+ * Found in scss/content/_button.scss#28: `\$parent-selector [type="button"] {`
+ * Found in scss/content/_button.scss#29: `-webkit-appearance: button;`
+ * Found in scss/content/_button.scss#35: `\$parent-selector button,`
+ * Found in scss/content/_button.scss#38: `\$parent-selector [type="button"],`
+ * Found in scss/content/_button.scss#39: `\$parent-selector [type="file"]::file-selector-button,`
+ * Found in scss/content/_button.scss#40: `\$parent-selector [role="button"] {`
+ * Found in scss/content/_button.scss#44: `\$css-var-prefixbox-shadow: var(\$css-var-prefixbutton-box-shadow, 0 0 0 rgba(0, 0, 0, 0));`
+ * Found in scss/content/_button.scss#74: `\$css-var-prefixbutton-hover-box-shadow,`
+ * Found in scss/content/_button.scss#83: `var(\$css-var-prefixbutton-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),`
+ * Found in scss/content/_button.scss#90: `\$parent-selector [type="button"] {`
+ * Found in scss/content/_button.scss#97: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).secondary,`
+ * Found in scss/content/_button.scss#99: `\$parent-selector [type="file"]::file-selector-button {`
+ * Found in scss/content/_button.scss#114: `var(\$css-var-prefixbutton-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),`
+ * Found in scss/content/_button.scss#120: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
+ * Found in scss/content/_button.scss#134: `var(\$css-var-prefixbutton-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),`
+ * Found in scss/content/_button.scss#140: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).outline,`
+ * Found in scss/content/_button.scss#155: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary,`
+ * Found in scss/content/_button.scss#168: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast {`
+ * Found in scss/content/_button.scss#178: `// Secondary button without .class`
+ * Found in scss/content/_button.scss#180: `\$parent-selector [type="file"]::file-selector-button {`
+ * Found in scss/content/_button.scss#194: `var(\$css-var-prefixbutton-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),`
+ * Found in scss/content/_button.scss#202: `:where(button, [type="submit"], [type="reset"], [type="button"], [role="button"])[disabled],`
+ * Found in scss/content/_button.scss#205: `:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]) {`
+ * Found in scss/content/_link.scss#9: `\$parent-selector :where(a:not([role="button"])),`
+ * Found in scss/content/_link.scss#65: `&[role="button"] {`
+ * Found in scss/forms/_basics.scss#61: `// Correct the cursor style of increment and decrement buttons in Safari`
+ * Found in scss/forms/_basics.scss#62: `\$parent-selector ::-webkit-inner-spin-button,`
+ * Found in scss/forms/_basics.scss#63: `\$parent-selector ::-webkit-outer-spin-button {`
+ * Found in scss/forms/_basics.scss#81: `\$parent-selector ::-webkit-file-upload-button {`
+ * Found in scss/forms/_basics.scss#82: `-webkit-appearance: button; // 1`
+ * Found in scss/forms/_basics.scss#150: `\$parent-selector button[type="submit"],`
+ * Found in scss/forms/_basics.scss#194: `[type="button"],`
+ * Found in scss/forms/_basics.scss#210: `input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]),`
+ * Found in scss/forms/_basics.scss#221: `[type="button"],`
+ * Found in scss/forms/_basics.scss#238: `\$parent-selector input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ * Found in scss/forms/_input-file.scss#9: `// 1. Hack to display the outline on the focused file selector button`
+ * Found in scss/forms/_input-file.scss#20: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#27: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#34: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#36: `var(\$css-var-prefixbutton-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),`
+ * Found in scss/utilities/_accessibility.scss#41: `\$parent-selector button,`
+ *
  * Add your styles here
  */
 /** SASS for the <cite> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <code> HTML element
+ *
+ * Found in scss/content/_code.scss#4: `@if map.get($modules, "content/code") {`
+ * Found in scss/content/_code.scss#17: `\$parent-selector code,`
+ * Found in scss/content/_code.scss#24: `\$parent-selector pre code,`
+ * Found in scss/content/_code.scss#40: `\$parent-selector code,`
+ * Found in scss/content/_code.scss#44: `background: var(\$css-var-prefixcode-background-color);`
+ * Found in scss/content/_code.scss#45: `color: var(\$css-var-prefixcode-color);`
+ * Found in scss/content/_code.scss#50: `\$parent-selector code,`
+ * Found in scss/content/_code.scss#62: `> code,`
+ * Found in scss/content/_code.scss#73: `background-color: var(\$css-var-prefixcode-kbd-background-color);`
+ * Found in scss/content/_code.scss#74: `color: var(\$css-var-prefixcode-kbd-color);`
+ *
  * Add your styles here
  */
 /** SASS for the <data> HTML element
+ *
+ * Found in scss/components/_tooltip.scss#6: `* Tooltip ([data-tooltip])`
+ * Found in scss/components/_tooltip.scss#9: `\$parent-selector [data-tooltip] {`
+ * Found in scss/components/_tooltip.scss#18: `&[data-placement="top"]::before,`
+ * Found in scss/components/_tooltip.scss#19: `&[data-placement="top"]::after,`
+ * Found in scss/components/_tooltip.scss#32: `content: attr(data-tooltip);`
+ * Found in scss/components/_tooltip.scss#45: `&[data-placement="top"]::after,`
+ * Found in scss/components/_tooltip.scss#58: `&[data-placement="bottom"] {`
+ * Found in scss/components/_tooltip.scss#73: `&[data-placement="left"] {`
+ * Found in scss/components/_tooltip.scss#90: `&[data-placement="right"] {`
+ * Found in scss/components/_tooltip.scss#140: `&[data-placement="bottom"] {`
+ * Found in scss/components/_tooltip.scss#159: `&[data-placement="left"] {`
+ * Found in scss/components/_tooltip.scss#178: `&[data-placement="right"] {`
+ *
  * Add your styles here
  */
 /** SASS for the <dfn> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <em> HTML element
+ *
+ *
  * Add your styles here
  */
 /** SASS for the <img> HTML element
+ *
+ * Found in scss/content/_embedded.scss#15: `\$parent-selector :where(audio, canvas, iframe, img, svg, video) {`
+ * Found in scss/content/_embedded.scss#38: `\$parent-selector img {`
+ *
  * Add your styles here
  */
 /** SASS for the <input> HTML element
+ *
+ * Found in scss/components/_group.scss#21: `input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/components/_group.scss#48: `input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/components/_group.scss#70: `input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/components/_group.scss#76: `// Group box shadow when an input is focused`
+ * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
+ * Found in scss/components/_group.scss#79: `\$css-var-prefixgroup-box-shadow-focus-with-input`
+ * Found in scss/components/_loading.scss#10: `\$parent-selector [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/components/_nav.scss#68: `input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
+ * Found in scss/components/_tooltip.scss#12: `&:not(a, button, input, [role="button"]) {`
+ * Found in scss/forms/_basics.scss#6: `$helper-previous-tags: "input, select, textarea, fieldset";`
+ * Found in scss/forms/_basics.scss#18: `\$parent-selector input,`
+ * Found in scss/forms/_basics.scss#30: `\$parent-selector input {`
+ * Found in scss/forms/_basics.scss#117: `// Force height for alternatives input types`
+ * Found in scss/forms/_basics.scss#118: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"]) {`
+ * Found in scss/forms/_basics.scss#149: `\$parent-selector input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#157: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
+ * Found in scss/forms/_basics.scss#166: `\$parent-selector input,`
+ * Found in scss/forms/_basics.scss#192: `input:not(`
+ * Found in scss/forms/_basics.scss#210: `input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]),`
+ * Found in scss/forms/_basics.scss#219: `input:not(`
+ * Found in scss/forms/_basics.scss#238: `\$parent-selector input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ * Found in scss/forms/_basics.scss#249: `\$parent-selector label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#254: `\$parent-selector :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#361: `\$parent-selector :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#371: `\$parent-selector input::placeholder,`
+ * Found in scss/forms/_basics.scss#372: `\$parent-selector input::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#374: `\$parent-selector textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#381: `\$parent-selector input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#467: `> :where(input, select, textarea) {`
+ * Found in scss/forms/_input-color.scss#15: `@if map.get($modules, "forms/input-color") {`
+ * Found in scss/forms/_input-date.scss#4: `@if map.get($modules, "forms/input-date") {`
+ * Found in scss/forms/_input-date.scss#10: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-file.scss#4: `@if map.get($modules, "forms/input-file") {`
+ * Found in scss/forms/_input-file.scss#10: `//    with the forced overflow hidden on the input[type="file"] element.`
+ * Found in scss/forms/_input-range.scss#41: `@if map.get($modules, "forms/input-range") {`
+ * Found in scss/forms/_input-search.scss#4: `@if map.get($modules, "forms/input-search") {`
+ * Found in scss/forms/_input-search.scss#10: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-search.scss#46: `\$parent-selector :where(input) {`
+ * Found in scss/utilities/_accessibility.scss#42: `\$parent-selector input,`
+ *
  * Add your styles here
  */
 /** SASS for the <i> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <kbd> HTML element
+ *
+ * Found in scss/content/_code.scss#18: `\$parent-selector kbd,`
+ * Found in scss/content/_code.scss#41: `\$parent-selector kbd,`
+ * Found in scss/content/_code.scss#51: `\$parent-selector kbd,`
+ * Found in scss/content/_code.scss#71: `// kbd`
+ * Found in scss/content/_code.scss#72: `\$parent-selector kbd {`
+ * Found in scss/content/_code.scss#73: `background-color: var(\$css-var-prefixcode-kbd-background-color);`
+ * Found in scss/content/_code.scss#74: `color: var(\$css-var-prefixcode-kbd-color);`
+ *
  * Add your styles here
  */
 /** SASS for the <label> HTML element
+ *
+ * Found in scss/components/_dropdown.scss#225: `label {`
+ * Found in scss/components/_dropdown.scss#230: `&:has(label):hover {`
+ * Found in scss/components/_dropdown.scss#277: `\$parent-selector label > details.dropdown {`
+ * Found in scss/components/_nav.scss#83: `&[aria-label="breadcrumb"] {`
+ * Found in scss/components/_nav.scss#149: `&[aria-label="breadcrumb"] {`
+ * Found in scss/forms/_basics.scss#136: `\$parent-selector label,`
+ * Found in scss/forms/_basics.scss#141: `font-weight: var(\$css-var-prefixform-label-font-weight, var(\$css-var-prefixfont-weight));`
+ * Found in scss/forms/_basics.scss#241: `\$parent-selector label[aria-disabled="true"],`
+ * Found in scss/forms/_basics.scss#249: `\$parent-selector label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#465: `// Styles for Input inside a label`
+ * Found in scss/forms/_basics.scss#466: `\$parent-selector label {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#11: `\$parent-selector label {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#46: `& ~ label {`
+ * Found in scss/utilities/_accessibility.scss#43: `\$parent-selector label,`
+ *
  * Add your styles here
  */
 /** SASS for the <mark> HTML element
+ *
+ * Found in scss/components/_accordion.scss#26: `// Reset marker`
+ * Found in scss/components/_accordion.scss#27: `&::-webkit-details-marker {`
+ * Found in scss/components/_accordion.scss#31: `&::marker {`
+ * Found in scss/components/_dropdown.scss#27: `// for the marker to be aligned with the regular select`
+ * Found in scss/content/_typography.scss#136: `\$parent-selector mark {`
+ * Found in scss/content/_typography.scss#138: `background-color: var(\$css-var-prefixmark-background-color);`
+ * Found in scss/content/_typography.scss#139: `color: var(\$css-var-prefixmark-color);`
+ * Found in scss/layout/_landmarks.scss#4: `@if map.get($modules, "layout/landmarks") {`
+ * Found in scss/layout/_landmarks.scss#6: `* Landmarks`
+ *
  * Add your styles here
  */
 /** SASS for the <meter> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <output> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <progress> HTML element
+ *
+ * Found in scss/components/_progress.scss#4: `@if map.get($modules, "components/progress") {`
+ * Found in scss/components/_progress.scss#16: `\$parent-selector progress {`
+ * Found in scss/components/_progress.scss#24: `\$parent-selector progress {`
+ * Found in scss/components/_progress.scss#40: `background-color: var(\$css-var-prefixprogress-background-color);`
+ * Found in scss/components/_progress.scss#43: `color: var(\$css-var-prefixprogress-color);`
+ * Found in scss/components/_progress.scss#45: `&::-webkit-progress-bar {`
+ * Found in scss/components/_progress.scss#50: `&[value]::-webkit-progress-value {`
+ * Found in scss/components/_progress.scss#51: `background-color: var(\$css-var-prefixprogress-color);`
+ * Found in scss/components/_progress.scss#58: `&::-moz-progress-bar {`
+ * Found in scss/components/_progress.scss#59: `background-color: var(\$css-var-prefixprogress-color);`
+ * Found in scss/components/_progress.scss#65: `background: var(\$css-var-prefixprogress-background-color)`
+ * Found in scss/components/_progress.scss#68: `var(\$css-var-prefixprogress-color) 30%,`
+ * Found in scss/components/_progress.scss#69: `var(\$css-var-prefixprogress-background-color) 30%`
+ * Found in scss/components/_progress.scss#72: `animation: progress-indeterminate 1s linear infinite;`
+ * Found in scss/components/_progress.scss#74: `&[value]::-webkit-progress-value {`
+ * Found in scss/components/_progress.scss#78: `&::-moz-progress-bar {`
+ * Found in scss/components/_progress.scss#87: `\$parent-selector progress:indeterminate {`
+ * Found in scss/components/_progress.scss#93: `@keyframes progress-indeterminate {`
+ *
  * Add your styles here
  */
 /** SASS for the <q> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <ruby> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <rp> HTML element
+ *
+ * Found in scss/colors/_index.scss#71: `// Purple`
+ * Found in scss/colors/_index.scss#72: `$purple-950: #1e0820;`
+ * Found in scss/colors/_index.scss#73: `$purple-900: #2d0f33;`
+ * Found in scss/colors/_index.scss#74: `$purple-850: #3d1545;`
+ * Found in scss/colors/_index.scss#75: `$purple-800: #4d1a57;`
+ * Found in scss/colors/_index.scss#76: `$purple-750: #5e206b;`
+ * Found in scss/colors/_index.scss#77: `$purple-700: #6f277d;`
+ * Found in scss/colors/_index.scss#78: `$purple-650: #802e90;`
+ * Found in scss/colors/_index.scss#79: `$purple-600: #9236a4;`
+ * Found in scss/colors/_index.scss#80: `$purple-550: #aa40bf;`
+ * Found in scss/colors/_index.scss#81: `$purple-500: #b645cd;`
+ * Found in scss/colors/_index.scss#82: `$purple-450: #c652dc;`
+ * Found in scss/colors/_index.scss#83: `$purple-400: #cd68e0;`
+ * Found in scss/colors/_index.scss#84: `$purple-350: #d47de4;`
+ * Found in scss/colors/_index.scss#85: `$purple-300: #db90e8;`
+ * Found in scss/colors/_index.scss#86: `$purple-250: #e2a3eb;`
+ * Found in scss/colors/_index.scss#87: `$purple-200: #e7b6ee;`
+ * Found in scss/colors/_index.scss#88: `$purple-150: #edc9f1;`
+ * Found in scss/colors/_index.scss#89: `$purple-100: #f2dcf4;`
+ * Found in scss/colors/_index.scss#90: `$purple-50: #f8eef9;`
+ * Found in scss/colors/_index.scss#91: `$purple: $purple-600;`
+ * Found in scss/colors/_index.scss#512: `purple: (`
+ * Found in scss/colors/_index.scss#513: `950: $purple-950,`
+ * Found in scss/colors/_index.scss#514: `900: $purple-900,`
+ * Found in scss/colors/_index.scss#515: `850: $purple-850,`
+ * Found in scss/colors/_index.scss#516: `800: $purple-800,`
+ * Found in scss/colors/_index.scss#517: `750: $purple-750,`
+ * Found in scss/colors/_index.scss#518: `700: $purple-700,`
+ * Found in scss/colors/_index.scss#519: `650: $purple-650,`
+ * Found in scss/colors/_index.scss#520: `600: $purple-600,`
+ * Found in scss/colors/_index.scss#521: `550: $purple-550,`
+ * Found in scss/colors/_index.scss#522: `500: $purple-500,`
+ * Found in scss/colors/_index.scss#523: `450: $purple-450,`
+ * Found in scss/colors/_index.scss#524: `400: $purple-400,`
+ * Found in scss/colors/_index.scss#525: `350: $purple-350,`
+ * Found in scss/colors/_index.scss#526: `300: $purple-300,`
+ * Found in scss/colors/_index.scss#527: `250: $purple-250,`
+ * Found in scss/colors/_index.scss#528: `200: $purple-200,`
+ * Found in scss/colors/_index.scss#529: `150: $purple-150,`
+ * Found in scss/colors/_index.scss#530: `100: $purple-100,`
+ * Found in scss/colors/_index.scss#531: `50: $purple-50,`
+ * Found in scss/colors/_index.scss#532: `main: $purple,`
+ *
  * Add your styles here
  */
 /** SASS for the <rt> HTML element
+ *
  * Add your styles here
  */
 /** SASS for the <samp> HTML element
+ *
+ * Found in scss/content/_code.scss#19: `\$parent-selector samp {`
+ * Found in scss/content/_code.scss#25: `\$parent-selector pre samp {`
+ * Found in scss/content/_code.scss#42: `\$parent-selector samp {`
+ * Found in scss/content/_code.scss#52: `\$parent-selector samp {`
+ * Found in scss/content/_code.scss#63: `> samp {`
+ *
  * Add your styles here
  */
 /** SASS for the <select> HTML element
+ *
+ * Found in scss/components/_accordion.scss#9: `\$parent-selector details {`
+ * Found in scss/components/_accordion.scss#105: `\$parent-selector details {`
+ * Found in scss/components/_card.scss#9: `\$parent-selector article {`
+ * Found in scss/components/_dropdown.scss#11: `\$parent-selector details.dropdown {`
+ * Found in scss/components/_dropdown.scss#27: `// for the marker to be aligned with the regular select`
+ * Found in scss/components/_dropdown.scss#41: `\$parent-selector nav details.dropdown {`
+ * Found in scss/components/_dropdown.scss#46: `// Button as a select`
+ * Found in scss/components/_dropdown.scss#49: `\$parent-selector details.dropdown > summary:not([role]) {`
+ * Found in scss/components/_dropdown.scss#68: `user-select: none;`
+ * Found in scss/components/_dropdown.scss#125: `\$parent-selector nav details.dropdown {`
+ * Found in scss/components/_dropdown.scss#159: `\$parent-selector details.dropdown > summary + ul {`
+ * Found in scss/components/_dropdown.scss#239: `\$parent-selector details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#246: `\$parent-selector details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#262: `\$parent-selector details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#277: `\$parent-selector label > details.dropdown {`
+ * Found in scss/components/_group.scss#9: `\$parent-selector [role="search"],`
+ * Found in scss/components/_group.scss#10: `\$parent-selector [role="group"] {`
+ * Found in scss/components/_group.scss#22: `select {`
+ * Found in scss/components/_group.scss#49: `select {`
+ * Found in scss/components/_group.scss#63: `@supports selector(:has(*)) {`
+ * Found in scss/components/_group.scss#71: `select {`
+ * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
+ * Found in scss/components/_group.scss#107: `\$parent-selector [role="search"] {`
+ * Found in scss/components/_loading.scss#10: `\$parent-selector [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/components/_loading.scss#36: `\$parent-selector button,`
+ * Found in scss/components/_loading.scss#37: `\$parent-selector [type="submit"],`
+ * Found in scss/components/_loading.scss#38: `\$parent-selector [type="button"],`
+ * Found in scss/components/_loading.scss#39: `\$parent-selector [type="reset"],`
+ * Found in scss/components/_loading.scss#40: `\$parent-selector [role="button"],`
+ * Found in scss/components/_loading.scss#41: `\$parent-selector a {`
+ * Found in scss/components/_modal.scss#14: `\$parent-selector dialog {`
+ * Found in scss/components/_modal.scss#36: `$close-selector: if(`
+ * Found in scss/components/_modal.scss#63: `\$close-selector {`
+ * Found in scss/components/_modal.scss#85: `\$close-selector {`
+ * Found in scss/components/_nav.scss#21: `\$parent-selector nav,`
+ * Found in scss/components/_nav.scss#22: `\$parent-selector nav ul {`
+ * Found in scss/components/_nav.scss#26: `\$parent-selector nav {`
+ * Found in scss/components/_nav.scss#69: `select {`
+ * Found in scss/components/_nav.scss#123: `\$parent-selector aside {`
+ * Found in scss/components/_nav.scss#148: `\$parent-selector nav {`
+ * Found in scss/components/_progress.scss#16: `\$parent-selector progress {`
+ * Found in scss/components/_progress.scss#24: `\$parent-selector progress {`
+ * Found in scss/components/_progress.scss#87: `\$parent-selector progress:indeterminate {`
+ * Found in scss/components/_tooltip.scss#9: `\$parent-selector [data-tooltip] {`
+ * Found in scss/content/_button.scss#17: `\$parent-selector button {`
+ * Found in scss/content/_button.scss#25: `\$parent-selector button,`
+ * Found in scss/content/_button.scss#26: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#27: `\$parent-selector [type="reset"],`
+ * Found in scss/content/_button.scss#28: `\$parent-selector [type="button"] {`
+ * Found in scss/content/_button.scss#35: `\$parent-selector button,`
+ * Found in scss/content/_button.scss#36: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#37: `\$parent-selector [type="reset"],`
+ * Found in scss/content/_button.scss#38: `\$parent-selector [type="button"],`
+ * Found in scss/content/_button.scss#39: `\$parent-selector [type="file"]::file-selector-button,`
+ * Found in scss/content/_button.scss#40: `\$parent-selector [role="button"] {`
+ * Found in scss/content/_button.scss#59: `user-select: none;`
+ * Found in scss/content/_button.scss#88: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#89: `\$parent-selector [type="reset"],`
+ * Found in scss/content/_button.scss#90: `\$parent-selector [type="button"] {`
+ * Found in scss/content/_button.scss#97: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).secondary,`
+ * Found in scss/content/_button.scss#98: `\$parent-selector [type="reset"],`
+ * Found in scss/content/_button.scss#99: `\$parent-selector [type="file"]::file-selector-button {`
+ * Found in scss/content/_button.scss#120: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
+ * Found in scss/content/_button.scss#140: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).outline,`
+ * Found in scss/content/_button.scss#154: `\$parent-selector`
+ * Found in scss/content/_button.scss#167: `\$parent-selector`
+ * Found in scss/content/_button.scss#179: `\$parent-selector [type="reset"],`
+ * Found in scss/content/_button.scss#180: `\$parent-selector [type="file"]::file-selector-button {`
+ * Found in scss/content/_button.scss#201: `\$parent-selector`
+ * Found in scss/content/_button.scss#203: `\$parent-selector`
+ * Found in scss/content/_code.scss#16: `\$parent-selector pre,`
+ * Found in scss/content/_code.scss#17: `\$parent-selector code,`
+ * Found in scss/content/_code.scss#18: `\$parent-selector kbd,`
+ * Found in scss/content/_code.scss#19: `\$parent-selector samp {`
+ * Found in scss/content/_code.scss#24: `\$parent-selector pre code,`
+ * Found in scss/content/_code.scss#25: `\$parent-selector pre samp {`
+ * Found in scss/content/_code.scss#31: `\$parent-selector pre {`
+ * Found in scss/content/_code.scss#39: `\$parent-selector pre,`
+ * Found in scss/content/_code.scss#40: `\$parent-selector code,`
+ * Found in scss/content/_code.scss#41: `\$parent-selector kbd,`
+ * Found in scss/content/_code.scss#42: `\$parent-selector samp {`
+ * Found in scss/content/_code.scss#50: `\$parent-selector code,`
+ * Found in scss/content/_code.scss#51: `\$parent-selector kbd,`
+ * Found in scss/content/_code.scss#52: `\$parent-selector samp {`
+ * Found in scss/content/_code.scss#57: `\$parent-selector pre {`
+ * Found in scss/content/_code.scss#72: `\$parent-selector kbd {`
+ * Found in scss/content/_embedded.scss#15: `\$parent-selector :where(audio, canvas, iframe, img, svg, video) {`
+ * Found in scss/content/_embedded.scss#20: `\$parent-selector audio,`
+ * Found in scss/content/_embedded.scss#21: `\$parent-selector video {`
+ * Found in scss/content/_embedded.scss#26: `\$parent-selector audio:not([controls]) {`
+ * Found in scss/content/_embedded.scss#32: `\$parent-selector :where(iframe) {`
+ * Found in scss/content/_embedded.scss#38: `\$parent-selector img {`
+ * Found in scss/content/_embedded.scss#45: `\$parent-selector :where(svg:not([fill])) {`
+ * Found in scss/content/_embedded.scss#50: `\$parent-selector svg:not(:root),`
+ * Found in scss/content/_embedded.scss#51: `\$parent-selector svg:not(:host) {`
+ * Found in scss/content/_figure.scss#9: `\$parent-selector figure {`
+ * Found in scss/content/_link.scss#9: `\$parent-selector :where(a:not([role="button"])),`
+ * Found in scss/content/_link.scss#10: `\$parent-selector [role="link"] {`
+ * Found in scss/content/_link.scss#64: `\$parent-selector a {`
+ * Found in scss/content/_misc.scss#16: `\$parent-selector hr {`
+ * Found in scss/content/_misc.scss#25: `\$parent-selector [hidden],`
+ * Found in scss/content/_misc.scss#26: `\$parent-selector template {`
+ * Found in scss/content/_misc.scss#35: `\$parent-selector canvas {`
+ * Found in scss/content/_table.scss#16: `\$parent-selector :where(table) {`
+ * Found in scss/content/_table.scss#27: `\$parent-selector th,`
+ * Found in scss/content/_table.scss#28: `\$parent-selector td {`
+ * Found in scss/content/_table.scss#41: `\$parent-selector tfoot {`
+ * Found in scss/content/_table.scss#53: `\$parent-selector table {`
+ * Found in scss/content/_typography.scss#15: `\$parent-selector b,`
+ * Found in scss/content/_typography.scss#16: `\$parent-selector strong {`
+ * Found in scss/content/_typography.scss#21: `\$parent-selector sub,`
+ * Found in scss/content/_typography.scss#22: `\$parent-selector sup {`
+ * Found in scss/content/_typography.scss#28: `\$parent-selector sub {`
+ * Found in scss/content/_typography.scss#31: `\$parent-selector sup {`
+ * Found in scss/content/_typography.scss#38: `\$parent-selector address,`
+ * Found in scss/content/_typography.scss#39: `\$parent-selector blockquote,`
+ * Found in scss/content/_typography.scss#40: `\$parent-selector dl,`
+ * Found in scss/content/_typography.scss#41: `\$parent-selector ol,`
+ * Found in scss/content/_typography.scss#42: `\$parent-selector p,`
+ * Found in scss/content/_typography.scss#43: `\$parent-selector pre,`
+ * Found in scss/content/_typography.scss#44: `\$parent-selector table,`
+ * Found in scss/content/_typography.scss#45: `\$parent-selector ul {`
+ * Found in scss/content/_typography.scss#54: `\$parent-selector h1,`
+ * Found in scss/content/_typography.scss#55: `\$parent-selector h2,`
+ * Found in scss/content/_typography.scss#56: `\$parent-selector h3,`
+ * Found in scss/content/_typography.scss#57: `\$parent-selector h4,`
+ * Found in scss/content/_typography.scss#58: `\$parent-selector h5,`
+ * Found in scss/content/_typography.scss#59: `\$parent-selector h6 {`
+ * Found in scss/content/_typography.scss#69: `\$parent-selector h1 {`
+ * Found in scss/content/_typography.scss#72: `\$parent-selector h2 {`
+ * Found in scss/content/_typography.scss#75: `\$parent-selector h3 {`
+ * Found in scss/content/_typography.scss#78: `\$parent-selector h4 {`
+ * Found in scss/content/_typography.scss#81: `\$parent-selector h5 {`
+ * Found in scss/content/_typography.scss#84: `\$parent-selector h6 {`
+ * Found in scss/content/_typography.scss#89: `\$parent-selector`
+ * Found in scss/content/_typography.scss#97: `\$parent-selector p {`
+ * Found in scss/content/_typography.scss#102: `\$parent-selector hgroup {`
+ * Found in scss/content/_typography.scss#118: `\$parent-selector :where(ol, ul) {`
+ * Found in scss/content/_typography.scss#126: `\$parent-selector :where(dl, ol, ul) :where(dl, ol, ul) {`
+ * Found in scss/content/_typography.scss#131: `\$parent-selector ul li {`
+ * Found in scss/content/_typography.scss#136: `\$parent-selector mark {`
+ * Found in scss/content/_typography.scss#144: `\$parent-selector blockquote {`
+ * Found in scss/content/_typography.scss#161: `\$parent-selector abbr[title] {`
+ * Found in scss/content/_typography.scss#168: `\$parent-selector ins {`
+ * Found in scss/content/_typography.scss#174: `\$parent-selector del {`
+ * Found in scss/content/_typography.scss#178: `// selection`
+ * Found in scss/content/_typography.scss#179: `\$parent-selector ::selection {`
+ * Found in scss/content/_typography.scss#180: `background-color: var(\$css-var-prefixtext-selection-color);`
+ * Found in scss/forms/_basics.scss#6: `$helper-previous-tags: "input, select, textarea, fieldset";`
+ * Found in scss/forms/_basics.scss#18: `\$parent-selector input,`
+ * Found in scss/forms/_basics.scss#19: `\$parent-selector optgroup,`
+ * Found in scss/forms/_basics.scss#20: `\$parent-selector select,`
+ * Found in scss/forms/_basics.scss#21: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#30: `\$parent-selector input {`
+ * Found in scss/forms/_basics.scss#35: `\$parent-selector select {`
+ * Found in scss/forms/_basics.scss#43: `\$parent-selector legend {`
+ * Found in scss/forms/_basics.scss#51: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#56: `\$parent-selector [type="checkbox"],`
+ * Found in scss/forms/_basics.scss#57: `\$parent-selector [type="radio"] {`
+ * Found in scss/forms/_basics.scss#62: `\$parent-selector ::-webkit-inner-spin-button,`
+ * Found in scss/forms/_basics.scss#63: `\$parent-selector ::-webkit-outer-spin-button {`
+ * Found in scss/forms/_basics.scss#69: `\$parent-selector [type="search"] {`
+ * Found in scss/forms/_basics.scss#75: `\$parent-selector [type="search"]::-webkit-search-decoration {`
+ * Found in scss/forms/_basics.scss#81: `\$parent-selector ::-webkit-file-upload-button {`
+ * Found in scss/forms/_basics.scss#87: `\$parent-selector ::-moz-focus-inner {`
+ * Found in scss/forms/_basics.scss#93: `\$parent-selector :-moz-focusring {`
+ * Found in scss/forms/_basics.scss#98: `\$parent-selector :-moz-ui-invalid {`
+ * Found in scss/forms/_basics.scss#103: `\$parent-selector ::-ms-expand {`
+ * Found in scss/forms/_basics.scss#108: `\$parent-selector [type="file"],`
+ * Found in scss/forms/_basics.scss#109: `\$parent-selector [type="range"] {`
+ * Found in scss/forms/_basics.scss#118: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"]) {`
+ * Found in scss/forms/_basics.scss#127: `\$parent-selector fieldset {`
+ * Found in scss/forms/_basics.scss#136: `\$parent-selector label,`
+ * Found in scss/forms/_basics.scss#137: `\$parent-selector fieldset legend {`
+ * Found in scss/forms/_basics.scss#144: `\$parent-selector fieldset legend {`
+ * Found in scss/forms/_basics.scss#149: `\$parent-selector input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#150: `\$parent-selector button[type="submit"],`
+ * Found in scss/forms/_basics.scss#151: `\$parent-selector select,`
+ * Found in scss/forms/_basics.scss#152: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#157: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
+ * Found in scss/forms/_basics.scss#158: `\$parent-selector select,`
+ * Found in scss/forms/_basics.scss#159: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#166: `\$parent-selector input,`
+ * Found in scss/forms/_basics.scss#167: `\$parent-selector select,`
+ * Found in scss/forms/_basics.scss#168: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#191: `\$parent-selector`
+ * Found in scss/forms/_basics.scss#200: `\$parent-selector :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#209: `\$parent-selector`
+ * Found in scss/forms/_basics.scss#211: `\$parent-selector :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#218: `\$parent-selector`
+ * Found in scss/forms/_basics.scss#227: `\$parent-selector :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#238: `\$parent-selector input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
+ * Found in scss/forms/_basics.scss#239: `\$parent-selector select[disabled],`
+ * Found in scss/forms/_basics.scss#240: `\$parent-selector textarea[disabled],`
+ * Found in scss/forms/_basics.scss#241: `\$parent-selector label[aria-disabled="true"],`
+ * Found in scss/forms/_basics.scss#242: `\$parent-selector`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ * Found in scss/forms/_basics.scss#249: `\$parent-selector label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#254: `\$parent-selector :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#286: `&[aria-invalid="false"]:not(select) {`
+ * Found in scss/forms/_basics.scss#290: `&[aria-invalid="true"]:not(select) {`
+ * Found in scss/forms/_basics.scss#361: `\$parent-selector :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#371: `\$parent-selector input::placeholder,`
+ * Found in scss/forms/_basics.scss#372: `\$parent-selector input::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#373: `\$parent-selector textarea::placeholder,`
+ * Found in scss/forms/_basics.scss#374: `\$parent-selector textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#375: `\$parent-selector select:invalid {`
+ * Found in scss/forms/_basics.scss#381: `\$parent-selector input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#382: `\$parent-selector select,`
+ * Found in scss/forms/_basics.scss#383: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#388: `\$parent-selector select {`
+ * Found in scss/forms/_basics.scss#389: `// Unstyle the caret on `<select>`s in IE10+.`
+ * Found in scss/forms/_basics.scss#409: `background: var(\$css-var-prefixform-element-selected-background-color);`
+ * Found in scss/forms/_basics.scss#417: `\$parent-selector select {`
+ * Found in scss/forms/_basics.scss#425: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#445: `\$parent-selector :where(\$helper-previous-tags) {`
+ * Found in scss/forms/_basics.scss#466: `\$parent-selector label {`
+ * Found in scss/forms/_basics.scss#467: `> :where(input, select, textarea) {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#11: `\$parent-selector label {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#18: `\$parent-selector [type="checkbox"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#19: `\$parent-selector [type="radio"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#58: `\$parent-selector [type="checkbox"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#70: `\$parent-selector [type="radio"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#83: `\$parent-selector [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#139: `\$parent-selector [type="checkbox"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#140: `\$parent-selector [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#159: `\$parent-selector [type="checkbox"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#160: `\$parent-selector [type="radio"],`
+ * Found in scss/forms/_checkbox-radio-switch.scss#161: `\$parent-selector [type="checkbox"][role="switch"] {`
+ * Found in scss/forms/_input-color.scss#20: `\$parent-selector [type="color"] {`
+ * Found in scss/forms/_input-date.scss#10: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-date.scss#28: `\$parent-selector [type="date"],`
+ * Found in scss/forms/_input-date.scss#29: `\$parent-selector [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#30: `\$parent-selector [type="month"],`
+ * Found in scss/forms/_input-date.scss#31: `\$parent-selector [type="time"],`
+ * Found in scss/forms/_input-date.scss#32: `\$parent-selector [type="week"] {`
+ * Found in scss/forms/_input-date.scss#44: `\$parent-selector [type="date"],`
+ * Found in scss/forms/_input-date.scss#45: `\$parent-selector [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#46: `\$parent-selector [type="month"],`
+ * Found in scss/forms/_input-date.scss#47: `\$parent-selector [type="time"],`
+ * Found in scss/forms/_input-date.scss#48: `\$parent-selector [type="week"] {`
+ * Found in scss/forms/_input-date.scss#56: `\$parent-selector`
+ * Found in scss/forms/_input-file.scss#9: `// 1. Hack to display the outline on the focused file selector button`
+ * Found in scss/forms/_input-file.scss#11: `\$parent-selector [type="file"] {`
+ * Found in scss/forms/_input-file.scss#20: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#27: `&::file-selector-button {`
+ * Found in scss/forms/_input-file.scss#34: `&::file-selector-button {`
+ * Found in scss/forms/_input-range.scss#46: `\$parent-selector [type="range"] {`
+ * Found in scss/forms/_input-search.scss#10: `\$parent-selector input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-search.scss#46: `\$parent-selector :where(input) {`
+ * Found in scss/layout/_landmarks.scss#27: `\$parent-selector \$semantic-root-element {`
+ * Found in scss/layout/_overflow-auto.scss#9: `\$parent-selector .overflow-auto {`
+ * Found in scss/layout/_section.scss#9: `\$parent-selector section {`
+ * Found in scss/utilities/_accessibility.scss#17: `\$parent-selector [aria-controls] {`
+ * Found in scss/utilities/_accessibility.scss#22: `\$parent-selector [aria-disabled="true"],`
+ * Found in scss/utilities/_accessibility.scss#23: `\$parent-selector [disabled] {`
+ * Found in scss/utilities/_accessibility.scss#28: `\$parent-selector [aria-hidden="false"][hidden] {`
+ * Found in scss/utilities/_accessibility.scss#32: `\$parent-selector [aria-hidden="false"][hidden]:not(:focus) {`
+ * Found in scss/utilities/_accessibility.scss#39: `\$parent-selector a,`
+ * Found in scss/utilities/_accessibility.scss#40: `\$parent-selector area,`
+ * Found in scss/utilities/_accessibility.scss#41: `\$parent-selector button,`
+ * Found in scss/utilities/_accessibility.scss#42: `\$parent-selector input,`
+ * Found in scss/utilities/_accessibility.scss#43: `\$parent-selector label,`
+ * Found in scss/utilities/_accessibility.scss#44: `\$parent-selector select,`
+ * Found in scss/utilities/_accessibility.scss#45: `\$parent-selector summary,`
+ * Found in scss/utilities/_accessibility.scss#46: `\$parent-selector textarea,`
+ * Found in scss/utilities/_accessibility.scss#47: `\$parent-selector [tabindex] {`
+ * Found in scss/utilities/_accessibility.scss#54: `\$parent-selector [dir="rtl"] {`
+ * Found in scss/utilities/_reduce-motion.scss#18: `\$parent-selector *:not([aria-busy="true"]),`
+ * Found in scss/utilities/_reduce-motion.scss#19: `\$parent-selector :not([aria-busy="true"])::before,`
+ * Found in scss/utilities/_reduce-motion.scss#20: `\$parent-selector :not([aria-busy="true"])::after {`
+ *
  * Add your styles here
  */
 /** SASS for the <slot> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <small> HTML element
+ *
+ * Found in scss/forms/_basics.scss#446: `+ small {`
+ * Found in scss/forms/_basics.scss#454: `+ small {`
+ * Found in scss/forms/_basics.scss#459: `+ small {`
+ *
  * Add your styles here
  */
+.pico :where(input, select, textarea, fieldset, .grid) + small {
+  display: block;
+  width: 100%;
+  margin-top: calc(var(--pico-spacing) * -0.75);
+  margin-bottom: var(--pico-spacing);
+  color: var(--pico-muted-color);
+}
+.pico :where(input, select, textarea, fieldset, .grid)[aria-invalid=false] + small {
+  color: var(--pico-ins-color);
+}
+.pico :where(input, select, textarea, fieldset, .grid)[aria-invalid=true] + small {
+  color: var(--pico-del-color);
+}
+
 /** SASS for the <span> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <s> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <strong> HTML element
+ *
+ * Found in scss/content/_typography.scss#16: `\$parent-selector strong {`
+ *
  * Add your styles here
  */
 /** SASS for the <sub> HTML element
+ *
+ * Found in scss/components/_group.scss#44: `[type="submit"],`
+ * Found in scss/components/_group.scss#56: `[type="submit"],`
+ * Found in scss/components/_group.scss#65: `&:has(button:focus, [type="submit"]:focus, [type="button"]:focus, [role="button"]:focus) {`
+ * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
+ * Found in scss/components/_group.scss#84: `[type="submit"],`
+ * Found in scss/components/_group.scss#96: `[type="submit"],`
+ * Found in scss/components/_loading.scss#37: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#26: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#36: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#88: `\$parent-selector [type="submit"],`
+ * Found in scss/content/_button.scss#97: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).secondary,`
+ * Found in scss/content/_button.scss#120: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
+ * Found in scss/content/_button.scss#140: `\$parent-selector :is(button, [type="submit"], [type="button"], [role="button"]).outline,`
+ * Found in scss/content/_button.scss#155: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary,`
+ * Found in scss/content/_button.scss#168: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast {`
+ * Found in scss/content/_button.scss#202: `:where(button, [type="submit"], [type="reset"], [type="button"], [role="button"])[disabled],`
+ * Found in scss/content/_button.scss#205: `:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]) {`
+ * Found in scss/content/_typography.scss#20: `// Prevent `sub` and `sup` elements from affecting the line height in all browsers`
+ * Found in scss/content/_typography.scss#21: `\$parent-selector sub,`
+ * Found in scss/content/_typography.scss#28: `\$parent-selector sub {`
+ * Found in scss/forms/_basics.scss#150: `\$parent-selector button[type="submit"],`
+ * Found in scss/forms/_basics.scss#193: `[type="submit"],`
+ * Found in scss/forms/_basics.scss#210: `input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]),`
+ * Found in scss/forms/_basics.scss#220: `[type="submit"],`
+ * Found in scss/forms/_basics.scss#238: `\$parent-selector input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ *
  * Add your styles here
  */
 /** SASS for the <sup> HTML element
+ *
+ * Found in scss/components/_dropdown.scss#229: `// Not working in Firefox, which doesn't support the `:has()` pseudo-class`
+ * Found in scss/components/_group.scss#63: `@supports selector(:has(*)) {`
+ * Found in scss/components/_nav.scss#64: `// Minimal support for buttons and forms elements`
+ * Found in scss/components/_nav.scss#112: `// Minimal support for aria-current`
+ * Found in scss/components/_nav.scss#139: `// Minimal support for links as buttons`
+ * Found in scss/content/_typography.scss#20: `// Prevent `sub` and `sup` elements from affecting the line height in all browsers`
+ * Found in scss/content/_typography.scss#22: `\$parent-selector sup {`
+ * Found in scss/content/_typography.scss#31: `\$parent-selector sup {`
+ * Found in scss/forms/_checkbox-radio-switch.scss#10: `// Not working in Firefox, which doesn't support the `:has()` pseudo-class`
+ *
  * Add your styles here
  */
 /** SASS for the <textarea> HTML element
+ *
+ * Found in scss/components/_loading.scss#10: `\$parent-selector [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/forms/_basics.scss#6: `$helper-previous-tags: "input, select, textarea, fieldset";`
+ * Found in scss/forms/_basics.scss#21: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#51: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#152: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#159: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#168: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#200: `\$parent-selector :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#211: `\$parent-selector :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#227: `\$parent-selector :where(select, textarea):not([readonly]) {`
+ * Found in scss/forms/_basics.scss#240: `\$parent-selector textarea[disabled],`
+ * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
+ * Found in scss/forms/_basics.scss#254: `\$parent-selector :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#361: `\$parent-selector :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#373: `\$parent-selector textarea::placeholder,`
+ * Found in scss/forms/_basics.scss#374: `\$parent-selector textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#383: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#425: `\$parent-selector textarea {`
+ * Found in scss/forms/_basics.scss#467: `> :where(input, select, textarea) {`
+ * Found in scss/utilities/_accessibility.scss#46: `\$parent-selector textarea,`
+ *
  * Add your styles here
  */
 /** SASS for the <time> HTML element
+ *
+ * Found in scss/forms/_basics.scss#259: `[type="datetime-local"],`
+ * Found in scss/forms/_basics.scss#261: `[type="time"],`
+ * Found in scss/forms/_input-date.scss#6: `* Input type datetime`
+ * Found in scss/forms/_input-date.scss#11: `&:is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {`
+ * Found in scss/forms/_input-date.scss#22: `&[type="time"] {`
+ * Found in scss/forms/_input-date.scss#23: `background-image: var(\$css-var-prefixicon-time);`
+ * Found in scss/forms/_input-date.scss#29: `\$parent-selector [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#31: `\$parent-selector [type="time"],`
+ * Found in scss/forms/_input-date.scss#45: `\$parent-selector [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#47: `\$parent-selector [type="time"],`
+ * Found in scss/forms/_input-date.scss#57: `:is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {`
+ * Found in scss/utilities/_reduce-motion.scss#15: `// 3. Remove timed scrolling behaviors when motion is reduced (opinionated)`
+ *
  * Add your styles here
  */
 /** SASS for the <u> HTML element
+ *
+
+ *
  * Add your styles here
  */
 /** SASS for the <var> HTML element
+ *
  * Add your styles here
  */

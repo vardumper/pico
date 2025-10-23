@@ -6,8 +6,8 @@
  * Found in scss/components/_nav.scss#112: `// Minimal support for aria-current`
  * Found in scss/components/_nav.scss#139: `// Minimal support for links as buttons`
  * Found in scss/content/_typography.scss#20: `// Prevent `sub` and `sup` elements from affecting the line height in all browsers`
- * Found in scss/content/_typography.scss#22: `#{$parent-selector} sup {`
- * Found in scss/content/_typography.scss#31: `#{$parent-selector} sup {`
+ * Found in scss/content/_typography.scss#22: `#{\$parent-selector} sup {`
+ * Found in scss/content/_typography.scss#31: `#{\$parent-selector} sup {`
  * Found in scss/forms/_checkbox-radio-switch.scss#10: `// Not working in Firefox, which doesn't support the `:has()` pseudo-class`
  *
  * Add your styles here

@@ -5,11 +5,11 @@
  * Found in scss/forms/_input-date.scss#6: `* Input type datetime`
  * Found in scss/forms/_input-date.scss#11: `&:is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {`
  * Found in scss/forms/_input-date.scss#22: `&[type="time"] {`
- * Found in scss/forms/_input-date.scss#23: `background-image: var(#{$css-var-prefix}icon-time);`
- * Found in scss/forms/_input-date.scss#29: `#{$parent-selector} [type="datetime-local"],`
- * Found in scss/forms/_input-date.scss#31: `#{$parent-selector} [type="time"],`
- * Found in scss/forms/_input-date.scss#45: `#{$parent-selector} [type="datetime-local"],`
- * Found in scss/forms/_input-date.scss#47: `#{$parent-selector} [type="time"],`
+ * Found in scss/forms/_input-date.scss#23: `background-image: var(#{\$css-var-prefix}icon-time);`
+ * Found in scss/forms/_input-date.scss#29: `#{\$parent-selector} [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#31: `#{\$parent-selector} [type="time"],`
+ * Found in scss/forms/_input-date.scss#45: `#{\$parent-selector} [type="datetime-local"],`
+ * Found in scss/forms/_input-date.scss#47: `#{\$parent-selector} [type="time"],`
  * Found in scss/forms/_input-date.scss#57: `:is([type="date"], [type="datetime-local"], [type="month"], [type="time"], [type="week"]) {`
  * Found in scss/utilities/_reduce-motion.scss#15: `// 3. Remove timed scrolling behaviors when motion is reduced (opinionated)`
  *

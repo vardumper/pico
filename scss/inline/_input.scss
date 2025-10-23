@@ -5,41 +5,41 @@
  * Found in scss/components/_group.scss#70: `input:not([type="checkbox"], [type="radio"]),`
  * Found in scss/components/_group.scss#76: `// Group box shadow when an input is focused`
  * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
- * Found in scss/components/_group.scss#79: `#{$css-var-prefix}group-box-shadow-focus-with-input`
- * Found in scss/components/_loading.scss#10: `#{$parent-selector} [aria-busy="true"]:not(input, select, textarea, html, form) {`
+ * Found in scss/components/_group.scss#79: `#{\$css-var-prefix}group-box-shadow-focus-with-input`
+ * Found in scss/components/_loading.scss#10: `#{\$parent-selector} [aria-busy="true"]:not(input, select, textarea, html, form) {`
  * Found in scss/components/_nav.scss#68: `input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
  * Found in scss/components/_tooltip.scss#12: `&:not(a, button, input, [role="button"]) {`
  * Found in scss/forms/_basics.scss#6: `$helper-previous-tags: "input, select, textarea, fieldset";`
- * Found in scss/forms/_basics.scss#18: `#{$parent-selector} input,`
- * Found in scss/forms/_basics.scss#30: `#{$parent-selector} input {`
+ * Found in scss/forms/_basics.scss#18: `#{\$parent-selector} input,`
+ * Found in scss/forms/_basics.scss#30: `#{\$parent-selector} input {`
  * Found in scss/forms/_basics.scss#117: `// Force height for alternatives input types`
- * Found in scss/forms/_basics.scss#118: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"]) {`
- * Found in scss/forms/_basics.scss#149: `#{$parent-selector} input:not([type="checkbox"], [type="radio"]),`
- * Found in scss/forms/_basics.scss#157: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
- * Found in scss/forms/_basics.scss#166: `#{$parent-selector} input,`
+ * Found in scss/forms/_basics.scss#118: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"]) {`
+ * Found in scss/forms/_basics.scss#149: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#157: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),`
+ * Found in scss/forms/_basics.scss#166: `#{\$parent-selector} input,`
  * Found in scss/forms/_basics.scss#192: `input:not(`
  * Found in scss/forms/_basics.scss#210: `input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]),`
  * Found in scss/forms/_basics.scss#219: `input:not(`
- * Found in scss/forms/_basics.scss#238: `#{$parent-selector} input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
+ * Found in scss/forms/_basics.scss#238: `#{\$parent-selector} input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
  * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
- * Found in scss/forms/_basics.scss#249: `#{$parent-selector} label[aria-disabled="true"] input[disabled] {`
- * Found in scss/forms/_basics.scss#254: `#{$parent-selector} :where(input, select, textarea) {`
- * Found in scss/forms/_basics.scss#361: `#{$parent-selector} :where(input, select, textarea) {`
- * Found in scss/forms/_basics.scss#371: `#{$parent-selector} input::placeholder,`
- * Found in scss/forms/_basics.scss#372: `#{$parent-selector} input::-webkit-input-placeholder,`
- * Found in scss/forms/_basics.scss#374: `#{$parent-selector} textarea::-webkit-input-placeholder,`
- * Found in scss/forms/_basics.scss#381: `#{$parent-selector} input:not([type="checkbox"], [type="radio"]),`
+ * Found in scss/forms/_basics.scss#249: `#{\$parent-selector} label[aria-disabled="true"] input[disabled] {`
+ * Found in scss/forms/_basics.scss#254: `#{\$parent-selector} :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#361: `#{\$parent-selector} :where(input, select, textarea) {`
+ * Found in scss/forms/_basics.scss#371: `#{\$parent-selector} input::placeholder,`
+ * Found in scss/forms/_basics.scss#372: `#{\$parent-selector} input::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#374: `#{\$parent-selector} textarea::-webkit-input-placeholder,`
+ * Found in scss/forms/_basics.scss#381: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"]),`
  * Found in scss/forms/_basics.scss#467: `> :where(input, select, textarea) {`
  * Found in scss/forms/_input-color.scss#15: `@if map.get($modules, "forms/input-color") {`
  * Found in scss/forms/_input-date.scss#4: `@if map.get($modules, "forms/input-date") {`
- * Found in scss/forms/_input-date.scss#10: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-date.scss#10: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
  * Found in scss/forms/_input-file.scss#4: `@if map.get($modules, "forms/input-file") {`
  * Found in scss/forms/_input-file.scss#10: `//    with the forced overflow hidden on the input[type="file"] element.`
  * Found in scss/forms/_input-range.scss#41: `@if map.get($modules, "forms/input-range") {`
  * Found in scss/forms/_input-search.scss#4: `@if map.get($modules, "forms/input-search") {`
- * Found in scss/forms/_input-search.scss#10: `#{$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
- * Found in scss/forms/_input-search.scss#46: `#{$parent-selector} :where(input) {`
- * Found in scss/utilities/_accessibility.scss#42: `#{$parent-selector} input,`
+ * Found in scss/forms/_input-search.scss#10: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
+ * Found in scss/forms/_input-search.scss#46: `#{\$parent-selector} :where(input) {`
+ * Found in scss/utilities/_accessibility.scss#42: `#{\$parent-selector} input,`
  *
  * Add your styles here
  */
