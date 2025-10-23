@@ -5,6 +5,7 @@ module.exports = {
     "css-declaration-sorter": {
       order: "smacss"
     },
-    "postcss-merge-rules": {}
+    "postcss-merge-rules": {},
+    "postcss-discard-duplicates": {}
   }
 }
