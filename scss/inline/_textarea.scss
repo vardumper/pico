@@ -207,4 +207,49 @@
       }
     }
   }
+  [dir="rtl"] {
+    #{$parent-selector} :where(input, select, textarea) {
+      &:not([type="checkbox"], [type="radio"]) {
+        &:is([aria-invalid], [aria-invalid="true"], [aria-invalid="false"]) {
+          background-position: center left 0.75rem;
+        }
+      }
+    }
+  }
+  // Placeholder
+  #{$parent-selector} textarea::placeholder,
+  #{$parent-selector} textarea::-webkit-input-placeholder {
+    color: var(#{$css-var-prefix}form-element-placeholder-color);
+    opacity: 1;
+  }
+
+  // Margin bottom (Not Checkboxes and Radios)
+  #{$parent-selector} textarea {
+    margin-bottom: var(#{$css-var-prefix}spacing);
+  }
+
+  // Textarea
+  #{$parent-selector} textarea {
+    display: block;
+    resize: vertical;
+
+    &[aria-invalid] {
+      @if $enable-important {
+        #{$css-var-prefix}icon-height: calc(
+          (1rem * var(#{$css-var-prefix}line-height)) +
+            (var(#{$css-var-prefix}form-element-spacing-vertical) * 2) +
+            (var(#{$css-var-prefix}border-width) * 2)
+        );
+        background-position: top right 0.75rem !important;
+        background-size: 1rem var(#{$css-var-prefix}icon-height) !important;
+      }
+    }
+  }
+
+  // Styles for Input inside a label
+  #{$parent-selector} label {
+    > :where(input, select, textarea) {
+      margin-top: calc(var(#{$css-var-prefix}spacing) * 0.25);
+    }
+  }
 }

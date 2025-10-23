@@ -455,4 +455,68 @@
       }
     }
   }
+  [dir="rtl"] {
+    #{$parent-selector} :where(input, select, textarea) {
+      &:not([type="checkbox"], [type="radio"]) {
+        &:is([aria-invalid], [aria-invalid="true"], [aria-invalid="false"]) {
+          background-position: center left 0.75rem;
+        }
+      }
+    }
+  }
+
+  // Placeholder
+  #{$parent-selector} select:invalid {
+    color: var(#{$css-var-prefix}form-element-placeholder-color);
+    opacity: 1;
+  }
+
+  // Margin bottom (Not Checkboxes and Radios)
+  #{$parent-selector} select {
+    margin-bottom: var(#{$css-var-prefix}spacing);
+  }
+
+  // Select
+  #{$parent-selector} select {
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+      border: 0;
+      background-color: transparent;
+    }
+
+    &:not([multiple], [size]) {
+      padding-right: calc(var(#{$css-var-prefix}form-element-spacing-horizontal) + 1.5rem);
+      padding-left: var(#{$css-var-prefix}form-element-spacing-horizontal);
+      padding-inline-start: var(#{$css-var-prefix}form-element-spacing-horizontal);
+      padding-inline-end: calc(var(#{$css-var-prefix}form-element-spacing-horizontal) + 1.5rem);
+      background-image: var(#{$css-var-prefix}icon-chevron);
+      background-position: center right 0.75rem;
+      background-size: 1rem auto;
+      background-repeat: no-repeat;
+    }
+
+    &[multiple] {
+      option {
+        &:checked {
+          background: var(#{$css-var-prefix}form-element-selected-background-color);
+          color: var(#{$css-var-prefix}form-element-color);
+        }
+      }
+    }
+  }
+
+  [dir="rtl"] {
+    #{$parent-selector} select {
+      &:not([multiple], [size]) {
+        background-position: center left 0.75rem;
+      }
+    }
+  }
+
+  // Styles for Input inside a label
+  #{$parent-selector} label {
+    > :where(input, select, textarea) {
+      margin-top: calc(var(#{$css-var-prefix}spacing) * 0.25);
+    }
+  }
 }

@@ -39,8 +39,6 @@
  * Found in scss/forms/_input-search.scss#4: `@if map.get($modules, "forms/input-search") {`
  * Found in scss/forms/_input-search.scss#10: `#{\$parent-selector} input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]) {`
  * Found in scss/forms/_input-search.scss#46: `#{\$parent-selector} :where(input) {`
- * Found in scss/utilities/_accessibility.scss#42: `#{\$parent-selector} input,`
- *
  * Add your styles here
  */
 
@@ -362,74 +360,14 @@
 
   // Placeholder
   #{$parent-selector} input::placeholder,
-  #{$parent-selector} input::-webkit-input-placeholder,
-  #{$parent-selector} textarea::placeholder,
-  #{$parent-selector} textarea::-webkit-input-placeholder,
-  #{$parent-selector} select:invalid {
+  #{$parent-selector} input::-webkit-input-placeholder {
     color: var(#{$css-var-prefix}form-element-placeholder-color);
     opacity: 1;
   }
 
   // Margin bottom (Not Checkboxes and Radios)
-  #{$parent-selector} input:not([type="checkbox"], [type="radio"]),
-  #{$parent-selector} select,
-  #{$parent-selector} textarea {
+  #{$parent-selector} input:not([type="checkbox"], [type="radio"]) {
     margin-bottom: var(#{$css-var-prefix}spacing);
-  }
-
-  // Select
-  #{$parent-selector} select {
-    // Unstyle the caret on `<select>`s in IE10+.
-    &::-ms-expand {
-      border: 0;
-      background-color: transparent;
-    }
-
-    &:not([multiple], [size]) {
-      padding-right: calc(var(#{$css-var-prefix}form-element-spacing-horizontal) + 1.5rem);
-      padding-left: var(#{$css-var-prefix}form-element-spacing-horizontal);
-      padding-inline-start: var(#{$css-var-prefix}form-element-spacing-horizontal);
-      padding-inline-end: calc(var(#{$css-var-prefix}form-element-spacing-horizontal) + 1.5rem);
-      background-image: var(#{$css-var-prefix}icon-chevron);
-      background-position: center right 0.75rem;
-      background-size: 1rem auto;
-      background-repeat: no-repeat;
-    }
-
-    &[multiple] {
-      option {
-        &:checked {
-          background: var(#{$css-var-prefix}form-element-selected-background-color);
-          color: var(#{$css-var-prefix}form-element-color);
-        }
-      }
-    }
-  }
-
-  [dir="rtl"] {
-    #{$parent-selector} select {
-      &:not([multiple], [size]) {
-        background-position: center left 0.75rem;
-      }
-    }
-  }
-
-  // Textarea
-  #{$parent-selector} textarea {
-    display: block;
-    resize: vertical;
-
-    &[aria-invalid] {
-      @if $enable-important {
-        #{$css-var-prefix}icon-height: calc(
-          (1rem * var(#{$css-var-prefix}line-height)) +
-            (var(#{$css-var-prefix}form-element-spacing-vertical) * 2) +
-            (var(#{$css-var-prefix}border-width) * 2)
-        );
-        background-position: top right 0.75rem !important;
-        background-size: 1rem var(#{$css-var-prefix}icon-height) !important;
-      }
-    }
   }
 
   // Styles for Input inside a label
