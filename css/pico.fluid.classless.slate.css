@@ -2489,9 +2489,6 @@ article > header {
 
 h1 {
   --pico-color: var(--pico-h1-color);
-}
-
-h1 {
   margin-top: 0;
   margin-bottom: var(--pico-typography-spacing-vertical);
   color: var(--pico-color);
@@ -2511,9 +2508,6 @@ h1 {
 
 h2 {
   --pico-color: var(--pico-h2-color);
-}
-
-h2 {
   margin-top: 0;
   margin-bottom: var(--pico-typography-spacing-vertical);
   color: var(--pico-color);
@@ -2533,9 +2527,6 @@ h2 {
 
 h3 {
   --pico-color: var(--pico-h3-color);
-}
-
-h3 {
   margin-top: 0;
   margin-bottom: var(--pico-typography-spacing-vertical);
   color: var(--pico-color);
@@ -2555,9 +2546,6 @@ h3 {
 
 h4 {
   --pico-color: var(--pico-h4-color);
-}
-
-h4 {
   margin-top: 0;
   margin-bottom: var(--pico-typography-spacing-vertical);
   color: var(--pico-color);
@@ -2577,9 +2565,6 @@ h4 {
 
 h5 {
   --pico-color: var(--pico-h5-color);
-}
-
-h5 {
   margin-top: 0;
   margin-bottom: var(--pico-typography-spacing-vertical);
   color: var(--pico-color);
@@ -2599,9 +2584,6 @@ h5 {
 
 h6 {
   --pico-color: var(--pico-h6-color);
-}
-
-h6 {
   margin-top: 0;
   margin-bottom: var(--pico-typography-spacing-vertical);
   color: var(--pico-color);
