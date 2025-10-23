@@ -11,12 +11,6 @@
   // - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
   // ––––––––––––––––––––
 
-  // Add the correct font weight in Chrome, Edge, and Safari
-  #{$parent-selector} b,
-  #{$parent-selector} strong {
-    font-weight: bolder;
-  }
-
   // Prevent `sub` and `sup` elements from affecting the line height in all browsers
   #{$parent-selector} sub,
   #{$parent-selector} sup {

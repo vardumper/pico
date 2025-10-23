@@ -1,31 +1,19 @@
 /** SASS for the <sub> HTML element
  *
- * Found in scss/components/_group.scss#44: `[type="submit"],`
- * Found in scss/components/_group.scss#56: `[type="submit"],`
- * Found in scss/components/_group.scss#65: `&:has(button:focus, [type="submit"]:focus, [type="button"]:focus, [role="button"]:focus) {`
- * Found in scss/components/_group.scss#77: `&:has(input:not([type="submit"], [type="button"]):focus, select:focus) {`
- * Found in scss/components/_group.scss#84: `[type="submit"],`
- * Found in scss/components/_group.scss#96: `[type="submit"],`
- * Found in scss/components/_loading.scss#37: `#{\$parent-selector} [type="submit"],`
- * Found in scss/content/_button.scss#26: `#{\$parent-selector} [type="submit"],`
- * Found in scss/content/_button.scss#36: `#{\$parent-selector} [type="submit"],`
- * Found in scss/content/_button.scss#88: `#{\$parent-selector} [type="submit"],`
- * Found in scss/content/_button.scss#97: `#{\$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).secondary,`
- * Found in scss/content/_button.scss#120: `#{\$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).contrast {`
- * Found in scss/content/_button.scss#140: `#{\$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).outline,`
- * Found in scss/content/_button.scss#155: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.secondary,`
- * Found in scss/content/_button.scss#168: `:is(button, [type="submit"], [type="button"], [role="button"]).outline.contrast {`
- * Found in scss/content/_button.scss#202: `:where(button, [type="submit"], [type="reset"], [type="button"], [role="button"])[disabled],`
- * Found in scss/content/_button.scss#205: `:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"]) {`
- * Found in scss/content/_typography.scss#20: `// Prevent `sub` and `sup` elements from affecting the line height in all browsers`
- * Found in scss/content/_typography.scss#21: `#{\$parent-selector} sub,`
- * Found in scss/content/_typography.scss#28: `#{\$parent-selector} sub {`
- * Found in scss/forms/_basics.scss#150: `#{\$parent-selector} button[type="submit"],`
- * Found in scss/forms/_basics.scss#193: `[type="submit"],`
- * Found in scss/forms/_basics.scss#210: `input:not([type="submit"], [type="button"], [type="reset"], [role="switch"], [readonly]),`
- * Found in scss/forms/_basics.scss#220: `[type="submit"],`
- * Found in scss/forms/_basics.scss#238: `#{\$parent-selector} input:not([type="submit"], [type="button"], [type="reset"])[disabled],`
- * Found in scss/forms/_basics.scss#244: `:is(input:not([type="submit"], [type="button"], [type="reset"]), select, textarea) {`
- *
  * Add your styles here
  */
+@use "sass:map";
+@use "../settings" as *;
+
+@if map.get($modules, "content/typography") {
+  // Prevent `sub` and `sup` elements from affecting the line height in all browsers
+  #{$parent-selector} sub {
+    position: relative;
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: baseline;
+  }
+  #{$parent-selector} sub {
+    bottom: -0.25em;
+  }
+}
