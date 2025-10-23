@@ -6,15 +6,15 @@
 @use "../settings" as *;
 
 @if map.get($modules, "content/typography") {
+  // Margin-top for headings after a block
+  #{$parent-selector}
+    :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
+    ~ :is(h1, h2, h3, h4, h5, h6) {
+      margin-top: var(#{$css-var-prefix}typography-spacing-top);
+    }
+  }
 
-   // Margin-top for headings after a block
-   #{$parent-selector} :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
-      ~ :is(h1, h2, h3, h4, h5, h6) {
-         margin-top: var(#{$css-var-prefix}typography-spacing-top);
-      }
-   }
-
-   #{$parent-selector} h1 {
+  #{$parent-selector} h1 {
     #{$css-var-prefix}color: var(#{$css-var-prefix}h1-color);
   }
 

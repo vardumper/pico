@@ -1,20 +1,12 @@
 /** SASS for the <fieldset> HTML element
  *
- * Found in scss/content/_button.scss#204: `:where(fieldset[disabled])` - targets button inside fieldset
- * Found in scss/forms/_basics.scss#40: `// 2. Correct the color inheritance from `fieldset` elements in IE`
- * Found in scss/forms/_basics.scss#42: `// `fieldset` elements in all browsers`
- * Found in scss/forms/_basics.scss#127: `#{$parent-selector} fieldset {`
- * Found in scss/forms/_basics.scss#137: `#{$parent-selector} fieldset legend {`
- * Found in scss/forms/_basics.scss#144: `#{$parent-selector} fieldset legend {`
- * Found in scss/forms/_basics.scss#243: `:where(fieldset[disabled])`
- *
  * Add your styles here
  */
 @use "sass:map";
 @use "../settings" as *;
 
 @if map.get($modules, "forms/basics") {
- // Fieldset
+  // Fieldset
   #{$parent-selector} fieldset {
     width: 100%;
     margin: 0;

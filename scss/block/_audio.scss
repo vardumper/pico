@@ -1,16 +1,12 @@
 /** SASS for the <audio> HTML element
  *
- * Found in scss/content/_embedded.scss#15: `#{$parent-selector} :where(audio, canvas, iframe, img, svg, video) {`
- * Found in scss/content/_embedded.scss#20: `#{$parent-selector} audio,`
- * Found in scss/content/_embedded.scss#26: `#{$parent-selector} audio:not([controls]) {`
- *
  * Add your styles here
  */
 @use "sass:map";
 @use "../settings" as *;
 
 @if map.get($modules, "content/embedded") {
-   // Change the alignment on media elements in all browsers (opinionated)
+  // Change the alignment on media elements in all browsers (opinionated)
   #{$parent-selector} :where(audio, canvas, iframe, img, svg, video) {
     vertical-align: middle;
   }

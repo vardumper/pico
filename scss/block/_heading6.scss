@@ -7,8 +7,7 @@
 @use "../settings" as *;
 
 @if map.get($modules, "content/typography") {
-
- #{$parent-selector}
+  #{$parent-selector}
     :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
     ~ :is(h1, h2, h3, h4, h5, h6) {
       margin-top: var(#{$css-var-prefix}typography-spacing-top);

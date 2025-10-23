@@ -1,22 +1,19 @@
 /** SASS for the <canvas> HTML element
  *
- * Found in scss/content/_embedded.scss#15: `#{$parent-selector} :where(audio, canvas, iframe, img, svg, video) {`
- * Found in scss/content/_misc.scss#35: `#{$parent-selector} canvas {`
- *
  * Add your styles here
  */
 @use "sass:map";
 @use "../settings" as *;
 
 @if map.get($modules, "content/embedded") {
- // Change the alignment on media elements in all browsers (opinionated)
+  // Change the alignment on media elements in all browsers (opinionated)
   #{$parent-selector} :where(audio, canvas, iframe, img, svg, video) {
     vertical-align: middle;
   }
 }
 
 @if map.get($modules, "content/misc") {
-// Add the correct display in IE 9-
+  // Add the correct display in IE 9-
   #{$parent-selector} canvas {
     display: inline-block;
   }

@@ -6,7 +6,7 @@
 @use "../settings" as *;
 
 @if map.get($modules, "layout/landmarks") {
-   // 1. Remove the margin in all browsers (opinionated)
+  // 1. Remove the margin in all browsers (opinionated)
   body {
     width: 100%;
     margin: 0; // 1

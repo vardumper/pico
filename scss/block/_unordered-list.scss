@@ -1,65 +1,14 @@
 /** SASS for the <ul> HTML element
  *
- * Found in scss/components/_accordion.scss#4: `@if map.get($modules, "components/accordion") {`
- * Found in scss/components/_accordion.scss#35: `&::-moz-list-bullet {`
- * Found in scss/components/_card.scss#4: `@if map.get($modules, "components/card") {`
- * Found in scss/components/_dropdown.scss#4: `@if map.get($modules, "components/dropdown") and $enable-classes {`
- * Found in scss/components/_dropdown.scss#27: `// for the marker to be aligned with the regular select`
- * Found in scss/components/_dropdown.scss#159: `#{$parent-selector} details.dropdown > summary + ul {`
+ * Found in scss/components/_dropdown.scss#159: `#{\$parent-selector} details.dropdown > summary + ul {`
  * Found in scss/components/_dropdown.scss#247: `+ ul {`
- * Found in scss/components/_dropdown.scss#272: `cursor: default;`
- * Found in scss/components/_group.scss#4: `@if map.get($modules, "components/group") {`
- * Found in scss/components/_loading.scss#4: `@if map.get($modules, "components/loading") {`
- * Found in scss/components/_modal.scss#4: `@if map.get($modules, "components/modal") {`
- * Found in scss/components/_nav.scss#4: `@if map.get($modules, "components/nav") {`
- * Found in scss/components/_nav.scss#22: `#{$parent-selector} nav ul {`
+ * * Found in scss/components/_nav.scss#22: `#{\$parent-selector} nav ul {`
  * Found in scss/components/_nav.scss#31: `ul {`
- * Found in scss/components/_nav.scss#87: `& ul li {`
  * Found in scss/components/_nav.scss#126: `ul,`
- * Found in scss/components/_nav.scss#150: `& ul li {`
- * Found in scss/components/_progress.scss#4: `@if map.get($modules, "components/progress") {`
- * Found in scss/components/_progress.scss#25: `// Reset the default appearance`
- * Found in scss/components/_tooltip.scss#4: `@if map.get($modules, "components/tooltip") {`
- * Found in scss/components/_tooltip.scss#119: `// Default (top)`
- * Found in scss/content/_button.scss#4: `@if map.get($modules, "content/button") {`
- * Found in scss/content/_code.scss#4: `@if map.get($modules, "content/code") {`
- * Found in scss/content/_embedded.scss#4: `@if map.get($modules, "content/embedded") {`
- * Found in scss/content/_embedded.scss#37: `// 2. Responsive by default`
- * Found in scss/content/_figure.scss#4: `@if map.get($modules, "content/figure") {`
- * Found in scss/content/_link.scss#4: `@if map.get($modules, "content/link") {`
- * Found in scss/content/_misc.scss#4: `@if map.get($modules, "content/misc") {`
- * Found in scss/content/_table.scss#4: `@if map.get($modules, "content/table") {`
- * Found in scss/content/_typography.scss#4: `@if map.get($modules, "content/typography") {`
- * Found in scss/content/_typography.scss#45: `#{$parent-selector} ul {`
+ * Found in scss/content/_typography.scss#45: `#{\$parent-selector} ul {`
  * Found in scss/content/_typography.scss#90: `:where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul) {`
- * Found in scss/content/_typography.scss#118: `#{$parent-selector} :where(ol, ul) {`
- * Found in scss/content/_typography.scss#126: `#{$parent-selector} :where(dl, ol, ul) :where(dl, ol, ul) {`
- * Found in scss/content/_typography.scss#131: `#{$parent-selector} ul li {`
- * Found in scss/forms/_basics.scss#4: `@if map.get($modules, "forms/basics") {`
- * Found in scss/forms/_basics.scss#50: `// 1. Remove the default vertical scrollbar in IE`
- * Found in scss/forms/_basics.scss#395: `&:not([multiple], [size]) {`
- * Found in scss/forms/_basics.scss#406: `&[multiple] {`
- * Found in scss/forms/_basics.scss#418: `&:not([multiple], [size]) {`
- * Found in scss/forms/_basics.scss#441: `@if map.get($modules, "layout/grid") and $enable-classes {`
- * Found in scss/forms/_checkbox-radio-switch.scss#4: `@if map.get($modules, "forms/checkbox-radio-switch") {`
- * Found in scss/forms/_input-color.scss#15: `@if map.get($modules, "forms/input-color") {`
- * Found in scss/forms/_input-date.scss#4: `@if map.get($modules, "forms/input-date") {`
- * Found in scss/forms/_input-file.scss#4: `@if map.get($modules, "forms/input-file") {`
- * Found in scss/forms/_input-range.scss#41: `@if map.get($modules, "forms/input-range") {`
- * Found in scss/forms/_input-search.scss#4: `@if map.get($modules, "forms/input-search") {`
- * Found in scss/layout/_container.scss#4: `@if map.get($modules, "layout/container") and $enable-classes {`
- * Found in scss/layout/_document.scss#4: `@if map.get($modules, "layout/document") {`
- * Found in scss/layout/_document.scss#16: `// 2. Backgrounds do not repeat by default (opinionated)`
- * Found in scss/layout/_grid.scss#4: `@if map.get($modules, "layout/grid") and $enable-classes {`
- * Found in scss/layout/_landmarks.scss#4: `@if map.get($modules, "layout/landmarks") {`
- * Found in scss/layout/_landmarks.scss#56: `// Regular vertical spacings for <header>, <main>, <footer>`
- * Found in scss/layout/_overflow-auto.scss#4: `@if map.get($modules, "layout/overflow-auto") and $enable-classes {`
- * Found in scss/layout/_section.scss#4: `@if map.get($modules, "layout/section") {`
- * Found in scss/themes/_default.scss#2: `@use "default/styles";`
- * Found in scss/themes/_default.scss#5: `@use "default/schemes";`
- * Found in scss/utilities/_accessibility.scss#4: `@if map.get($modules, "utilities/accessibility") {`
- * Found in scss/utilities/_accessibility.scss#48: `-ms-touch-action: manipulation;`
- * Found in scss/utilities/_reduce-motion.scss#4: `@if map.get($modules, "utilities/reduce-motion") and enable-transitions and enable-important {`
+ * Found in scss/content/_typography.scss#118: `#{\$parent-selector} :where(ol, ul) {`
+ * Found in scss/content/_typography.scss#126: `#{\$parent-selector} :where(dl, ol, ul) :where(dl, ol, ul) {`
  *
  * Add your styles here
  */

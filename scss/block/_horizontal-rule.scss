@@ -1,8 +1,9 @@
 /** SASS for the <hr> HTML element
  *
- * Found in scss/content/_misc.scss#16: `#{$parent-selector} hr { *
  * Add your styles here
  */
+@use "sass:map";
+@use "../settings" as *;
 
 @if map.get($modules, "content/misc") {
   // Reboot based on :

@@ -10,13 +10,13 @@
 @if map.get($modules, "content/typography") {
   // Blockquote Footer
   #{$parent-selector} blockquote footer {
-      margin-top: calc(var(#{$css-var-prefix}typography-spacing-vertical) * 0.5);
-      color: var(#{$css-var-prefix}blockquote-footer-color);
+    margin-top: calc(var(#{$css-var-prefix}typography-spacing-vertical) * 0.5);
+    color: var(#{$css-var-prefix}blockquote-footer-color);
   }
 }
 
 @if map.get($modules, "layout/landmarks") {
-   // 1. Remove the margin in all browsers (opinionated)
+  // 1. Remove the margin in all browsers (opinionated)
   body {
     width: 100%;
     margin: 0; // 1
@@ -63,18 +63,18 @@
    */
   #{$parent-selector} article {
     > footer {
+      margin-top: var(#{$css-var-prefix}block-spacing-vertical);
       margin-right: calc(var(#{$css-var-prefix}block-spacing-horizontal) * -1);
+      margin-bottom: calc(var(#{$css-var-prefix}block-spacing-vertical) * -1);
       margin-left: calc(var(#{$css-var-prefix}block-spacing-horizontal) * -1);
       padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66)
         var(#{$css-var-prefix}block-spacing-horizontal);
-      background-color: var(#{$css-var-prefix}card-sectioning-background-color);
-      margin-top: var(#{$css-var-prefix}block-spacing-vertical);
-      margin-bottom: calc(var(#{$css-var-prefix}block-spacing-vertical) * -1);
       border-top: var(#{$css-var-prefix}border-width)
         solid
         var(#{$css-var-prefix}card-border-color);
       border-bottom-right-radius: var(#{$css-var-prefix}border-radius);
       border-bottom-left-radius: var(#{$css-var-prefix}border-radius);
+      background-color: var(#{$css-var-prefix}card-sectioning-background-color);
     }
   }
 }

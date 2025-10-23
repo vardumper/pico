@@ -1,19 +1,14 @@
 /** SASS for the <summary> HTML element
  *
  * Found in scss/components/_accordion.scss#13: `summary {`
- * Found in scss/components/_accordion.scss#23: `color: var(#{$css-var-prefix}accordion-close-summary-color);`
- * Found in scss/components/_accordion.scss#62: `color: var(#{$css-var-prefix}accordion-active-summary-color);`
  * Found in scss/components/_accordion.scss#88: `> summary {`
- * Found in scss/components/_accordion.scss#93: `color: var(#{$css-var-prefix}accordion-open-summary-color);`
- * Found in scss/components/_accordion.scss#106: `summary {`
  * Found in scss/components/_dropdown.scss#17: `> summary,`
- * Found in scss/components/_dropdown.scss#49: `#{$parent-selector} details.dropdown > summary:not([role]) {`
+ * Found in scss/components/_dropdown.scss#49: `#{\$parent-selector} details.dropdown > summary:not([role]) {`
  * Found in scss/components/_dropdown.scss#129: `> summary {`
- * Found in scss/components/_dropdown.scss#159: `#{$parent-selector} details.dropdown > summary + ul {`
- * Found in scss/components/_dropdown.scss#239: `#{$parent-selector} details.dropdown[open] > summary {`
- * Found in scss/components/_dropdown.scss#246: `#{$parent-selector} details.dropdown[open] > summary {`
- * Found in scss/components/_dropdown.scss#262: `#{$parent-selector} details.dropdown[open] > summary {`
- * Found in scss/utilities/_accessibility.scss#45: `#{$parent-selector} summary,`
+ * Found in scss/components/_dropdown.scss#239: `#{\$parent-selector} details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#246: `#{\$parent-selector} details.dropdown[open] > summary {`
+ * Found in scss/components/_dropdown.scss#262: `#{\$parent-selector} details.dropdown[open] > summary {`
+ * Found in scss/utilities/_accessibility.scss#45: `#{\$parent-selector} summary,`
  *
  * Add your styles here
  */

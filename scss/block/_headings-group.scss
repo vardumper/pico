@@ -2,7 +2,7 @@
  *
  * Add your styles here
  */
- // Heading group
+// Heading group
 @use "sass:map";
 @use "../settings" as *;
 @if map.get($modules, "content/typography") {
