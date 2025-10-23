@@ -10,8 +10,9 @@ use Symfony\Component\Console\Command\Command;
 class CreateSassForHtmlElements extends Command
 {
    private const SOURCE_NAMESPACES = [
-      'Block',
-      'Inline',
+      // 'Block',
+      // 'Inline',
+      'Void',
    ];
 
    public function __invoke($input, $output): int

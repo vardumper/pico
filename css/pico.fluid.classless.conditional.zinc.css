@@ -634,36 +634,6 @@ main{
 .pico ::selection{
   background-color:var(--pico-text-selection-color);
 }
-.pico :where(a:not([role=button])),
-.pico [role=link]{
-  --pico-color:var(--pico-primary);
-  --pico-background-color:transparent;
-  --pico-underline:var(--pico-primary-underline);
-  outline:none;
-  background-color:var(--pico-background-color);
-  color:var(--pico-color);
-  -webkit-text-decoration:var(--pico-text-decoration);
-  text-decoration:var(--pico-text-decoration);
-  text-decoration-color:var(--pico-underline);
-  text-underline-offset:0.125em;
-  transition:background-color var(--pico-transition), color var(--pico-transition), box-shadow var(--pico-transition), -webkit-text-decoration var(--pico-transition);
-  transition:background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition);
-  transition:background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition), -webkit-text-decoration var(--pico-transition);
-}
-.pico :where(a:not([role=button])):is([aria-current]:not([aria-current=false]), :hover, :active, :focus),
-.pico [role=link]:is([aria-current]:not([aria-current=false]), :hover, :active, :focus){
-  --pico-color:var(--pico-primary-hover);
-  --pico-underline:var(--pico-primary-hover-underline);
-  --pico-text-decoration:underline;
-}
-.pico :where(a:not([role=button])):focus-visible,
-.pico [role=link]:focus-visible{
-  box-shadow:0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
-}
-
-.pico a[role=button]{
-  display:inline-block;
-}
 .pico button{
   margin:0;
   overflow:visible;
@@ -2060,14 +2030,6 @@ main{
   position:absolute;
 }
 
-.pico a,
-.pico area,
-.pico button,
-.pico input,
-.pico label,
-.pico select,
-.pico summary,
-.pico textarea,
 .pico [tabindex]{
   -ms-touch-action:manipulation;
 }
@@ -2311,7 +2273,17 @@ body{
   font-style:normal;
   font-weight:var(--pico-font-weight);
 }
-.pico p,.pico pre,.pico table{
+.pico p,.pico pre{
+  margin-top:0;
+  margin-bottom:var(--pico-typography-spacing-vertical);
+  color:var(--pico-color);
+  font-style:normal;
+  font-weight:var(--pico-font-weight);
+}
+.pico summary{
+  -ms-touch-action:manipulation;
+}
+.pico table{
   margin-top:0;
   margin-bottom:var(--pico-typography-spacing-vertical);
   color:var(--pico-color);
@@ -2345,6 +2317,39 @@ body{
   font-style:normal;
   font-weight:var(--pico-font-weight);
 }
+.pico :where(a:not([role=button])),
+.pico [role=link]{
+  --pico-color:var(--pico-primary);
+  --pico-background-color:transparent;
+  --pico-underline:var(--pico-primary-underline);
+  outline:none;
+  background-color:var(--pico-background-color);
+  color:var(--pico-color);
+  -webkit-text-decoration:var(--pico-text-decoration);
+  text-decoration:var(--pico-text-decoration);
+  text-decoration-color:var(--pico-underline);
+  text-underline-offset:0.125em;
+  transition:background-color var(--pico-transition), color var(--pico-transition), box-shadow var(--pico-transition), -webkit-text-decoration var(--pico-transition);
+  transition:background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition);
+  transition:background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition), -webkit-text-decoration var(--pico-transition);
+}
+.pico :where(a:not([role=button])):is([aria-current]:not([aria-current=false]), :hover, :active, :focus),
+.pico [role=link]:is([aria-current]:not([aria-current=false]), :hover, :active, :focus){
+  --pico-color:var(--pico-primary-hover);
+  --pico-underline:var(--pico-primary-hover-underline);
+  --pico-text-decoration:underline;
+}
+.pico :where(a:not([role=button])):focus-visible,
+.pico [role=link]:focus-visible{
+  box-shadow:0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
+}
+
+.pico a[role=button]{
+  display:inline-block;
+}
+.pico a,.pico button,.pico input,.pico label,.pico select{
+  -ms-touch-action:manipulation;
+}
 .pico :where(input, select, textarea, fieldset) + small{
   display:block;
   width:100%;
@@ -2357,4 +2362,7 @@ body{
 }
 .pico :where(input, select, textarea, fieldset)[aria-invalid=true] + small{
   color:var(--pico-del-color);
+}
+.pico textarea,.pico area{
+  -ms-touch-action:manipulation;
 }

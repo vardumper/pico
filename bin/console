@@ -15,8 +15,8 @@ $application->command('merge:specs', function ($input, OutputInterface $output) 
    return (new MergeSpecifications())(null, $input, $output);
 })->descriptions('Merges the PicoCSS specifications into the HTML5 specifications from Extended HTMLDocument');
 
-// $application->command('make:sass', function ($input, OutputInterface $output) {
-//    return (new CreateSassForHtmlElements())($input, $output);
-// })->descriptions('Creates SASS files for all HTML elements based on the compiled PHP Element classes');
+$application->command('make:sass', function ($input, OutputInterface $output) {
+   return (new CreateSassForHtmlElements())($input, $output);
+})->descriptions('Creates SASS files for all HTML elements based on the compiled PHP Element classes');
 
 $application->run();
