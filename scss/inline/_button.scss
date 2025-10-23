@@ -247,3 +247,9 @@
     pointer-events: none;
   }
 }
+
+@if map.get($modules, "forms/basics") {
+  #{$parent-selector} button[type="submit"] {
+    width: 100%;
+  }
+}

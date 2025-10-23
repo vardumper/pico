@@ -36,18 +36,16 @@
     // Prevent overflow of the container in all browsers (opinionated)
     -ms-overflow-style: scrollbar;
     overflow: auto;
-  }
-
-  // Pico
-  // ––––––––––––––––––––
-  #{$parent-selector} pre {
+    display: block;
+    margin-bottom: var(#{$css-var-prefix}spacing);
+    overflow-x: auto;
     border-radius: var(#{$css-var-prefix}border-radius);
     background: var(#{$css-var-prefix}code-background-color);
     color: var(#{$css-var-prefix}code-color);
     font-weight: var(#{$css-var-prefix}font-weight);
     line-height: initial;
-    display: block;
-    margin-bottom: var(#{$css-var-prefix}spacing);
-    overflow-x: auto;
   }
+
+  // Pico
+  // ––––––––––––––––––––
 }

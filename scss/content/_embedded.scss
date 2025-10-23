@@ -28,15 +28,4 @@
     height: auto; // 2
     border-style: none; // 1
   }
-
-  // Change the fill color to match the text color in all browsers (opinionated)
-  #{$parent-selector} :where(svg:not([fill])) {
-    fill: currentColor;
-  }
-
-  // Hide the overflow in IE
-  #{$parent-selector} svg:not(:root),
-  #{$parent-selector} svg:not(:host) {
-    overflow: hidden;
-  }
 }

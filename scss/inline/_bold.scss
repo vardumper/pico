@@ -7,7 +7,7 @@
 
 @if map.get($modules, "content/typography") {
   // Add the correct font weight in Chrome, Edge, and Safari
-  #{$parent-selector} b{
+  #{$parent-selector} b {
     font-weight: bolder;
   }
 }

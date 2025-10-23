@@ -29,7 +29,7 @@
     font-family: var(#{$css-var-prefix}font-family); // 1
   }
 
-  #{$parent-selector} pre code{
+  #{$parent-selector} pre code {
     font-size: inherit;
     font-family: inherit;
   }
@@ -42,9 +42,6 @@
     color: var(#{$css-var-prefix}code-color);
     font-weight: var(#{$css-var-prefix}font-weight);
     line-height: initial;
-  }
-
-  #{$parent-selector} code {
     display: inline-block;
     padding: 0.375rem;
   }
