@@ -9,9 +9,9 @@
   // Prevent `sub` and `sup` elements from affecting the line height in all browsers
   #{$parent-selector} sub {
     position: relative;
+    bottom: -0.25em;
     font-size: 0.75em;
     line-height: 0;
     vertical-align: baseline;
-    bottom: -0.25em;
   }
 }

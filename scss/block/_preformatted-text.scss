@@ -35,9 +35,9 @@
     font-family: var(#{$css-var-prefix}font-family); // 1
     // Prevent overflow of the container in all browsers (opinionated)
     -ms-overflow-style: scrollbar;
-    overflow: auto;
     display: block;
     margin-bottom: var(#{$css-var-prefix}spacing);
+    overflow: auto;
     overflow-x: auto;
     border-radius: var(#{$css-var-prefix}border-radius);
     background: var(#{$css-var-prefix}code-background-color);

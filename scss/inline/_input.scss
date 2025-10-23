@@ -69,11 +69,11 @@
   // 2. Remove the margin in Firefox and Safari
   #{$parent-selector} input {
     margin: 0; // 2
+    overflow: visible;
     font-size: 1rem; // 1
     line-height: var(#{$css-var-prefix}line-height); // 1
     font-family: inherit; // 1
     letter-spacing: inherit; // 2
-    overflow: visible;
   }
 
   // Show the overflow in IE.

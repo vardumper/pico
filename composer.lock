@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db1afa9f63c23416a35978ac299ad1a4",
+    "content-hash": "d56dfe125e45f208fae4c505cc217e1a",
     "packages": [
         {
             "name": "mnapoli/silly",
@@ -997,16 +997,16 @@
         },
         {
             "name": "vardumper/extended-htmldocument",
-            "version": "0.1.24",
+            "version": "0.1.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vardumper/extended-htmldocument.git",
-                "reference": "284a1ae7737fe699cc89b659cc5567c951c47364"
+                "reference": "23cec0f17a79ec2cb52a4de99c4545fce3427917"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vardumper/extended-htmldocument/zipball/284a1ae7737fe699cc89b659cc5567c951c47364",
-                "reference": "284a1ae7737fe699cc89b659cc5567c951c47364",
+                "url": "https://api.github.com/repos/vardumper/extended-htmldocument/zipball/23cec0f17a79ec2cb52a4de99c4545fce3427917",
+                "reference": "23cec0f17a79ec2cb52a4de99c4545fce3427917",
                 "shasum": ""
             },
             "require": {
@@ -1097,7 +1097,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-19T21:50:18+00:00"
+            "time": "2025-10-23T23:11:11+00:00"
         }
     ],
     "packages-dev": [],

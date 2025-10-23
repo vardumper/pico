@@ -778,6 +778,21 @@ main{
   opacity:var(--pico-form-element-disabled-opacity);
   pointer-events:none;
 }
+
+.pico input::placeholder,
+.pico input::-webkit-input-placeholder,
+.pico textarea::placeholder,
+.pico textarea::-webkit-input-placeholder,
+.pico select:invalid{
+  color:var(--pico-form-element-placeholder-color);
+  opacity:1;
+}
+
+.pico input:not([type=checkbox], [type=radio]),
+.pico select,
+.pico textarea{
+  margin-bottom:var(--pico-spacing);
+}
 .pico label:has([type=checkbox], [type=radio]){
   width:-moz-fit-content;
   width:fit-content;
@@ -2015,9 +2030,9 @@ body{
   font-size:0.875em;
   font-family:var(--pico-font-family);
   -ms-overflow-style:scrollbar;
-  overflow:auto;
   display:block;
   margin-bottom:var(--pico-spacing);
+  overflow:auto;
   overflow-x:auto;
   border-radius:var(--pico-border-radius);
   background:var(--pico-code-background-color);
@@ -2215,13 +2230,13 @@ body{
 }
 
 .pico code{
+  display:inline-block;
+  padding:0.375rem;
   border-radius:var(--pico-border-radius);
   background:var(--pico-code-background-color);
   color:var(--pico-code-color);
   font-weight:var(--pico-font-weight);
   line-height:initial;
-  display:inline-block;
-  padding:0.375rem;
 }
 
 .pico pre > code{
@@ -2242,11 +2257,11 @@ body{
 .pico input{
   -ms-touch-action:manipulation;
   margin:0;
+  overflow:visible;
   font-size:1rem;
   line-height:var(--pico-line-height);
   font-family:inherit;
   letter-spacing:inherit;
-  overflow:visible;
 }
 
 .pico [type=checkbox],
@@ -2358,73 +2373,27 @@ body{
   opacity:1;
 }
 
-[dir=rtl] .pico :where(input, select, textarea):not([type=checkbox], [type=radio]):is([aria-invalid], [aria-invalid=true], [aria-invalid=false]){
-  background-position:center left 0.75rem;
-}
-
 .pico input::placeholder,
-.pico input::-webkit-input-placeholder,
-.pico textarea::placeholder,
-.pico textarea::-webkit-input-placeholder,
-.pico select:invalid{
+.pico input::-webkit-input-placeholder{
   color:var(--pico-form-element-placeholder-color);
   opacity:1;
 }
 
-.pico input:not([type=checkbox], [type=radio]),
-.pico select,
-.pico textarea{
+.pico input:not([type=checkbox], [type=radio]){
   margin-bottom:var(--pico-spacing);
 }
-
-.pico select::-ms-expand{
-  border:0;
-  background-color:transparent;
-}
-.pico select:not([multiple], [size]){
-  padding-right:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);
-  padding-left:var(--pico-form-element-spacing-horizontal);
-  padding-inline-start:var(--pico-form-element-spacing-horizontal);
-  padding-inline-end:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);
-  background-image:var(--pico-icon-chevron);
-  background-position:center right 0.75rem;
-  background-size:1rem auto;
-  background-repeat:no-repeat;
-}
-.pico select[multiple] option:checked{
-  background:var(--pico-form-element-selected-background-color);
-  color:var(--pico-form-element-color);
-}
-
-[dir=rtl] .pico select:not([multiple], [size]){
-  background-position:center left 0.75rem;
-}
-
-.pico textarea{
-  display:block;
-  resize:vertical;
-}
-.pico textarea[aria-invalid]{
-  --pico-icon-height:calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);
-  background-position:top right 0.75rem !important;
-  background-size:1rem var(--pico-icon-height) !important;
-}
-
-.pico label > :where(input, select, textarea){
-  margin-top:calc(var(--pico-spacing) * 0.25);
-}
 .pico kbd{
-  font-size:0.875em;
-  font-family:var(--pico-font-family);
-  border-radius:var(--pico-border-radius);
-  background:var(--pico-code-background-color);
-  color:var(--pico-code-color);
-  font-weight:var(--pico-font-weight);
-  line-height:initial;
   display:inline-block;
   padding:0.375rem;
+  border-radius:var(--pico-border-radius);
+  background:var(--pico-code-background-color);
   background-color:var(--pico-code-kbd-background-color);
+  color:var(--pico-code-color);
   color:var(--pico-code-kbd-color);
+  font-weight:var(--pico-font-weight);
+  font-size:0.875em;
+  line-height:initial;
+  font-family:var(--pico-font-family);
   vertical-align:baseline;
 }
 .pico label{
@@ -2450,13 +2419,13 @@ body{
 }
 
 .pico samp{
+  display:inline-block;
+  padding:0.375rem;
   border-radius:var(--pico-border-radius);
   background:var(--pico-code-background-color);
   color:var(--pico-code-color);
   font-weight:var(--pico-font-weight);
   line-height:initial;
-  display:inline-block;
-  padding:0.375rem;
 }
 
 .pico pre > samp{
@@ -2467,10 +2436,10 @@ body{
 }
 .pico select{
   -ms-touch-action:manipulation;
-  width:100%;
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
+  width:100%;
   padding:var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);
   --pico-background-color:var(--pico-form-element-background-color);
   --pico-border-color:var(--pico-form-element-border-color);
@@ -2490,6 +2459,38 @@ body{
 .pico :where(fieldset[disabled]) :is(input:not([type=submit], [type=button], [type=reset]), select, textarea){
   opacity:var(--pico-form-element-disabled-opacity);
   pointer-events:none;
+}
+
+.pico select:invalid{
+  color:var(--pico-form-element-placeholder-color);
+  opacity:1;
+}
+
+.pico select{
+  margin-bottom:var(--pico-spacing);
+}
+
+.pico select::-ms-expand{
+  border:0;
+  background-color:transparent;
+}
+.pico select:not([multiple], [size]){
+  padding-right:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);
+  padding-left:var(--pico-form-element-spacing-horizontal);
+  padding-inline-start:var(--pico-form-element-spacing-horizontal);
+  padding-inline-end:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);
+  background-image:var(--pico-icon-chevron);
+  background-position:center right 0.75rem;
+  background-size:1rem auto;
+  background-repeat:no-repeat;
+}
+.pico select[multiple] option:checked{
+  background:var(--pico-form-element-selected-background-color);
+  color:var(--pico-form-element-color);
+}
+
+[dir=rtl] .pico select:not([multiple], [size]){
+  background-position:center left 0.75rem;
 }
 .pico :where(input, select, textarea, fieldset) + small{
   display:block;
@@ -2521,10 +2522,10 @@ body{
 }
 .pico textarea{
   -ms-touch-action:manipulation;
-  width:100%;
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
+  width:100%;
   padding:var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);
   --pico-background-color:var(--pico-form-element-background-color);
   --pico-border-color:var(--pico-form-element-border-color);
@@ -2611,6 +2612,31 @@ body{
 }
 .pico :where(input, select, textarea)[aria-invalid=true]:is(:active, :focus):not([type=checkbox], [type=radio]){
   --pico-box-shadow:0 0 0 var(--pico-outline-width) var(--pico-form-element-invalid-focus-color) !important;
+}
+
+[dir=rtl] .pico :where(input, select, textarea):not([type=checkbox], [type=radio]):is([aria-invalid], [aria-invalid=true], [aria-invalid=false]){
+  background-position:center left 0.75rem;
+}
+
+.pico textarea::placeholder,
+.pico textarea::-webkit-input-placeholder{
+  color:var(--pico-form-element-placeholder-color);
+  opacity:1;
+}
+
+.pico textarea{
+  margin-bottom:var(--pico-spacing);
+  display:block;
+  resize:vertical;
+}
+.pico textarea[aria-invalid]{
+  --pico-icon-height:calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);
+  background-position:top right 0.75rem !important;
+  background-size:1rem var(--pico-icon-height) !important;
+}
+
+.pico label > :where(input, select, textarea){
+  margin-top:calc(var(--pico-spacing) * 0.25);
 }
 .pico area{
   -ms-touch-action:manipulation;
