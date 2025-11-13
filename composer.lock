@@ -1001,19 +1001,20 @@
         },
         {
             "name": "vardumper/extended-htmldocument",
-            "version": "0.2.16",
+            "version": "0.2.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vardumper/extended-htmldocument.git",
-                "reference": "96867986d214a39c32873b643c1a7cfd4396c1b0"
+                "reference": "e959f1c1678ac48935c8f1fc115f959cb9b2bcb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vardumper/extended-htmldocument/zipball/96867986d214a39c32873b643c1a7cfd4396c1b0",
-                "reference": "96867986d214a39c32873b643c1a7cfd4396c1b0",
+                "url": "https://api.github.com/repos/vardumper/extended-htmldocument/zipball/e959f1c1678ac48935c8f1fc115f959cb9b2bcb6",
+                "reference": "e959f1c1678ac48935c8f1fc115f959cb9b2bcb6",
                 "shasum": ""
             },
             "require": {
+                "ext-dom": "*",
                 "mnapoli/silly": "^1.9.1",
                 "php": "^8.4",
                 "revolt/event-loop": "^1.0.7",
@@ -1101,7 +1102,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-08T12:18:24+00:00"
+            "time": "2025-11-09T21:10:53+00:00"
         }
     ],
     "packages-dev": [],
