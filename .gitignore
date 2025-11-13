@@ -33,3 +33,7 @@ Thumbs.db
 # Pico
 .pico
 /tests
+
+# Yarn
+yarn-error.log
+/.yarn/

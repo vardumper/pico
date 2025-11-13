@@ -5,7 +5,7 @@
 @use "sass:map";
 @use "../settings" as *;
 
-@if map.get($modules, "content/embedded") or map.get($elements, "block/canvas"){
+@if map.get($modules, "content/embedded") or map.get($elements, "block/canvas") {
   // Change the alignment on media elements in all browsers (opinionated)
   #{$parent-selector} :where(audio, canvas, iframe, img, svg, video) {
     vertical-align: middle;

@@ -5,7 +5,7 @@
 @use "sass:map";
 @use "../settings" as *;
 
-@if map.get($modules, "layout/landmarks") or map.get($elements, "block/body"){
+@if map.get($modules, "layout/landmarks") or map.get($elements, "block/body") {
   // 1. Remove the margin in all browsers (opinionated)
   body {
     width: 100%;

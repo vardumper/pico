@@ -6,7 +6,7 @@
 @use "sass:map";
 @use "../settings" as *;
 
-@if map.get($modules, "content/typography") or map.get($elements, "block/definition-list"){
+@if map.get($modules, "content/typography") or map.get($elements, "block/definition-list") {
   #{$parent-selector} dl {
     margin-top: 0;
     margin-bottom: var(#{$css-var-prefix}typography-spacing-vertical);
