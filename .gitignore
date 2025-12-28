@@ -37,3 +37,4 @@ Thumbs.db
 # Yarn
 yarn-error.log
 /.yarn/
+/**node_modules

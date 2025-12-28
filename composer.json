@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "require": {
-    "vardumper/extended-htmldocument": "^0.2.7"
+    "vardumper/extended-htmldocument": "^0.2.63"
   },
   "autoload": {
     "psr-4": {
